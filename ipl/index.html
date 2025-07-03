@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>IPL</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/ipl/assets/css/styles.css?v=1.14">
+    <link rel="stylesheet" href="/ipl/assets/css/styles.css?v=1.22">
     <!-- <link rel="stylesheet" href="/assets/css/styles.css?v=1.4"> -->
 </head>
 
@@ -14,51 +15,51 @@
     <div class="main">
         <!-- header -->
         <nav class="navbar">
-            <div class="navbar__logo">
-                <!-- Replace with actual logo image if available -->
-                <img src="/ipl/assets/images/ipl-logo.svg" alt="Indian Premier League Logo">
-                <!-- <span>
-              <strong>INDIAN<br>PREMIER<br>LEAGUE</strong>
-              </span> -->
-            </div>
+            <!-- <div class="navbar__logo">
+                <img src="/ipl/assets/images/ipl-n.png" alt="Indian Premier League Logo">
+            </div> -->
             <div class="navbar__actions">
-                <div class="navbar__switch" id="theme-toggle" tabindex="0" aria-label="Toggle light/dark mode">
-                    <span class="toggle-knob">
-                        <span class="icon-sun">
-                            <!-- Sun SVG -->
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9" cy="9" r="4" stroke="white" stroke-width="2" fill="none" />
-                                <g stroke="white" stroke-width="2">
-                                    <line x1="9" y1="1" x2="9" y2="3" />
-                                    <line x1="9" y1="15" x2="9" y2="17" />
-                                    <line x1="1" y1="9" x2="3" y2="9" />
-                                    <line x1="15" y1="9" x2="17" y2="9" />
-                                    <line x1="3.64" y1="3.64" x2="5.05" y2="5.05" />
-                                    <line x1="12.95" y1="12.95" x2="14.36" y2="14.36" />
-                                    <line x1="3.64" y1="14.36" x2="5.05" y2="12.95" />
-                                    <line x1="12.95" y1="5.05" x2="14.36" y2="3.64" />
-                                </g>
-                            </svg>
-                        </span>
-                        <span class="icon-moon">
-                            <!-- Moon SVG -->
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.5 11.5A6 6 0 016.5 3.5a5 5 0 108 8z" stroke="white" stroke-width="2"
-                                    fill="none" />
-                            </svg>
-                        </span>
-                    </span>
+                <div class="navbar__logo">
+                    <img src="/ipl/assets/images/ipl-n.png" alt="Indian Premier League Logo">
                 </div>
-                <div class="navbar__profile">
-                    <a href="/ipl/login.html">
-                        <!-- User profile SVG icon -->
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="14" cy="10" r="5" stroke="#fff" stroke-width="2" />
-                            <path d="M5 23c0-3.866 3.582-7 8-7s8 3.134 8 7" stroke="#fff" stroke-width="2" />
-                        </svg>
-                    </a>
+                <div class="nav-actions-wrap">
+                    <div class="nav-border">
+                        <div class="navbar__switch" id="theme-toggle" tabindex="0" aria-label="Toggle light/dark mode">
+                            <span class="toggle-knob">
+                                <span class="icon-sun">
+                                    <!-- Sun SVG -->
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="9" cy="9" r="4" stroke="white" stroke-width="2" fill="none" />
+                                        <g stroke="white" stroke-width="2">
+                                            <line x1="9" y1="1" x2="9" y2="3" />
+                                            <line x1="9" y1="15" x2="9" y2="17" />
+                                            <line x1="1" y1="9" x2="3" y2="9" />
+                                            <line x1="15" y1="9" x2="17" y2="9" />
+                                            <line x1="3.64" y1="3.64" x2="5.05" y2="5.05" />
+                                            <line x1="12.95" y1="12.95" x2="14.36" y2="14.36" />
+                                            <line x1="3.64" y1="14.36" x2="5.05" y2="12.95" />
+                                            <line x1="12.95" y1="5.05" x2="14.36" y2="3.64" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span class="icon-moon">
+                                    <!-- Moon SVG -->
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.5 11.5A6 6 0 016.5 3.5a5 5 0 108 8z" stroke="white" stroke-width="2"
+                                            fill="none" />
+                                    </svg>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="navbar__profile">
+                        <a href="/ipl/login.html">
+                            <!-- User profile SVG icon -->
+                            <img src="/ipl/assets/images/user.png" alt="User Profile">
+                        </a>
+                    </div>
                 </div>
                 <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false"
                     aria-controls="navbar-menu">
@@ -98,33 +99,64 @@
                     <li><a href="#">MATCHES</a></li>
                     <li><a href="#">POINTS TABLE</a></li>
                     <li class="has-submenu">
-                        <a href="#">TEAMS</a>
-                        <span class="chevron">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <polyline points="4,6 8,10 12,6" stroke="#222" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
+                        <div class="navbar__submenu-header">
+                            <a href="#">TEAMS</a>
+                            <span class="chevron">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <polyline points="4,6 8,10 12,6" stroke="#222" stroke-width="2" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="navbar__submenu">
+                            <ul>
+                                <li><a href="#">Mumbai Indians</a></li>
+                                <li><a href="#">Chennai Super Kings</a></li>
+                                <li><a href="#">Royal Challengers Bangalore</a></li>
+                                <li><a href="#">Kolkata Knight Riders</a></li>
+                                <li><a href="#">Delhi Capitals</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li><a href="#">FANTASY</a></li>
                     <li class="has-submenu">
-                        <a href="#">VIDEOS</a>
-                        <span class="chevron">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <polyline points="4,6 8,10 12,6" stroke="#222" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
+                        <div class="navbar__submenu-header">
+                            <a href="#">VIDEOS</a>
+                            <span class="chevron">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <polyline points="4,6 8,10 12,6" stroke="#222" stroke-width="2" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="navbar__submenu">
+                            <ul>
+                                <li><a href="#">Match Highlights</a></li>
+                                <li><a href="#">Player Interviews</a></li>
+                                <li><a href="#">Behind the Scenes</a></li>
+                                <li><a href="#">Best Moments</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li><a href="#">NEWS</a></li>
                     <li class="has-submenu">
-                        <a href="#">STATS</a>
-                        <span class="chevron">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <polyline points="4,6 8,10 12,6" stroke="#222" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
+                        <div class="navbar__submenu-header">
+                            <a href="#">STATS</a>
+                            <span class="chevron">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <polyline points="4,6 8,10 12,6" stroke="#222" stroke-width="2" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="navbar__submenu">
+                            <ul>
+                                <li><a href="#">Player Stats</a></li>
+                                <li><a href="#">Team Stats</a></li>
+                                <li><a href="#">Season Records</a></li>
+                                <li><a href="#">All Time Records</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
                 <div class="navbar__menu-footer">
@@ -476,28 +508,28 @@
             <div class="videos-list">
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/point-table-1.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/points/point-table-1.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/point-table-2.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/points/point-table-2.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/point-table-3.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/points/point-table-3.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/point-table-4.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/points/point-table-4.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
             </div>
         </section>
         <!-- point table section end -->
-        <section class="moments-section magic-moments-section" id="magic-moments">
+        <section class="moments-section magic-moments-section">
             <div class="moments-section__header">
                 <h2 class="moments-section__title">Magic MOMENTS</h2>
                 <span class="moments-section__arrow">
@@ -526,7 +558,7 @@
                     <img src="/ipl/assets/images/moments/magic-moments-5.png" alt="Magic Moments 5" />
                 </div>
             </div>
-            <div class="stats-section">
+            <div class="stats-section" id="magic-moments">
                 <div class="stats-header">
                     <h2 class="stats-title">2025 In Numbers</h2>
                     <div class="stats-header-img">
@@ -553,7 +585,25 @@
                         </div>
                     </div>
                     <div class="stats-data">
-
+                        <div class="stats-data-sai">
+                            <img src="/ipl/assets/images/sai.png" alt="Stats Image" />
+                        </div>
+                        <div class="stats-data-image">
+                            <img src="/ipl/assets/images/player-1.png" alt="Stats Image" />
+                        </div>
+                        <div class="stats-data-team">
+                            <img src="/ipl/assets/images/gt.png" alt="Stats Image" />
+                        </div>
+                        <div class="stats-data-player">
+                            <span class="number">01</span>
+                            <div class="stats-data-player-info">
+                                <span class="name">sai</span>
+                                <span class="role">sudharshan</span>
+                            </div>
+                            <div class="stats-data-im">
+                                <img src="/ipl/assets/images/up-right-w.png" alt="Stats Image" />
+                            </div>
+                        </div>
                     </div>
                     <div class="stats-orange">
                         <span class="text">runs 759</span>
@@ -776,19 +826,22 @@
         </section>
         <!-- IPL App Promo Section Start -->
         <section class="ipl-app-promo">
-            <div class="ipl-app-promo__img-wrap">
+            <div class="ipl-app-promo-wrapper">
+                <img src="/ipl/assets/images/pomo.gif" alt="IPL App Card Left" class="" />
+            </div>
+            <!-- <div class="ipl-app-promo__img-wrap">
                 <img src="/ipl/assets/images/mobile-card.gif" alt="IPL App Card Left" class="ipl-app-promo__card ipl-app-promo__card--left" />
                 <img src="/ipl/assets/images/iphone.png" alt="IPL Mobile App" class="ipl-app-promo__img" />
                 <img src="/ipl/assets/images/mobile-card.gif" alt="IPL App Card Right" class="ipl-app-promo__card ipl-app-promo__card--right" />
-            </div>
+            </div> -->
             <h2 class="ipl-app-promo__title">DOWNLOAD THE OFFICIAL IPL APP</h2>
             <p class="ipl-app-promo__desc">Get the latest scores on the go. Find the latest content, including match highlights, press conferences and recap all at your fingertips by downloading the official IPL app.</p>
             <div class="ipl-app-promo__stores">
                 <a href="#" class="ipl-app-promo__store-btn">
-                    <img src="/ipl/assets/images/play-store.png" alt="Download on Google Play" />
+                    <img src="/ipl/assets/images/google-ap.png" alt="Download on Google Play" />
                 </a>
                 <a href="#" class="ipl-app-promo__store-btn">
-                    <img src="/ipl/assets/images/app-store.png" alt="Download on App Store" />
+                    <img src="/ipl/assets/images/app-st.png" alt="Download on App Store" />
                 </a>
             </div>
         </section>
@@ -800,7 +853,7 @@
                         <span class="footer-title">title sponsor</span>
                     </div>
                     <div class="footer-logo">
-                        <img src="/ipl/assets/images/sponsors/tata.png" alt="Mumbai Indians" />
+                        <img src="/ipl/assets/images/sponsorsn/tata.png" alt="Mumbai Indians" />
                     </div>
                 </div>
                 <div class="footer-wrap associate-partner">
@@ -808,9 +861,9 @@
                         <span class="footer-title">associate partner</span>
                     </div>
                     <div class="footer-logo">
-                        <img src="/ipl/assets/images/sponsors/my11circle.png" alt="Mumbai Indians" />
-                        <img src="/ipl/assets/images/sponsors/angle.png" alt="AngelOne" />
-                        <img src="/ipl/assets/images/sponsors/rupayn.png" alt="RuPay" />
+                        <img src="/ipl/assets/images/sponsorsn/my11circle.png" alt="Mumbai Indians" />
+                        <img src="/ipl/assets/images/sponsorsn/angle.png" alt="AngelOne" />
+                        <img src="/ipl/assets/images/sponsorsn/rupayn.png" alt="RuPay" />
                     </div>
                 </div>
                 <div class="footer-half-wrap">
@@ -819,7 +872,7 @@
                             <span class="footer-title">official<br>umpire partner</span>
                         </div>
                         <div class="footer-logo">
-                            <img src="/ipl/assets/images/sponsors/cement.png" alt="Mumbai Indians" />
+                            <img src="/ipl/assets/images/sponsorsn/cement.png" alt="Mumbai Indians" />
                         </div>
                     </div>
                     <div class="footer-wrap">
@@ -827,7 +880,7 @@
                             <span class="footer-title">official strategic<br>timeout partner</span>
                         </div>
                         <div class="footer-logo">
-                            <img src="/ipl/assets/images/sponsors/ceatn.png" alt="Mumbai Indians" />
+                            <img src="/ipl/assets/images/sponsorsn/ceatn.png" alt="Mumbai Indians" />
                         </div>
                     </div>
                 </div>
@@ -837,7 +890,7 @@
                             <span class="footer-title">official<br>broadcaster</span>
                         </div>
                         <div class="footer-logo">
-                            <img src="/ipl/assets/images/sponsors/starsp.png" alt="Mumbai Indians" />
+                            <img src="/ipl/assets/images/sponsorsn/starsp.png" alt="Mumbai Indians" />
                         </div>
                     </div>
                     <div class="footer-wrap">
@@ -845,7 +898,7 @@
                             <span class="footer-title">official digital<br>streaming partner</span>
                         </div>
                         <div class="footer-logo">
-                            <img src="/ipl/assets/images/sponsors/jiostar.png" alt="Mumbai Indians" />
+                            <img src="/ipl/assets/images/sponsorsn/jiostar.png" alt="Mumbai Indians" />
                         </div>
                     </div>
                 </div>
@@ -998,6 +1051,29 @@
                 // Add active class to clicked item (unless it's the first one which is active by default)
                 if (index !== 0) {
                     this.classList.add('active');
+                }
+            });
+        });
+
+        // Submenu expand/collapse functionality
+        document.querySelectorAll('.has-submenu .navbar__submenu-header').forEach(header => {
+            header.addEventListener('click', function(e) {
+                e.preventDefault();
+                const submenuItem = this.parentElement;
+                const isExpanded = submenuItem.classList.contains('expanded');
+                
+                // Close all other submenus
+                document.querySelectorAll('.has-submenu').forEach(item => {
+                    if (item !== submenuItem) {
+                        item.classList.remove('expanded');
+                    }
+                });
+                
+                // Toggle current submenu
+                if (isExpanded) {
+                    submenuItem.classList.remove('expanded');
+                } else {
+                    submenuItem.classList.add('expanded');
                 }
             });
         });
