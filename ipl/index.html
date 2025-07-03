@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPL</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/ipl/assets/css/styles.css?v=1.4">
+    <link rel="stylesheet" href="/ipl/assets/css/styles.css?v=1.5">
+    <!-- <link rel="stylesheet" href="/assets/css/styles.css?v=1.4"> -->
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <nav class="navbar">
             <div class="navbar__logo">
                 <!-- Replace with actual logo image if available -->
-                <img src="assets/images/ipl-logo.svg" alt="Indian Premier League Logo">
+                <img src="/ipl/assets/images/ipl-logo.svg" alt="Indian Premier League Logo">
                 <!-- <span>
               <strong>INDIAN<br>PREMIER<br>LEAGUE</strong>
               </span> -->
@@ -126,10 +127,10 @@
                 </ul>
                 <div class="navbar__menu-footer">
                     <div class="bcci-tv-box">
-                        <img src="assets/images/bcci.svg" alt="BCCI TV" />
+                        <img src="/ipl/assets/images/bcci.svg" alt="BCCI TV" />
                         <!-- <span>BCCI.TV</span> -->
                         <span class="divider"></span>
-                        <img src="assets/images/wpl.svg" alt="WPL" />
+                        <img src="/ipl/assets/images/wpl.svg" alt="WPL" />
                     </div>
                     <div class="navbar__footer-row">
                         <div class="navbar__socials">
@@ -178,10 +179,10 @@
         <nav class="navbar__desktop">
             <div class="navbar__desktop-top">
                 <div class="navbar__desktop-bcci">
-                    <img src="assets/images/bcci.svg" alt="BCCI TV" />
+                    <img src="/ipl/assets/images/bcci.svg" alt="BCCI TV" />
                     BCCI TV
                     <span class="navbar__desktop-wpl">
-                        <img src="assets/images/wpl.svg" alt="WPL" />
+                        <img src="/ipl/assets/images/wpl.svg" alt="WPL" />
                     </span>
                 </div>
                 <div class="navbar__desktop-meta">
@@ -257,35 +258,48 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="match-card">
-                        <img src="assets/images/showcase.png" alt="Match" class="match-card__img" />
+                        <img src="/ipl/assets/images/showcase-1.png" alt="Match" class="match-card__img" />
                         <div class="match-card__overlay">
                             <div class="match-card__content">
-                                <span class="match-card__play">
-                                    <svg width="32" height="32" viewBox="0 0 32 32">
-                                        <circle cx="16" cy="16" r="16" fill="#FF3B2E" />
-                                        <polygon points="13,10 23,16 13,22" fill="#fff" />
-                                    </svg>
-                                </span>
+                                <img src="/ipl/assets/images/play-showcase.png" alt="Match" class="play-logo" />
                                 <h2 class="match-card__title">TATA IPL 2025 Match 70 , LSG vs RCB – Match Report</h2>
                                 <div class="match-card__date">27 May, 2025</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="match-card">
-                        <img src="assets/images/showcase.png" alt="Match" class="match-card__img" />
+                        <img src="/ipl/assets/images/showcase-2.png" alt="Match" class="match-card__img" />
                         <div class="match-card__overlay">
                             <div class="match-card__content">
-                                <span class="match-card__play">
-                                    <svg width="32" height="32" viewBox="0 0 32 32">
-                                        <circle cx="16" cy="16" r="16" fill="#FF3B2E" />
-                                        <polygon points="13,10 23,16 13,22" fill="#fff" />
-                                    </svg>
-                                </span>
-                                <h2 class="match-card__title">TATA IPL 2025 Match 71 , MI vs CSK – Match Report</h2>
-                                <div class="match-card__date">28 May, 2025</div>
+                                <img src="/ipl/assets/images/play-showcase.png" alt="Match" class="play-logo" />
+                                <h2 class="match-card__title">TATA IPL 2025 Match 70 , LSG vs RCB – Match Report</h2>
+                                <div class="match-card__date">27 May, 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="match-card">
+                        <img src="/ipl/assets/images/showcase-3.png" alt="Match" class="match-card__img" />
+                        <div class="match-card__overlay">
+                            <div class="match-card__content">
+                                <img src="/ipl/assets/images/play-showcase.png" alt="Match" class="play-logo" />
+                                <h2 class="match-card__title">TATA IPL 2025 Match 70 , LSG vs RCB – Match Report</h2>
+                                <div class="match-card__date">27 May, 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="match-card">
+                        <img src="/ipl/assets/images/showcase-2.png" alt="Match" class="match-card__img" />
+                        <div class="match-card__overlay">
+                            <div class="match-card__content">
+                                <img src="/ipl/assets/images/play-showcase.png" alt="Match" class="play-logo" />
+                                <h2 class="match-card__title">TATA IPL 2025 Match 70 , LSG vs RCB – Match Report</h2>
+                                <div class="match-card__date">27 May, 2025</div>
                             </div>
                         </div>
                     </div>
@@ -294,17 +308,12 @@
             <div class="swiper-pagination"></div>
         </div>
         <!-- Match Card Section Start -->
-        <section class="match-card-section">
-            <div class="moments-section__header">
-                <h2 class="moments-section__title">Matches</h2>
-                <span class="moments-section__arrow">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <rect x="2" y="2" width="28" height="28" rx="4" fill="white" stroke="#18398b"
-                            stroke-width="2" />
-                        <path d="M10 22L22 10" stroke="#18398b" stroke-width="3" stroke-linecap="round" />
-                        <path d="M14 10H22V18" stroke="#18398b" stroke-width="3" stroke-linecap="round" />
-                    </svg>
-                </span>
+        <section class="match-card-section" id="fixtures">
+            <div class="announcement-header">
+                <h2 class="announcement-title">mactches</h2>
+                <a href="#" class="announcement-link">
+                    <img src="/ipl/assets/images/up-right.png" alt="Arrow Right" />
+                </a>
             </div>
             <div class="match-card-list">
                 <div class="match-card-box">
@@ -325,8 +334,8 @@
                     </div>
                     <div class="match-card-box__body">
                         <div class="match-card-box__team match-card-box__team--top">
-                            <img src="assets/images/" alt="Punjab Kings" class="match-card-box__team-logo" />
-                            <img src="assets/images/" alt="Mumbai Indians" class="match-card-box__team-logo" />
+                            <img src="/ipl/assets/images/team/pbks.png" alt="Punjab Kings" class="match-card-box__team-logo" />
+                            <img src="/ipl/assets/images/team/mi.png" alt="Mumbai Indians" class="match-card-box__team-logo" />
                         </div>
                         <div class="match-card-box__team match-card-box__team--bottom">
                             <div class="match-card-box__score-wrapper">
@@ -334,7 +343,7 @@
                                 <span class="match-card-box__score">212/4 <span
                                         class="match-card-box__overs">(20.0)</span></span>
                             </div>
-                            <div class="match-card-box__score-wrapper">
+                            <div class="match-card-box__score-wrapper winner">
                                 <span class="match-card-box__team-name">MUMBAI <span>INDIANS</span></span>
                                 <span class="match-card-box__score">101/10 <span
                                         class="match-card-box__overs">(18.0)</span></span>
@@ -347,9 +356,9 @@
                 </div>
                 <div class="match-card-box">
                     <div class="match-card-box__header">
-                        <span class="match-card-box__status match-card-box__status--live">Live</span>
+                        <span class="match-card-box__status match-card-box__status--live">LIVE</span>
                         <div class="match-status">
-                            <span class="match-card-box__date">28 APR</span>
+                            <span class="match-card-box__date">27 APR</span>
                             <span class="match-card-box__time">
                                 <svg class="match-card-box__clock" width="14" height="14" viewBox="0 0 14 14"
                                     fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -363,16 +372,16 @@
                     </div>
                     <div class="match-card-box__body">
                         <div class="match-card-box__team match-card-box__team--top">
-                            <img src="assets/images/" alt="Punjab Kings" class="match-card-box__team-logo" />
-                            <img src="assets/images/" alt="Mumbai Indians" class="match-card-box__team-logo" />
+                            <img src="/ipl/assets/images/team/pbks.png" alt="Punjab Kings" class="match-card-box__team-logo" />
+                            <img src="/ipl/assets/images/team/mi.png" alt="Mumbai Indians" class="match-card-box__team-logo" />
                         </div>
                         <div class="match-card-box__team match-card-box__team--bottom">
                             <div class="match-card-box__score-wrapper">
-                                <span class="match-card-box__team-name">Royal Challengers <span>Bengaluru</span></span>
+                                <span class="match-card-box__team-name">PUNJAB <span>KINGS</span></span>
                                 <span class="match-card-box__score">212/4 <span
                                         class="match-card-box__overs">(20.0)</span></span>
                             </div>
-                            <div class="match-card-box__score-wrapper">
+                            <div class="match-card-box__score-wrapper winner">
                                 <span class="match-card-box__team-name">MUMBAI <span>INDIANS</span></span>
                                 <span class="match-card-box__score">101/10 <span
                                         class="match-card-box__overs">(18.0)</span></span>
@@ -385,9 +394,9 @@
                 </div>
                 <div class="match-card-box">
                     <div class="match-card-box__header">
-                        <span class="match-card-box__status match-card-box__status--upcoming">Upcoming</span>
+                        <span class="match-card-box__status match-card-box__status--upcoming">UPCOMING</span>
                         <div class="match-status">
-                            <span class="match-card-box__date">28 APR</span>
+                            <span class="match-card-box__date">27 APR</span>
                             <span class="match-card-box__time">
                                 <svg class="match-card-box__clock" width="14" height="14" viewBox="0 0 14 14"
                                     fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -401,51 +410,49 @@
                     </div>
                     <div class="match-card-box__body">
                         <div class="match-card-box__team match-card-box__team--top">
-                            <img src="assets/images/" alt="Punjab Kings" class="match-card-box__team-logo" />
-                            <img src="assets/images/" alt="Mumbai Indians" class="match-card-box__team-logo" />
+                            <img src="/ipl/assets/images/team/pbks.png" alt="Punjab Kings" class="match-card-box__team-logo" />
+                            <img src="/ipl/assets/images/team/mi.png" alt="Mumbai Indians" class="match-card-box__team-logo" />
                         </div>
                         <div class="match-card-box__team match-card-box__team--bottom">
                             <div class="match-card-box__score-wrapper">
-                                <span class="match-card-box__team-name">Gujarat
-                                    <span>Titans</span></span>
-                                <span class="match-card-box__score">212/4 <span
-                                        class="match-card-box__overs">(20.0)</span></span>
+                                <span class="match-card-box__team-name">PUNJAB <span>KINGS</span></span>
                             </div>
                             <div class="match-card-box__score-wrapper">
-                                <span class="match-card-box__team-name">Delhi<span>Capitals</span></span>
-                                <span class="match-card-box__score">101/10 <span
-                                        class="match-card-box__overs">(18.0)</span></span>
+                                <span class="match-card-box__team-name">MUMBAI <span>INDIANS</span></span>
                             </div>
                         </div>
                     </div>
                     <div class="match-card-box__footer">
-                        Punjab Kings Won by 5 Wickets (Qualified)
+                        Narendra Modi Stadium
+                        <a class="buy-tickets">BUY TICKETS</a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Match Card Section End -->
         <!-- shorts section start -->
-        <section class="shorts-section">
-            <h2 class="shorts-section__title">Curated shorts</h2>
+        <section class="shorts-section" id="short-videos">
+            <div class="announcement-header">
+                <h2 class="announcement-title">curated shorts</h2>
+            </div>
             <div class="shorts-list">
                 <div class="shorts-item">
-                    <img src="assets/images/shorts/mivspbks.png" alt="MI v PBKS" />
+                    <img src="/ipl/assets/images/shorts/1.png" alt="MI v PBKS" />
                 </div>
                 <div class="shorts-item">
-                    <img src="assets/images/shorts/mivsdc.png" alt="MI v DC" />
+                    <img src="/ipl/assets/images/shorts/2.png" alt="MI v DC" />
                 </div>
                 <div class="shorts-item">
-                    <img src="assets/images/shorts/mivsrr.png" alt="MI v SRH" />
+                    <img src="/ipl/assets/images/shorts/3.png" alt="MI v SRH" />
                 </div>
                 <div class="shorts-item">
-                    <img src="assets/images/shorts/mivslsg.png" alt="MI v RCB" />
+                    <img src="/ipl/assets/images/shorts/4.png" alt="MI v RCB" />
                 </div>
                 <div class="shorts-item">
-                    <img src="assets/images/shorts/mivssrh.png" alt="MI v RR" />
+                    <img src="/ipl/assets/images/shorts/5.png" alt="MI v RR" />
                 </div>
                 <div class="shorts-item">
-                    <img src="assets/images/shorts/dcvskkr.png" alt="MI v RR" />
+                    <img src="/ipl/assets/images/shorts/6.png" alt="MI v RR" />
                 </div>
                 <!-- Add more shorts-item blocks as needed -->
             </div>
@@ -453,47 +460,42 @@
         <!-- shorts section end -->
         <!-- IPL Banner Start -->
         <section class="ipl-banner">
-            <img src="assets/images/tata-ipl-banner.png" alt="TATA IPL 2025 Banner" class="ipl-banner__img" />
+            <img src="/ipl/assets/images/tata-ipl-banner.png" alt="TATA IPL 2025 Banner" class="ipl-banner__img" />
         </section>
         <!-- IPL Banner End -->
         <!-- point table section start -->
-        <section class="videos-section point-table-section">
-            <div class="videos-section__header">
-                <h2 class="videos-section__title">Points Table</h2>
-                <span class="videos-section__arrow">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <rect x="2" y="2" width="28" height="28" rx="4" fill="white" stroke="#18398b"
-                            stroke-width="2" />
-                        <path d="M10 22L22 10" stroke="#18398b" stroke-width="3" stroke-linecap="round" />
-                        <path d="M14 10H22V18" stroke="#18398b" stroke-width="3" stroke-linecap="round" />
-                    </svg>
-                </span>
+        <section class="videos-section point-table-section" id="points-table">
+            <div class="announcement-header">
+                <h2 class="announcement-title">points table</h2>
+                <a href="#" class="announcement-link">
+                    <img src="/ipl/assets/images/up-right.png" alt="Arrow Right" />
+                </a>
             </div>
             <div class="videos-list">
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/point-table-1.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/point-table-1.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/point-table-2.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/point-table-2.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/point-table-3.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/point-table-3.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/point-table-4.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/point-table-4.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
             </div>
         </section>
         <!-- point table section end -->
-        <section class="moments-section magic-moments-section">
+        <section class="moments-section magic-moments-section" id="magic-moments">
             <div class="moments-section__header">
                 <h2 class="moments-section__title">Magic MOMENTS</h2>
                 <span class="moments-section__arrow">
@@ -507,58 +509,186 @@
             </div>
             <div class="moments-list">
                 <div class="moment-item">
-                    <img src="assets/images/moments/magic-moments-1.png" alt="Magic Moments 1" />
+                    <img src="/ipl/assets/images/moments/magic-moments-1.png" alt="Magic Moments 1" />
                 </div>
                 <div class="moment-item">
-                    <img src="assets/images/moments/magic-moments-2.png" alt="Magic Moments 2" />
+                    <img src="/ipl/assets/images/moments/magic-moments-2.png" alt="Magic Moments 2" />
                 </div>
                 <div class="moment-item">
-                    <img src="assets/images/moments/magic-moments-3.png" alt="Magic Moments 3" />
+                    <img src="/ipl/assets/images/moments/magic-moments-3.png" alt="Magic Moments 3" />
                 </div>
                 <div class="moment-item">
-                    <img src="assets/images/moments/magic-moments-4.png" alt="Magic Moments 4" />
+                    <img src="/ipl/assets/images/moments/magic-moments-4.png" alt="Magic Moments 4" />
                 </div>
                 <div class="moment-item">
-                    <img src="assets/images/moments/magic-moments-5.png" alt="Magic Moments 5" />
+                    <img src="/ipl/assets/images/moments/magic-moments-5.png" alt="Magic Moments 5" />
+                </div>
+            </div>
+            <div class="stats-section">
+                <div class="stats-header">
+                    <h2 class="stats-title">2025 In Numbers</h2>
+                    <div class="stats-header-img">
+                        <img src="/ipl/assets/images/stat-header.png" alt="Stats Header Image" />
+                    </div>
+                </div>
+                <div class="stats-top">
+                    <div class="run-list">
+                        <div class="run-item">
+                            <span class="value">100</span>
+                            <span class="label">fours</span>
+                        </div>
+                        <div class="run-item">
+                            <span class="value">100</span>
+                            <span class="label">sixes</span>
+                        </div>
+                        <div class="run-item">
+                            <span class="value">100</span>
+                            <span class="label">fifties</span>
+                        </div>
+                        <div class="run-item">
+                            <span class="value">100</span>
+                            <span class="label">hundreds</span>
+                        </div>
+                    </div>
+                    <div class="stats-data">
+
+                    </div>
+                    <div class="stats-orange">
+                        <span class="text">runs 759</span>
+                        <img src="/ipl/assets/images/orange.png" alt="Orange Background" />
+                    </div>
+                    <div class="stats-data-list">
+                        <div class="stat-list-item">
+                            <div class="stat-list-item-wrap">
+                                <span class="label">matches</span>
+                               <span class="value">15</span>
+                            </div>
+                            <div class="stat-list-item-wrap">
+                                <span class="label">Hs. Score</span>
+                               <span class="value">108*</span>
+                            </div>
+                        </div>
+                        <div class="stat-list-item">
+                            <div class="stat-list-item-wrap">
+                                <span class="label">Average</span>
+                               <span class="value">54.21</span>
+                            </div>
+                            <div class="stat-list-item-wrap">
+                                <span class="label">50s/100s</span>
+                               <span class="value">6/1</span>
+                            </div>
+                        </div>
+                        <div class="stat-list-item">
+                            <div class="stat-list-item-wrap">
+                                <span class="label">Strike Rate</span>
+                               <span class="value">156.17</span>
+                            </div>
+                            <div class="stat-list-item-wrap">
+                                <span class="label">50s/100s</span>
+                               <span class="value">6/1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-bottom">
+                    <div class="stats-bottom-list">
+                        <div class="stats-image">
+                            <img src="/ipl/assets/images/stats/1.png" alt="Stats Image" />
+                        </div>
+                        <div class="stats-image">
+                            <img src="/ipl/assets/images/stats/2.png" alt="Stats Image" />
+                        </div>
+                        <div class="stats-image">
+                            <img src="/ipl/assets/images/stats/3.png" alt="Stats Image" />
+                        </div>
+                        <div class="stats-image">
+                            <img src="/ipl/assets/images/stats/4.png" alt="Stats Image" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="videos-section latest-videos-section">
-            <div class="videos-section__header">
-                <h2 class="videos-section__title">LATEST VIDEOS</h2>
-                <span class="videos-section__arrow">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <rect x="2" y="2" width="28" height="28" rx="4" fill="white" stroke="#18398b"
-                            stroke-width="2" />
-                        <path d="M10 22L22 10" stroke="#18398b" stroke-width="3" stroke-linecap="round" />
-                        <path d="M14 10H22V18" stroke="#18398b" stroke-width="3" stroke-linecap="round" />
-                    </svg>
-                </span>
+            <div class="announcement-header">
+                <h2 class="announcement-title">latest videos</h2>
+                <a href="#" class="announcement-link">
+                    <img src="/ipl/assets/images/up-right.png" alt="Arrow Right" />
+                </a>
             </div>
             <div class="videos-list">
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/videos/latest-videos-1.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/videos/latest-videos-1.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/videos/latest-videos-2.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/videos/latest-videos-2.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/videos/latest-videos-3.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/videos/latest-videos-3.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/videos/latest-videos-4.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/videos/latest-videos-4.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item"></div>
                 <div class="video-thumb">
-                    <img src="assets/images/videos/latest-videos-5.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                    <img src="/ipl/assets/images/videos/latest-videos-5.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                </div>
+            </div>
+        </section>
+        <section class="announcement-section photo-gallery">
+            <div class="announcement-header">
+                <h2 class="announcement-title">Photo Galleries</h2>
+                <a href="#" class="announcement-link">
+                    <img src="/ipl/assets/images/up-right.png" alt="Arrow Right" />
+                </a>
+            </div>
+            <div class="announcement-list">
+                <div class="announcement-card">
+                    <div class="announcement-thumb">
+                        <img src="/ipl/assets/images/card-a.png" alt="Batsman Image" />
+                    </div>
+                    <div class="announcement-content">
+                        <div class="tag">275</div>
+                        <div class="title">Royal Twin Strikes: Bhuvneshwar's Game-Changing Over Bengaluru Vs...</div>
+                        <div class="date">05 Jun, 2025</div>
+                    </div>
+                </div>
+                <div class="announcement-card">
+                    <div class="announcement-thumb">
+                        <img src="/ipl/assets/images/card-a.png" alt="Batsman Image" />
+                    </div>
+                    <div class="announcement-content">
+                        <div class="tag">275</div>
+                        <div class="title">Royal Twin Strikes: Bhuvneshwar's Game-Changing Over Bengaluru Vs...</div>
+                        <div class="date">05 Jun, 2025</div>
+                    </div>
+                </div>
+                <div class="announcement-card">
+                    <div class="announcement-thumb">
+                        <img src="/ipl/assets/images/card-a.png" alt="Batsman Image" />
+                    </div>
+                    <div class="announcement-content">
+                        <div class="tag">275</div>
+                        <div class="title">Royal Twin Strikes: Bhuvneshwar's Game-Changing Over Bengaluru Vs...</div>
+                        <div class="date">05 Jun, 2025</div>
+                    </div>
+                </div>
+                <div class="announcement-card">
+                    <div class="announcement-thumb">
+                        <img src="/ipl/assets/images/card-a.png" alt="Batsman Image" />
+                    </div>
+                    <div class="announcement-content">
+                        <div class="tag">275</div>
+                        <div class="title">Royal Twin Strikes: Bhuvneshwar's Game-Changing Over Bengaluru Vs...</div>
+                        <div class="date">05 Jun, 2025</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -569,22 +699,22 @@
             <div class="videos-list">
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/viewer-choice.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/viewer-choice.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/polling.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/polling.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/watch-ipl.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/watch-ipl.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="assets/images/more-less.png" alt="Mumbai Indians Sign Raghu Sharma" />
+                        <img src="/ipl/assets/images/more-less.png" alt="Mumbai Indians Sign Raghu Sharma" />
                     </div>
                 </div>
             </div>
@@ -592,107 +722,139 @@
                 <button class="engagement-zone__button">VIEW MORE</button>
             </div>
         </section>
-        <section class="videos-section latest-updates-section">
-            <div class="videos-section__header">
-                <h2 class="videos-section__title">LATEST UPDATES</h2>
-                <span class="videos-section__arrow">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <rect x="2" y="2" width="28" height="28" rx="4" fill="white" stroke="#18398b"
-                            stroke-width="2" />
-                        <path d="M10 22L22 10" stroke="#18398b" stroke-width="3" stroke-linecap="round" />
-                        <path d="M14 10H22V18" stroke="#18398b" stroke-width="3" stroke-linecap="round" />
-                    </svg>
-                </span>
+        <section class="announcement-section" id="announcements">
+            <div class="announcement-header">
+                <h2 class="announcement-title">ANNOUNCEMENTS</h2>
+                <a href="#" class="announcement-link">
+                    <img src="/ipl/assets/images/up-right.png" alt="Arrow Right" />
+                </a>
             </div>
-            <div class="videos-list">
-                <div class="video-item">
-                    <div class="video-thumb">
-                        <img src="assets/images/latest-updates/latest-updates-1.png"
-                            alt="Mumbai Indians Sign Raghu Sharma" />
+            <div class="announcement-list">
+                <div class="announcement-card">
+                    <div class="announcement-thumb">
+                        <img src="/ipl/assets/images/card-a.png" alt="Batsman Image" />
+                    </div>
+                    <div class="announcement-content">
+                        <div class="tag">ANNOUNCEMENTS</div>
+                        <div class="title">Royal Twin Strikes: Bhuvneshwar's Game-Changing Over Bengaluru Vs...</div>
+                        <div class="date">05 Jun, 2025</div>
                     </div>
                 </div>
-                <div class="video-item">
-                    <div class="video-thumb">
-                        <img src="assets/images/latest-updates/latest-updates-2.png"
-                            alt="Mumbai Indians Sign Raghu Sharma" />
+                <div class="announcement-card">
+                    <div class="announcement-thumb">
+                        <img src="/ipl/assets/images/card-a.png" alt="Batsman Image" />
+                    </div>
+                    <div class="announcement-content">
+                        <div class="tag">ANNOUNCEMENTS</div>
+                        <div class="title">Royal Twin Strikes: Bhuvneshwar's Game-Changing Over Bengaluru Vs...</div>
+                        <div class="date">05 Jun, 2025</div>
                     </div>
                 </div>
-                <div class="video-item">
-                    <div class="video-thumb">
-                        <img src="assets/images/latest-updates/latest-updates-3.png"
-                            alt="Mumbai Indians Sign Raghu Sharma" />
+                <div class="announcement-card">
+                    <div class="announcement-thumb">
+                        <img src="/ipl/assets/images/card-a.png" alt="Batsman Image" />
+                    </div>
+                    <div class="announcement-content">
+                        <div class="tag">ANNOUNCEMENTS</div>
+                        <div class="title">Royal Twin Strikes: Bhuvneshwar's Game-Changing Over Bengaluru Vs...</div>
+                        <div class="date">05 Jun, 2025</div>
                     </div>
                 </div>
-                <div class="video-item">
-                    <div class="video-thumb">
-                        <img src="assets/images/latest-updates/latest-updates-4.png"
-                            alt="Mumbai Indians Sign Raghu Sharma" />
+                <div class="announcement-card">
+                    <div class="announcement-thumb">
+                        <img src="/ipl/assets/images/card-a.png" alt="Batsman Image" />
+                    </div>
+                    <div class="announcement-content">
+                        <div class="tag">ANNOUNCEMENTS</div>
+                        <div class="title">Royal Twin Strikes: Bhuvneshwar's Game-Changing Over Bengaluru Vs...</div>
+                        <div class="date">05 Jun, 2025</div>
                     </div>
                 </div>
             </div>
-
         </section>
-        <footer class="sponsor-footer">
-            <div class="sponsor-footer__main">
-                <div class="sponsor-footer__block sponsor-footer__block--title">
-                    <div class="sponsor-footer__label sponsor-footer__label--title">TITLE SPONSOR</div>
-                    <div class="logo-item">
-                        <img src="assets/images/sponsors/tata.png" alt="TATA" class="sponsor-footer__logo" />
+        <!-- IPL App Promo Section Start -->
+        <section class="ipl-app-promo">
+            <div class="ipl-app-promo__img-wrap">
+                <img src="/ipl/assets/images/mobile-card.gif" alt="IPL App Card Left" class="ipl-app-promo__card ipl-app-promo__card--left" />
+                <img src="/ipl/assets/images/iphone.png" alt="IPL Mobile App" class="ipl-app-promo__img" />
+                <img src="/ipl/assets/images/mobile-card.gif" alt="IPL App Card Right" class="ipl-app-promo__card ipl-app-promo__card--right" />
+            </div>
+            <h2 class="ipl-app-promo__title">DOWNLOAD THE OFFICIAL IPL APP</h2>
+            <p class="ipl-app-promo__desc">Get the latest scores on the go. Find the latest content, including match highlights, press conferences and recap all at your fingertips by downloading the official IPL app.</p>
+            <div class="ipl-app-promo__stores">
+                <a href="#" class="ipl-app-promo__store-btn">
+                    <img src="/ipl/assets/images/play-store.png" alt="Download on Google Play" />
+                </a>
+                <a href="#" class="ipl-app-promo__store-btn">
+                    <img src="/ipl/assets/images/app-store.png" alt="Download on App Store" />
+                </a>
+            </div>
+        </section>
+        <!-- IPL App Promo Section End -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-wrap">
+                    <div class="footer-title-wrap">
+                        <span class="footer-title">title sponsor</span>
+                    </div>
+                    <div class="footer-logo">
+                        <img src="/ipl/assets/images/sponsors/tata.png" alt="Mumbai Indians" />
                     </div>
                 </div>
-                <div class="sponsor-footer__block">
-                    <div class="sponsor-footer__label">ASSOCIATE PARTNER</div>
-                    <div class="sponsor-footer__row">
-                        <div class="logo-item">
-                            <img src="assets/images/sponsors/my11cirlce.png" alt="My11Circle" />
+                <div class="footer-wrap associate-partner">
+                    <div class="footer-title-wrap">
+                        <span class="footer-title">associate partner</span>
+                    </div>
+                    <div class="footer-logo">
+                        <img src="/ipl/assets/images/sponsors/my11circle.png" alt="Mumbai Indians" />
+                        <img src="/ipl/assets/images/sponsors/angle.png" alt="AngelOne" />
+                        <img src="/ipl/assets/images/sponsors/rupay.png" alt="RuPay" />
+                    </div>
+                </div>
+                <div class="footer-half-wrap">
+                    <div class="footer-wrap">
+                        <div class="footer-title-wrap">
+                            <span class="footer-title">official<br>umpire partner</span>
                         </div>
-                        <div class="logo-item">
-                            <img src="assets/images/sponsors/angelone.png" alt="AngelOne" />
+                        <div class="footer-logo">
+                            <img src="/ipl/assets/images/sponsors/cement.png" alt="Mumbai Indians" />
                         </div>
-                        <div class="logo-item">
-                            <img src="assets/images/sponsors/rupay.png" alt="RuPay" />
+                    </div>
+                    <div class="footer-wrap">
+                        <div class="footer-title-wrap">
+                            <span class="footer-title">official strategic<br>timeout partner</span>
+                        </div>
+                        <div class="footer-logo">
+                            <img src="/ipl/assets/images/sponsors/ceat.png" alt="Mumbai Indians" />
                         </div>
                     </div>
                 </div>
-                <div class="sponsor-footer__row sponsor-footer__row--split">
-                    <div>
-                        <div class="sponsor-footer__label">OFFICIAL</div>
-                        <div class="sponsor-footer_label">UMPIRE PARTNER</div>
-                        <div class="logo-item">
-                            <img src="assets/images/sponsors/wonder-cement.png" alt="Wonder Cement" />
+                <div class="footer-half-wrap">
+                    <div class="footer-wrap">
+                        <div class="footer-title-wrap">
+                            <span class="footer-title">official<br>broadcaster</span>
+                        </div>
+                        <div class="footer-logo">
+                            <img src="/ipl/assets/images/sponsors/starsp.png" alt="Mumbai Indians" />
                         </div>
                     </div>
-                    <div>
-                        <div class="sponsor-footer__label">OFFICIAL STRATEGIC</div>
-                        <div class="sponsor-footer_label">TIMEOUT PARTNER</div>
-                        <div class="logo-item">
-                            <img src="assets/images/sponsors/ceat.png" alt="CEAT" />
+                    <div class="footer-wrap">
+                        <div class="footer-title-wrap">
+                            <span class="footer-title">official digital<br>streaming partner</span>
                         </div>
-                    </div>
-                </div>
-                <div class="sponsor-footer__row sponsor-footer__row--split">
-                    <div>
-                        <div class="sponsor-footer__label">OFFICIAL</div>
-                        <div class="sponsor-footer_label">BROADCASTER</div>
-                        <div class="logo-item">
-                            <img src="assets/images/sponsors/star-sports.png" alt="Star Sports" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="sponsor-footer__label">OFFICIAL DIGITAL STREAMING PARTNER</div>
-                        <div class="logo-item">
-                            <img src="assets/images/sponsors/jio-hotstar.png" alt="Jio Hotstar" />
+                        <div class="footer-logo">
+                            <img src="/ipl/assets/images/sponsors/jiostar.png" alt="Mumbai Indians" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="sponsor-footer__copyright">
-                Copyright © IPL 2025 All Rights Reserved.
+            <div class="footer-copy">
+                <span>Copyright © 2025 IPL. All rights reserved.</span>
             </div>
         </footer>
         <div class="ipl-bottom-strip" role="navigation" aria-label="Quick Links">
             <div class="ipl-bottom-strip__scroll">
-                <a href="#" class="ipl-bottom-strip__item">
+                <a href="#fixtures" class="ipl-bottom-strip__item">
                     <span class="ipl-bottom-strip__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect x="3" y="5" width="18" height="16" rx="3" stroke="#fff" stroke-width="2" />
@@ -702,7 +864,7 @@
                     </span>
                     <span class="ipl-bottom-strip__label">Fixtures and Results</span>
                 </a>
-                <a href="#" class="ipl-bottom-strip__item">
+                <a href="#points-table" class="ipl-bottom-strip__item">
                     <span class="ipl-bottom-strip__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect x="3" y="13" width="4" height="6" rx="1" stroke="#fff" stroke-width="2" />
@@ -712,7 +874,7 @@
                     </span>
                     <span class="ipl-bottom-strip__label">Points Table</span>
                 </a>
-                <a href="#" class="ipl-bottom-strip__item">
+                <a href="#magic-moments" class="ipl-bottom-strip__item">
                     <span class="ipl-bottom-strip__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <rect x="3" y="3" width="18" height="18" rx="2" stroke="#fff" stroke-width="2" />
@@ -725,6 +887,17 @@
                         </svg>
                     </span>
                     <span class="ipl-bottom-strip__label">Overall Stats</span>
+                </a>
+                <a href="#short-videos" class="ipl-bottom-strip__item">
+                    <span class="ipl-bottom-strip__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="7" r="4" stroke="#fff" stroke-width="2"/>
+                            <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="#fff" stroke-width="2"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="#fff" stroke-width="2"/>
+                            <path d="M21 21v-2a4 4 0 0 0-3-3.85" stroke="#fff" stroke-width="2"/>
+                        </svg>
+                    </span>
+                    <span class="ipl-bottom-strip__label">All Teams</span>
                 </a>
             </div>
         </div>
@@ -790,12 +963,41 @@
                 clickable: true
             },
             slidesPerView: 1,
-            spaceBetween: 24,
+            spaceBetween: 0,
             breakpoints: {
                 900: {
                     slidesPerView: 1
                 }
             }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Stats section click animation
+        document.querySelectorAll('.stats-image').forEach((item, index) => {
+            item.addEventListener('click', function() {
+                // Remove active class from all items
+                document.querySelectorAll('.stats-image').forEach(img => {
+                    img.classList.remove('active');
+                });
+                
+                // Add active class to clicked item (unless it's the first one which is active by default)
+                if (index !== 0) {
+                    this.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
