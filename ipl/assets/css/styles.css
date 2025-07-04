@@ -231,12 +231,14 @@ body {
 	/* border-bottom: 1px solid #e0e0e0; */
 	cursor: pointer;
 	transition: background-color 0.2s;
+
 }
+
+
 
 .navbar__menu .navbar__links li.has-submenu .navbar__submenu-header:hover {
 	background-color: transparent;
 }
-
 .navbar__menu .navbar__links li.has-submenu .navbar__submenu-header a {
 	flex: 1;
 	padding: 0;
@@ -1344,6 +1346,26 @@ body.dark-mode .navbar__logo span {
 
 .latest-videos-section .video-item {
 	flex: 0 0 280px;
+}
+
+.latest-videos-section {
+	position: relative;
+	isolation: isolate;
+}
+
+.latest-videos-section::before {
+	content: '';
+    background: #0b2668;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+}
+
+.latest-videos-section .announcement-title {
+	color: #fff;
 }
 
 .ipl-app-promo {
@@ -2554,22 +2576,37 @@ footer {
 
 /* Team Preferences Section Styles - Mobile Only */
 
-.login-preferences-form {
-	background: #fff;
-	border-radius: 12px;
-	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-	padding: 2rem 1.5rem;
-	width: 100%;
-	max-width: 480px;
-	text-align: center;
+login-preferences-form {
+	position: relative;
+	isolation: isolate;
 }
 
-.login-preferences-subtitle {
-	font-size: 14px;
-	font-weight: 500;
-	color: #2B50AC;
-	margin-bottom: 35px;
-	font-family: 'Manrope', Arial, sans-serif;
+.login-preferences-form::before {
+	content: '';
+	position: absolute;
+	top: 57px;
+	left: -12px;
+	width: 50px;
+	height: 52px;
+	background: url('../images/pattern/preference-pattern-1.svg') no-repeat center center;
+	background-size: contain;
+	opacity: 0.1;
+	z-index: -1;
+}
+
+
+.login-preferences-form::after {
+	content: '';
+	position: absolute;
+	top: 65%;
+	left: -40px;
+	width: 40px;
+	height: 73px;
+	background: url('../images/pattern/login-pattern-2.svg') no-repeat center center;
+	background-size: contain;
+	opacity: 0.1;
+	z-index: -1;
+	rotate: 220deg;
 }
 
 .login-team-list {
@@ -2615,4 +2652,62 @@ footer {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+
+}
+
+.recommended-section {
+	background-color: #F9F9F9;
+	padding-block: 40px 16px;
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+	background-image: url('../images/pattern/recommended-pattern.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+}
+
+.recommended-section > .announcement-header {
+	padding-inline: 16px;
+}
+
+.recommended-shorts-section {
+	padding-block: 0px;
+}
+
+.recommended-header {
+	margin-bottom: 20px;
+}
+
+.recommended-title {
+	font-size: 20px;
+	font-weight: 700;
+	color: #2B50AC;
+	font-family: 'Teko', Arial, sans-serif;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.recommended-content {
+	margin-bottom: 40px;
+}
+
+.recommended-videos-section {
+	padding-block: 0px;
+}
+
+.recommended-magic-moments-section, .recommended-updates-section {
+	padding-inline: 16px;
+}
+
+.recommended-updates-img {
+	width: 100%;
+	height: auto;
+}
+
+.recommended-updates-list {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+
 }
