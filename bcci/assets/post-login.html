@@ -19,44 +19,44 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="main-container">
         <!-- Loading Screen -->
-        <div class="loading" id="loading">
-            <div class="spinner"></div>
+        <div class="loading-screen" id="loading">
+            <div class="loading-spinner"></div>
         </div>
-        <!-- Bottom Accordion Menu -->
-        <div class="bottom-accordion-menu" id="bottomAccordionMenu">
-            <div class="accordion-menu-content">
-                <div class="accordion-item">
+        <!-- Bottom Navigation Panel -->
+        <div class="bottom-navigation-panel" id="bottomNavigationPanel">
+            <div class="navigation-panel-content">
+                <div class="navigation-section">
                     <!-- Content comes first for upward expansion -->
-                    <div class="accordion-content" id="domestic">
-                        <div class="accordion-subitem">
-                            <span class="accordion-subitem-text">International</span>
-                            <div class="accordion-item-content">
-                                <div class="accordion-subitem-item">
+                    <div class="navigation-content" id="domestic">
+                        <div class="navigation-category">
+                            <span class="navigation-category-label">International</span>
+                            <div class="navigation-item-content">
+                                <div class="navigation-category-item">
                                     <span class="text">men</span>
                                 </div>
-                                <div class="accordion-subitem-item">
+                                <div class="navigation-category-item">
                                     <span class="text">women</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="accordion-subitem">
-                            <span class="accordion-subitem-text">Domestic</span>
-                            <div class="accordion-item-content">
-                                <div class="accordion-subitem-item">
+                        <div class="navigation-category">
+                            <span class="navigation-category-label">Domestic</span>
+                            <div class="navigation-item-content">
+                                <div class="navigation-category-item">
                                     <span class="text">men</span>
                                 </div>
-                                <div class="accordion-subitem-item">
+                                <div class="navigation-category-item">
                                     <span class="text">women</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Header comes at bottom -->
-                    <div class="accordion-header" data-toggle="domestic">
-                        <div class="accordion-header-content">
+                    <div class="navigation-header" data-toggle="domestic">
+                        <div class="navigation-header-content">
                             <span>International - men</span>
                             <svg class="submenu-arrow" width="25" height="25" viewBox="0 0 24 24" fill="currentColor">
                                 <path
@@ -199,7 +199,7 @@
             </div>
         </header>
         <!-- Cricket Showcase Swiper -->
-        <div class="showcase">
+        <div class="showcase-section">
             <div class="swiper-container">
                 <div class="swiper cricket-swiper">
                     <div class="swiper-wrapper">
@@ -271,7 +271,7 @@
         </div>
         <!-- Match Cards Section -->
         <div class="match-cards-section">
-            <div class="container">
+            <div class="match-cards-container">
                 <div class="match-cards-swiper swiper">
                     <div class="match-cards-grid swiper-wrapper">
                         <!-- Recent Match Card -->
@@ -402,7 +402,7 @@
         </div>
         <!-- News Cards Section -->
         <div class="news-cards-section">
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="HIGHLIGHTS">
                     HIGHLIGHTS
                     <span class="section-title-icon">
@@ -789,11 +789,11 @@
             </div>
         </div>
         <!-- App Download Section -->
-        <div class="app-download">
+        <div class="app-download-section">
             <img src="/bcci/assets/images/app-download.png" width="100%" alt="App Download">
         </div>
         <div class="recommended-section">
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="RECOMMENDED">
                     RECOMMENDED for you
                 </h2>
@@ -802,7 +802,7 @@
         <!-- Videos Section -->
         <div class="videos-section">
             <!-- Videos Section Title -->
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="VIDEOS">
                     VIDEOS
                     <span class="section-title-icon">
@@ -1116,7 +1116,7 @@
         </div>
         <!-- News Section -->
         <div class="news-section">
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="Galleries">
                     Galleries
                     <span class="section-title-icon">
@@ -1401,7 +1401,7 @@
             <div class="hall-of-fame-tshirt">
                 <img src="/bcci/assets/images/hall-of-fans-tshirt.png" alt="Hall of Fame">
             </div>
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="Hall of Fans">
                     Hall of Fans
                 </h2>
@@ -1484,7 +1484,7 @@
         </div>
         <!-- Series Section -->
         <div class="series-section">
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="SERIES">
                     SERIES
                     <span class="section-title-icon">
@@ -1549,7 +1549,7 @@
         </div>
         <!-- Players Section -->
         <div class="players-section">
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="Players">
                     Players
                     <span class="section-title-icon">
@@ -1594,7 +1594,7 @@
         </div>
         <!-- Gallery Section -->
         <div class="gallery-section">
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="GALLERY">
                     GALLERY
                     <span class="section-title-icon">
@@ -1782,7 +1782,7 @@
         </div>
         <!-- Video Highlights Section -->
         <div class="video-highlight-section">
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="VIDEO HIGHLIGHTS">
                     VIDEO HIGHLIGHTS
                     <span class="section-title-icon">
@@ -2035,9 +2035,9 @@
         </div>
         <!-- Players Section -->
         <div class="game-section">
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="Players">
-                    <p cllass="title-wrap">
+                    <p class="title-wrap">
                         <span class="title1">The Game in</span>
                         <span class="title2">Numbers
                             <span class="section-title-icon">
@@ -2102,7 +2102,7 @@
         </div>
         <!-- Shop Section -->
         <div class="shop-section">
-            <div class="section-title-container">
+            <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="Shop">
                     SHOP
                     <span class="section-title-icon">
@@ -2775,19 +2775,19 @@
             slidesPerView: 1.2,
         });
 
-        // Bottom Accordion Menu functionality
-        const accordionHeaders = document.querySelectorAll('.accordion-header');
-        const accordionSubitems = document.querySelectorAll('.accordion-subitem');
+        // Bottom Navigation Panel functionality
+        const navigationHeaders = document.querySelectorAll('.navigation-header');
+        const navigationCategories = document.querySelectorAll('.navigation-category');
 
-        // Handle accordion header clicks to expand/collapse sections
-        accordionHeaders.forEach(header => {
+        // Handle navigation header clicks to expand/collapse sections
+        navigationHeaders.forEach(header => {
             header.addEventListener('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
 
                 const targetId = this.getAttribute('data-toggle');
                 const targetContent = document.getElementById(targetId);
-                const parentItem = this.closest('.accordion-item');
+                const parentItem = this.closest('.navigation-section');
 
                 // Toggle the clicked section
                 parentItem.classList.toggle('active');
@@ -2795,9 +2795,9 @@
             });
         });
 
-        // Handle accordion subitem clicks for redirection
-        accordionSubitems.forEach(subitem => {
-            subitem.addEventListener('click', function (e) {
+        // Handle navigation category clicks for redirection
+        navigationCategories.forEach(category => {
+            category.addEventListener('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
 
@@ -2808,7 +2808,7 @@
             });
         });
 
-        // Accordion starts closed by default - no initialization needed
+        // Navigation panel starts closed by default - no initialization needed
     });
 </script>
 
