@@ -1233,7 +1233,7 @@ body.dark-mode .navbar__logo span {
 .match-card-section {
 	padding-block: 2.5rem;
 	padding-inline: 1rem;
-	background: url(/ipl/ipl/assets/images/pattern/matches-pattern.png?v=1.1) var(--color-bg-light);
+	background: url(/ipl/assets/images/pattern/matches-pattern.png?v=1.3) var(--color-bg-light);
 }
 
 .match-card-box {
@@ -1481,16 +1481,17 @@ body.dark-mode .navbar__logo span {
 
 .ipl-app-promo {
 	background: var(--color-bg-light);
-	box-shadow: 0 2px 12px var(--color-shadow-secondary);
-	padding: 2.5rem 1.2rem 2rem 1.2rem;
+	/* box-shadow: 0 2px 12px var(--color-shadow-secondary); */
+	padding: 20.5rem 0 3rem;
 	margin-inline: auto;
-	max-width: 100%;
+	/* max-width: 100%;
 	margin-top: -200px;
-	padding-top: 250px;
+	padding-top: 250px; */
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 }
 
 /* .ipl-app-promo__img-wrap {
@@ -1734,6 +1735,7 @@ body.dark-mode .navbar__logo span {
 	font-weight: 400;
 	text-transform: uppercase;
 	color: var(--color-text-light);
+	margin-top: 6px;
 }
 
 .ipl-bottom-strip__item:active,
@@ -3117,3 +3119,152 @@ login-preferences-form {
 
 .dark-mode .updates-img-light { display: none !important; }
 .dark-mode .updates-img-dark { display: inline !important; }
+
+
+/* ==========================================================================
+      IPL PROMO CARD ANIMATION
+      ========================================================================== */
+
+
+/* Animation sequence control */
+.ipl-promo-left {
+	animation: sideElementSequence 18s ease-in-out infinite;
+	transform: translateY(0%);
+	opacity: 1;
+	position: absolute;
+	width: 124px;
+	height: 101px;
+	right: 27px;
+	top: 17%;
+	z-index: 1;
+}
+
+.ipl-promo-right {
+	animation: sideElementSequenceReverse 18s ease-in-out infinite;
+	transform: translateY(0%);
+	opacity: 1;
+	position: absolute;
+	z-index: 1;
+    left: 14px;
+    top: 23%;
+	width: 124px;
+	height: 101px;
+}
+
+.ipl-app-promo-middle {
+	animation: middleElementSequence 18s ease-in-out infinite;
+	animation-delay: 6s;
+	height: 240px;
+    position: absolute;
+	top: 27%;
+    width: 200px;
+
+}
+
+@keyframes sideElementSequence {
+	0% {
+		transform: translateY(0%) translateX(0%);
+	}
+	8.33% {
+		transform: translateY(15%) translateX(0%);
+	}
+	16.67% {
+		transform: translateY(0%) translateX(0%);
+	}
+	25% {
+		transform: translateY(0%) translateX(15%);
+	}
+	33.33% {
+		transform: translateY(0%) translateX(0%);
+	}
+	38.89% {
+		transform: translateY(30%) translateX(15%);
+	}
+	44.44% {
+		transform: translateY(15%) translateX(0%);
+	}
+	50% {
+		transform: translateY(15%) translateX(15%);
+	}
+	55.56% {
+		transform: translateY(30%) translateX(15%);
+	}
+	61.11% {
+		transform: translateY(0%) translateX(15%);
+	}
+	66.67% {
+		transform: translateY(15%) translateX(15%);
+	}
+	100% {
+		transform: translateY(0%) translateX(0%);
+	}
+}
+
+@keyframes sideElementSequenceReverse {
+	0% {
+		transform: translateY(0%) translateX(0%);
+	}
+	8.33% {
+		transform: translateY(0%) translateX(25%);
+	}
+	16.67% {
+		transform: translateY(0%) translateX(0%);
+	}
+	25% {
+		transform: translateY(-25%) translateX(0%);
+	}
+	33.33% {
+		transform: translateY(0%) translateX(0%);
+	}
+	38.89% {
+		transform: translateY(-30%) translateX(15%);
+	}
+	44.44% {
+		transform: translateY(-25%) translateX(0%);
+	}
+	50% {
+		transform: translateY(-25%) translateX(30%);
+	}
+	55.56% {
+		transform: translateY(-30%) translateX(25%);
+	}
+	61.11% {
+		transform: translateY(0%) translateX(25%);
+	}
+	66.67% {
+		transform: translateY(-25%) translateX(25%);
+	}
+	100% {
+		transform: translateY(0%) translateX(0%);
+	}
+}
+
+@keyframes middleElementSequence {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	33.33% {
+		transform: translate(-50%, -50%);
+	}
+	38.89% {
+		transform: translate(-65%, -50%);
+	}
+	44.44% {
+		transform: translate(-50%, -65%);
+	}
+	50% {
+		transform: translate(-45%, -50%);
+	}
+	55.56% {
+		transform: translate(-55%, -50%);
+	}
+	61.11% {
+		transform: translate(-50%, -45%);
+	}
+	66.67% {
+		transform: translate(-50%, -50%);
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
