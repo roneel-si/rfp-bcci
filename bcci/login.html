@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="BCCI">
+    <title>BCCI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200;300;400;500;600;700&family=Fjalla+One&family=Bebas+Neue:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/bcci/assets/css/style.css?v=3.3">
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <!-- Mobile Header Top -->
+            <div class="header-top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header-search-icon">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+
+                <div class="header-logo-section">
+                    <img src="/bcci/assets/images/logo.png" alt="BCCI" class="header-logo">
+                </div>
+                <div class="header-user-section">
+                    <img src="/bcci/assets/images/user.png" alt="User Icon" class="header-user-icon">
+                </div>
+            </div>
+            <!-- Bottom Navigation -->
+            <div class="header-bottom-nav">
+                <div class="header-nav-item active" data-nav="home">
+                    <svg class="header-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                    </svg>
+                    <span class="header-nav-label">HOME</span>
+                </div>
+                <div class="header-nav-item" data-nav="fixtures">
+                    <svg class="header-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
+                    </svg>
+                    <span class="header-nav-label">FIXTURES</span>
+                </div>
+                <div class="header-nav-item" data-nav="series">
+                    <svg class="header-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    <span class="header-nav-label">SERIES</span>
+                </div>
+                <div class="header-nav-item" data-nav="videos">
+                    <svg class="header-nav-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                    <span class="header-nav-label">VIDEOS</span>
+                </div>
+                <div class="header-nav-item" data-nav="menu">
+                    <div class="header-nav-icon-container">
+                        <div class="header-nav-icon header-hamburger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="header-nav-label">MENU</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Modern Navigation Panel -->
+            <div class="modern-navigation-panel" id="modernNavPanel">
+                <div class="nav-panel-content">
+                    <!-- Header Controls -->
+                    <div class="nav-panel-header">
+                        <div class="language-selector">
+                            <span class="selected-language">ENGLISH</span>
+                            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41L12.7 15.29c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.03-.39 1.42 0z" />
+                            </svg>
+                            <div class="language-dropdown">
+                                <div class="language-option selected" data-lang="en">ENGLISH</div>
+                                <div class="language-option" data-lang="hi">हिंदी</div>
+                                <div class="language-option" data-lang="bn">বাংলা</div>
+                                <div class="language-option" data-lang="ta">தமிழ்</div>
+                                <div class="language-option" data-lang="te">తెలుగు</div>
+                            </div>
+                        </div>
+                        <div class="theme-toggle">
+                            <button class="theme-btn active" data-theme="light">LIGHT</button>
+                            <button class="theme-btn" data-theme="dark">DARK</button>
+                        </div>
+                    </div>
+                    <!-- Navigation Menu -->
+                    <div class="nav-menu-container">
+                        <!-- Menu with Submenu -->
+                        <div class="nav-menu-item has-submenu">
+                            <div class="nav-section expandable" data-section="more">
+                                <div class="nav-section-header">
+                                    <span class="nav-section-title">MORE</span>
+                                    <svg class="section-arrow" width="18" height="18" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="nav-section-content nav-submenu">
+                                    <a href="#" class="nav-submenu-item">
+                                        <span>IPL</span>
+                                        <svg class="external-link-icon" width="16" height="16" viewBox="0 0 32 32"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4 15H24.17L17.58 8.41L19 7L28 16L19 25L17.58 23.59L24.17 17H4V15Z" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="nav-submenu-item">
+                                        <span>WPL</span>
+                                        <svg class="external-link-icon" width="16" height="16" viewBox="0 0 32 32"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4 15H24.17L17.58 8.41L19 7L28 16L19 25L17.58 23.59L24.17 17H4V15Z" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="nav-submenu-item">
+                                        <span>VENUES</span>
+                                        <svg class="external-link-icon" width="16" height="16" viewBox="0 0 32 32"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4 15H24.17L17.58 8.41L19 7L28 16L19 25L17.58 23.59L24.17 17H4V15Z" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="nav-submenu-item">
+                                        <span>GALLERIES</span>
+                                        <svg class="external-link-icon" width="16" height="16" viewBox="0 0 32 32"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4 15H24.17L17.58 8.41L19 7L28 16L19 25L17.58 23.59L24.17 17H4V15Z" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="nav-submenu-item">
+                                        <span>JOBS</span>
+                                        <svg class="external-link-icon" width="16" height="16" viewBox="0 0 32 32"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4 15H24.17L17.58 8.41L19 7L28 16L19 25L17.58 23.59L24.17 17H4V15Z" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="nav-submenu-item">
+                                        <span>TENDER</span>
+                                        <svg class="external-link-icon" width="16" height="16" viewBox="0 0 32 32"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4 15H24.17L17.58 8.41L19 7L28 16L19 25L17.58 23.59L24.17 17H4V15Z" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="nav-submenu-item">
+                                        <span>PLAYING CONDITIONS</span>
+                                        <svg class="external-link-icon" width="16" height="16" viewBox="0 0 32 32"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4 15H24.17L17.58 8.41L19 7L28 16L19 25L17.58 23.59L24.17 17H4V15Z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Direct Menu Items -->
+                        <div class="nav-menu-item">
+                            <a href="#" class="nav-main-link">
+                                <span class="nav-section-title">ABOUT</span>
+                            </a>
+                        </div>
+                        <div class="nav-menu-item">
+                            <a href="#" class="nav-main-link">
+                                <span class="nav-section-title">NEWS</span>
+                            </a>
+                        </div>
+                        <div class="nav-menu-item">
+                            <a href="#" class="nav-main-link">
+                                <span class="nav-section-title">MATCHES</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Social Media & Footer -->
+                    <div class="nav-panel-footer">
+                        <div class="social-media-icons">
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="YouTube">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="copyright-text">
+                            © 2025 Vinay. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="login-container">
+            <div class="login-banner">
+                <img src="/bcci/assets/images/login-banner.png" alt="BCCI">
+            </div>
+        </div>
+        <div class="otp-container">
+            <div class="otp-header">
+                <h1 class="otp-title">OTP VERIFICATION</h1>
+                <p class="otp-subtitle">Enter the one-time password sent to 916761XXXX. Please do not share it with
+                    anyone.</p>
+            </div>
+
+            <div class="otp-form">
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" class="otp-input" value="1">
+                    <input type="text" maxlength="1" class="otp-input" value="2">
+                    <input type="text" maxlength="1" class="otp-input" value="4">
+                    <input type="text" maxlength="1" class="otp-input" value="0">
+                    <input type="text" maxlength="1" class="otp-input" value="5">
+                </div>
+
+                <div class="otp-resend">
+                    <p class="resend-text">You didn't receive the OTP? <span class="resend-link">Resend OTP</span></p>
+                    <p class="timer-text">Time remaining 30 sec</p>
+                </div>
+
+                <div class="otp-terms">
+                    <div class="terms-item">
+                        <input type="checkbox" id="terms1" class="terms-checkbox">
+                        <label for="terms1" class="terms-label">I acknowledge that I have read and agree to the <span
+                                class="terms-link">Terms Of Services</span> and <span class="terms-link">Privacy
+                                Policy</span>.</label>
+                    </div>
+                    <div class="terms-item">
+                        <input type="checkbox" id="terms2" class="terms-checkbox">
+                        <label for="terms2" class="terms-label">Disclaimer: Your information may be used by BCCI and
+                            made available to our sponsors and third-parties to provide you with news, updates and
+                            promotional information about BCCI. For further information, please consult our Online <span
+                                class="terms-link">Privacy Policy</span>.</label>
+                    </div>
+                </div>
+
+                <button class="otp-verify-btn">Verify</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modern Navigation Panel functionality
+        const navItems = document.querySelectorAll('.header-nav-item');
+        const modernNavPanel = document.getElementById('modernNavPanel');
+        const hamburgerIcon = document.querySelector('.header-hamburger-icon');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', function () {
+                const navType = this.getAttribute('data-nav');
+                if (navType === 'menu') {
+                    // Toggle menu
+                    if (modernNavPanel.classList.contains('active')) {
+                        // Close menu
+                        modernNavPanel.classList.remove('active');
+                        hamburgerIcon.classList.remove('menu-open');
+                        this.classList.remove('menu-active');
+                        document.body.style.overflow = '';
+                    } else {
+                        // Open menu
+                        modernNavPanel.classList.add('active');
+                        hamburgerIcon.classList.add('menu-open');
+                        this.classList.add('menu-active');
+                        document.body.style.overflow = 'hidden';
+                    }
+                } else {
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Navigation panel will only close when hamburger icon is clicked
+        // Removed outside click functionality as per requirement
+
+        // Theme toggle functionality
+        const themeButtons = document.querySelectorAll('.theme-btn');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', currentTheme);
+
+        themeButtons.forEach(btn => {
+            if (btn.dataset.theme === currentTheme) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+
+            btn.addEventListener('click', function () {
+                const theme = this.dataset.theme;
+                document.body.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+
+                themeButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Expandable sections functionality
+        const expandableSections = document.querySelectorAll('.nav-section.expandable');
+        expandableSections.forEach(section => {
+            const header = section.querySelector('.nav-section-header');
+            header.addEventListener('click', function () {
+                section.classList.toggle('active');
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.nav-search-input');
+        const navMenuItems = document.querySelectorAll('.nav-item, .nav-section');
+
+        searchInput.addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+
+            navMenuItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Language selector dropdown functionality
+        const languageSelector = document.querySelector('.language-selector');
+        const selectedLanguageSpan = document.querySelector('.selected-language');
+        const languageOptions = document.querySelectorAll('.language-option');
+        const dropdownArrow = document.querySelector('.dropdown-arrow');
+
+        if (languageSelector && selectedLanguageSpan && languageOptions.length > 0) {
+            // Toggle dropdown on selector click
+            languageSelector.addEventListener('click', function (e) {
+                e.stopPropagation();
+                console.log('Language selector clicked');
+
+                // Toggle active class
+                const isActive = this.classList.contains('active');
+                this.classList.toggle('active');
+
+                // Log current state
+                console.log('Dropdown is now:', isActive ? 'closed' : 'open');
+            });
+
+            // Handle language option selection
+            languageOptions.forEach(option => {
+                option.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    console.log('Language option clicked:', this.textContent);
+
+                    // Remove selected class from all options
+                    languageOptions.forEach(opt => opt.classList.remove('selected'));
+
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+
+                    // Update selected language text
+                    selectedLanguageSpan.textContent = this.textContent;
+
+                    // Close dropdown
+                    languageSelector.classList.remove('active');
+
+                    // Store selected language
+                    localStorage.setItem('selectedLanguage', this.dataset.lang);
+
+                    console.log('Language changed to:', this.textContent);
+                });
+            });
+
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!languageSelector.contains(e.target)) {
+                    languageSelector.classList.remove('active');
+                }
+            });
+
+            // Load saved language on page load
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            const savedOption = document.querySelector(`[data-lang="${savedLanguage}"]`);
+
+            if (savedOption) {
+                languageOptions.forEach(opt => opt.classList.remove('selected'));
+                savedOption.classList.add('selected');
+                selectedLanguageSpan.textContent = savedOption.textContent;
+                console.log('Loaded saved language:', savedOption.textContent);
+            } else {
+                // Default to English if no saved language or invalid saved language
+                const defaultOption = document.querySelector('[data-lang="en"]');
+                if (defaultOption) {
+                    languageOptions.forEach(opt => opt.classList.remove('selected'));
+                    defaultOption.classList.add('selected');
+                    selectedLanguageSpan.textContent = defaultOption.textContent;
+                    localStorage.setItem('selectedLanguage', 'en');
+                    console.log('Set default language to English');
+                }
+            }
+        } else {
+            console.error('Language selector elements not found');
+        }
+
+        // OTP Input functionality
+        const otpInputs = document.querySelectorAll('.otp-input');
+
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', function (e) {
+                const value = e.target.value;
+
+                // Only allow numbers
+                if (!/^[0-9]$/.test(value)) {
+                    e.target.value = '';
+                    return;
+                }
+
+                // Move to next input
+                if (value && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', function (e) {
+                // Move to previous input on backspace
+                if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+        });
+
+        // Timer functionality
+        let timeLeft = 30;
+        const timerElement = document.querySelector('.timer-text');
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = `Time remaining ${timeLeft} sec`;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                timerElement.textContent = 'Time expired';
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
