@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPL</title>
+    <title>Indian Premier League</title>
+    <link rel="icon" type="image/png" href="/ipl/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/ipl/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/ipl/assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/ipl/assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/ipl/assets/favicon/site.webmanifest" />
     <!-- <link rel="stylesheet" href="/assets/css/styles.css?v=1.5"> -->
-    <link rel="stylesheet" href="/ipl/assets/css/login.css?v=1.11">
+    <link rel="stylesheet" href="/ipl/assets/css/login.css?v=1.14">
 </head>
 
 <body>
@@ -18,7 +23,9 @@
             </div> -->
             <div class="navbar__actions">
                 <div class="navbar__logo">
+                    <a href="/ipl/index.html" title="Indian Premier League">
                     <img src="/ipl/assets/images/ipl-n.png?v=1.1" alt="Indian Premier League Logo">
+                    </a>
                 </div>
                 <div class="nav-actions-wrap">
                     <div class="nav-border">
@@ -548,6 +555,28 @@
             e.preventDefault();
             // Redirect to homepage
             window.location.href = '/ipl/post-login.html';
+        });
+        
+         document.querySelectorAll('.has-submenu .navbar__submenu-header').forEach(header => {
+            header.addEventListener('click', function (e) {
+                e.preventDefault();
+                const submenuItem = this.parentElement;
+                const isExpanded = submenuItem.classList.contains('expanded');
+
+                // Close all other submenus
+                document.querySelectorAll('.has-submenu').forEach(item => {
+                    if (item !== submenuItem) {
+                        item.classList.remove('expanded');
+                    }
+                });
+
+                // Toggle current submenu
+                if (isExpanded) {
+                    submenuItem.classList.remove('expanded');
+                } else {
+                    submenuItem.classList.add('expanded');
+                }
+            });
         });
 
     </script>
