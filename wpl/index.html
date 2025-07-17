@@ -34,6 +34,7 @@
                         </span>
                     </button>
                     <span class="header-bar-divider"></span>
+                    <!-- Header Bar Toggle Button (Two Bar Only) -->
                     <button class="header-bar-toggle" id="headerBarToggle" aria-label="Open menu">
                         <span class="header-bar-toggle-icon">
                             <span class="header-bar-bars">
@@ -75,6 +76,11 @@
                                     </svg>
                                 </a>
                             </div>
+                            <!-- <div class="header-social-item">
+                                <a href="#" class="header-social-link">
+                                    <img src="/wpl/assets/image/header-social-1.svg?v=2.5" alt="Facebook">
+                                </a>
+                            </div> -->
                         </div>
                         <div class="header-sheet-search">
                             <input type="text" placeholder="Search" class="header-search-input">
@@ -1415,93 +1421,124 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('load', function () {
         // Hide loading screen
         setTimeout(() => {
             document.getElementById('loading').classList.add('fade-out');
         }, 1000);
 
-        // Initialize Showcase Swiper
-        const showcaseSwiper = new Swiper('.showcase-swiper', {
+        // Initialize Swiper
+        const swiper = new Swiper('.showcase-swiper', {
             direction: 'horizontal',
             loop: true,
             speed: 800,
             effect: 'fade',
-            fadeEffect: { crossFade: true },
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            pagination: { el: '.swiper-pagination', clickable: true }
+            fadeEffect: {
+                crossFade: true
+            },
+
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
         });
 
         // Initialize Match Swiper
-        const matchSwiper = new Swiper('.match-swiper', {
-            direction: 'horizontal',
-            loop: false,
-            speed: 600,
-            slidesPerView: 1,
-            spaceBetween: 16,
-            centeredSlides: true
-        });
+        const matchSwiperElement = document.querySelector('.match-swiper');
+        if (matchSwiperElement) {
+            const matchSwiper = new Swiper('.match-swiper', {
+                direction: 'horizontal',
+                loop: false,
+                speed: 600,
+                slidesPerView: 1,
+                spaceBetween: 16,
+                centeredSlides: true,
+                // autoplay: {
+                //     delay: 4000,
+                //     disableOnInteraction: false,
+                // },
+            });
+        } else {
+            console.error('Match swiper element not found');
+        }
 
-        // Share tooltip functionality
+        // SHARE TOOLTIP LOGIC
         const shareTooltip = document.getElementById('shareTooltip');
         const shareTooltipOverlay = document.getElementById('shareTooltipOverlay');
         const shareCopiedFeedback = document.getElementById('shareCopiedFeedback');
         const shareCloseBtn = document.getElementById('shareTooltipCloseBtn');
+        const shareOptions = document.querySelectorAll('.share-option');
 
-        function openShareTooltip() {
+        // Open share tooltip (call this from your share button)
+        window.openShareTooltip = function () {
             shareTooltip.classList.add('active');
             shareTooltipOverlay.classList.add('active');
-            document.body.classList.add('overflow-hidden');
-        }
-
-        function closeShareTooltip() {
+        };
+        // Close share tooltip
+        window.closeShareTooltip = function () {
             document.body.classList.remove('overflow-hidden');
             shareTooltip.classList.remove('active');
             shareTooltipOverlay.classList.remove('active');
-        }
+        };
+        shareCloseBtn.addEventListener('click', window.closeShareTooltip);
+        shareTooltipOverlay.addEventListener('click', window.closeShareTooltip);
 
-        shareCloseBtn.addEventListener('click', closeShareTooltip);
-        shareTooltipOverlay.addEventListener('click', closeShareTooltip);
-
-        // Share buttons
-        document.querySelectorAll('.share-option').forEach(option => {
+        // Share actions
+        shareOptions.forEach(option => {
             option.addEventListener('click', function () {
                 const platform = option.getAttribute('data-platform');
                 const shareUrl = window.location.href;
                 const shareText = document.title;
-
-                switch (platform) {
-                    case 'facebook':
-                        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
-                        break;
-                    case 'twitter':
-                        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`, '_blank');
-                        break;
-                    case 'copy':
-                        navigator.clipboard.writeText(shareUrl).then(() => {
-                            shareCopiedFeedback.classList.add('active');
-                            setTimeout(() => shareCopiedFeedback.classList.remove('active'), 1500);
-                        });
-                        break;
+                if (platform === 'facebook') {
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
+                } else if (platform === 'twitter') {
+                    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`, '_blank');
+                } else if (platform === 'whatsapp') {
+                    window.open(`https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`, '_blank');
+                } else if (platform === 'telegram') {
+                    window.open(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`, '_blank');
+                } else if (platform === 'copy') {
+                    navigator.clipboard.writeText(shareUrl).then(() => {
+                        shareCopiedFeedback.classList.add('active');
+                        setTimeout(() => {
+                            shareCopiedFeedback.classList.remove('active');
+                        }, 1500);
+                    });
                 }
             });
         });
 
-        // Attach to share buttons
+        // Example: attach openShareTooltip to all .showcase-share-button
         document.querySelectorAll('.showcase-share-button').forEach(btn => {
             btn.addEventListener('click', function (e) {
                 e.preventDefault();
-                openShareTooltip();
+                document.body.classList.add('overflow-hidden');
+                window.openShareTooltip();
             });
         });
 
-        // Countdown timer
+        // COUNTDOWN TIMER FUNCTIONALITY
         function initCountdown() {
-            const countdownElements = document.querySelectorAll('.match-countdown');
-            if (countdownElements.length === 0) return;
+            console.log('Initializing countdown timer...');
 
+            // Check if countdown elements exist
+            const countdownElements = document.querySelectorAll('.match-countdown');
+            console.log('Found countdown elements:', countdownElements.length);
+
+            if (countdownElements.length === 0) {
+                console.warn('No countdown elements found');
+                return;
+            }
+
+            // Set target date - 6 days from now
             const now = new Date();
             const targetDate = new Date(now.getTime() + (6 * 24 * 60 * 60 * 1000) + (6 * 60 * 60 * 1000) + (43 * 60 * 1000) + (29 * 1000));
+            console.log('Target date set to:', targetDate);
 
             function updateCountdown() {
                 const currentTime = new Date().getTime();
@@ -1513,16 +1550,35 @@
                     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                    countdownElements.forEach(countdown => {
+                    // Update all countdown elements
+                    const countdownElements = document.querySelectorAll('.match-countdown');
+
+                    countdownElements.forEach((countdown, index) => {
                         const items = countdown.querySelectorAll('.match-countdown-item');
                         if (items.length >= 4) {
-                            items[0].querySelector('.match-countdown-value').textContent = String(days).padStart(2, '0');
-                            items[1].querySelector('.match-countdown-value').textContent = String(hours).padStart(2, '0');
-                            items[2].querySelector('.match-countdown-value').textContent = String(minutes).padStart(2, '0');
-                            items[3].querySelector('.match-countdown-value').textContent = String(seconds).padStart(2, '0');
+                            const valueElements = [
+                                items[0].querySelector('.match-countdown-value'),
+                                items[1].querySelector('.match-countdown-value'),
+                                items[2].querySelector('.match-countdown-value'),
+                                items[3].querySelector('.match-countdown-value')
+                            ];
+
+                            if (valueElements.every(el => el !== null)) {
+                                valueElements[0].textContent = String(days).padStart(2, '0');
+                                valueElements[1].textContent = String(hours).padStart(2, '0');
+                                valueElements[2].textContent = String(minutes).padStart(2, '0');
+                                valueElements[3].textContent = String(seconds).padStart(2, '0');
+                            } else {
+                                console.warn('Some countdown value elements not found in countdown', index);
+                            }
+                        } else {
+                            console.warn('Not enough countdown items found in countdown', index, 'Found:', items.length);
                         }
                     });
                 } else {
+                    // Countdown finished
+                    console.log('Countdown finished');
+                    const countdownElements = document.querySelectorAll('.match-countdown');
                     countdownElements.forEach(countdown => {
                         countdown.innerHTML = '<div class="match-countdown-finished">MATCH STARTED</div>';
                     });
@@ -1530,25 +1586,39 @@
                 }
             }
 
+            // Update immediately and start interval
             updateCountdown();
             const countdownInterval = setInterval(updateCountdown, 1000);
         }
 
+        // Wait a bit for DOM to be fully ready, then start countdown
         setTimeout(initCountdown, 1000);
 
-        // Header sheet toggle
+        // HEADER SHEET TOGGLE LOGIC
         const headerBarToggle = document.getElementById('headerBarToggle');
         const headerSheet = document.getElementById('headerSheet');
-
         headerBarToggle.addEventListener('click', function () {
             const isOpen = headerSheet.classList.toggle('active');
-            headerBarToggle.classList.toggle('open', isOpen);
+            if (isOpen) {
+                headerBarToggle.classList.add('open');
+            } else {
+                headerBarToggle.classList.remove('open');
+            }
         });
+        // Optional: close sheet on overlay click or swipe down (mobile UX)
 
-        // Theme switch
+        // HEADER THEME SWITCH LOGIC
         const headerThemeSwitch = document.getElementById('headerThemeSwitch');
+        const body = document.body;
+
         headerThemeSwitch.addEventListener('change', function () {
-            document.body.classList.toggle('dark-theme', headerThemeSwitch.checked);
+            if (headerThemeSwitch.checked) {
+                // Dark mode - add dark class to body
+                body.classList.add('dark-theme');
+            } else {
+                // Light mode - remove dark class from body
+                body.classList.remove('dark-theme');
+            }
         });
     });
 </script>
