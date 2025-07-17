@@ -124,7 +124,8 @@ body.dark-theme {
     .login-checkbox-label,
     .login-resend-link,
     .login-timer,
-    .login-preferences-subtitle {
+    .login-preferences-subtitle,
+    .showcase-meta {
         color: #C7C9D9;
     }
 
@@ -305,7 +306,11 @@ ol {
 
 body {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: var(--color-background-blue);
+    background-color: #000;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 .main-container {
@@ -742,7 +747,7 @@ body {
 .showcase-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
 }
 
@@ -880,7 +885,7 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 4;
-    height: 128px;
+    height: 126px;
     text-overflow: ellipsis;
 }
 
@@ -955,7 +960,7 @@ body {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=1.9') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.4') no-repeat center center;
     background-size: contain;
     opacity: 0.09;
     z-index: -2;
@@ -1059,6 +1064,7 @@ body {
 /* Team Section */
 .section {
     padding-block: 20px;
+    overflow: hidden;
 }
 
 .team-section {
@@ -1074,7 +1080,7 @@ body {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=1.9') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.4') no-repeat center center;
     background-size: contain;
     opacity: 0.09;
     z-index: -2;
@@ -1088,7 +1094,7 @@ body {
     left: -50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=1.9') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.4') no-repeat center center;
     background-size: contain;
     opacity: 0.09;
     z-index: -2;
@@ -1163,7 +1169,7 @@ body {
     left: -60%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=1.9') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.4') no-repeat center center;
     background-size: contain;
     opacity: 0.09;
     z-index: -2;
@@ -1272,7 +1278,7 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
-    height: 35px;
+    height: 33px;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1285,7 +1291,7 @@ body {
     color: #fff;
     -webkit-line-clamp: 4;
     line-clamp: 4;
-    height: 68px;
+    height: 65px;
 }
 
 .magic-moment-meta {
@@ -1534,10 +1540,10 @@ body {
 }
 
 .footer-sponsor-title {
-    margin-bottom: 16px;
     position: sticky;
     left: 0;
     top: 0;
+    margin-bottom: 16px;
 }
 
 .footer-sponsor-title span {
@@ -1573,8 +1579,22 @@ body {
     padding: 24px 16px;
 }
 
+.footer-sponsor-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.footer-sponsor-wrapper::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 4px;
+}
+
 .footer-sponsor-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-width: max-content;
+    align-items: flex-start;
     position: relative;
+    flex-direction: column;
 }
 
 /* Swiper Pagination */
@@ -1865,7 +1885,7 @@ body {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=1.9') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.4') no-repeat center center;
     background-size: cover;
     opacity: 0.09;
     z-index: -2;
@@ -2339,7 +2359,7 @@ body {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=1.9') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.4') no-repeat center center;
     background-size: contain;
     opacity: 0.1;
     pointer-events: none;
@@ -2445,7 +2465,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=1.9') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.4') no-repeat center center;
     background-size: cover;
     z-index: -1;
     opacity: 0.06;
@@ -2475,7 +2495,6 @@ body {
     font-size: 12px;
     font-weight: 700;
     color: var(--color-text-gray);
-    text-align: center;
     line-height: 1.2;
 }
 
@@ -2484,12 +2503,11 @@ body {
 }
 
 .match-team-left .match-team-name {
-    text-align: left;
+    text-align: right;
 }
 
 .match-team-right .match-team-name {
-
-    text-align: right;
+    text-align: left;
 }
 
 .match-team-logo {
@@ -2709,10 +2727,6 @@ body {
     color: #4D0099;
 }
 
-.match-action-btn:hover {
-    background: var(--color-pink-hover);
-}
-
 /* Team Overview Section Scrollable Cards */
 .auction-teams-scroll {
     display: flex;
@@ -2883,7 +2897,6 @@ body {
 }
 
 .auction-video-play:hover {
-    background: var(--color-white);
     transform: translate(-50%, -50%) scale(1.1);
 }
 
@@ -3097,6 +3110,7 @@ body {
 .login-page {
     position: relative;
     isolation: isolate;
+    overflow: hidden;
 }
 
 .login-page::after {
@@ -3106,7 +3120,7 @@ body {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=1.9') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.4') no-repeat center center;
     background-size: contain;
     opacity: 0.06;
     pointer-events: none;
