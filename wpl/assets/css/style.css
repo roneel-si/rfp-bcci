@@ -213,7 +213,6 @@ body.dark-theme {
 
     .exclusive-section {
         background: linear-gradient(180deg, #15254D 0%, #1D3166 100%);
-
     }
 
     .title-arrow,
@@ -236,12 +235,8 @@ body.dark-theme {
     .auction-team-card-image {
         display: none;
     }
-
 }
 
-/* ==========================================================================
-      RESPONSIVE BREAKPOINTS
-      ========================================================================== */
 @media screen and (min-width: 576px) {
     :root {
         --mob-screen: 375px;
@@ -357,7 +352,6 @@ body {
         transform: rotate(360deg);
     }
 }
-
 
 /* Header Bottom Sheet Styles */
 .header-sheet {
@@ -794,7 +788,6 @@ body {
     left: 0;
     width: 100%;
     height: 70%;
-    /* background: linear-gradient(to top, var(--color-overlay-darker), transparent); */
 }
 
 /* Content Styles */
@@ -960,7 +953,7 @@ body {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=2.5') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.9') no-repeat center center;
     background-size: contain;
     opacity: 0.09;
     z-index: -2;
@@ -1080,7 +1073,7 @@ body {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=2.5') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.9') no-repeat center center;
     background-size: contain;
     opacity: 0.09;
     z-index: -2;
@@ -1094,7 +1087,7 @@ body {
     left: -50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=2.5') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.9') no-repeat center center;
     background-size: contain;
     opacity: 0.09;
     z-index: -2;
@@ -1116,7 +1109,7 @@ body {
     cursor: pointer;
     transition: all .3s ease;
     flex-shrink: 0;
-    border-radius: 26px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -1144,7 +1137,6 @@ body {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .team-item:hover .team-item-content {
     transform: scale(1.05);
 }
@@ -1169,7 +1161,7 @@ body {
     left: -60%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=2.5') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.9') no-repeat center center;
     background-size: contain;
     opacity: 0.09;
     z-index: -2;
@@ -1598,7 +1590,6 @@ body {
 }
 
 /* Swiper Pagination */
-
 .swiper-pagination-bullet {
     border-radius: 50px;
 }
@@ -1788,7 +1779,6 @@ body {
 }
 
 /* Leaderboard */
-
 .leaderboard-section {
     background: var(--color-leaderboard-gradient);
 }
@@ -1885,7 +1875,7 @@ body {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=2.5') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.9') no-repeat center center;
     background-size: cover;
     opacity: 0.09;
     z-index: -2;
@@ -2359,7 +2349,7 @@ body {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=2.5') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.9') no-repeat center center;
     background-size: contain;
     opacity: 0.1;
     pointer-events: none;
@@ -2465,7 +2455,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=2.5') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.9') no-repeat center center;
     background-size: cover;
     z-index: -1;
     opacity: 0.06;
@@ -3096,6 +3086,7 @@ body {
 
 .download-content img {
     width: 110px;
+    height: 80%;
 }
 
 .download-link {
@@ -3120,7 +3111,7 @@ body {
     left: 50%;
     width: 100%;
     height: 100%;
-    background: url('/wpl/assets/image/pattern-01.svg?v=2.5') no-repeat center center;
+    background: url('/wpl/assets/image/pattern-01.svg?v=2.9') no-repeat center center;
     background-size: contain;
     opacity: 0.06;
     pointer-events: none;
@@ -3510,7 +3501,6 @@ body {
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-
 /* Center slide scaling with Swiper - Active slide becomes 130px x 130px */
 .login-team-item .swiper-slide-active {
     transform: translateY(-10px) scale(0.9);
@@ -3560,4 +3550,176 @@ body {
 
 .login-page .form-container {
     padding-bottom: 70px;
+}
+
+/* Post login */
+
+.post-login {
+    .post-login-title {
+        margin-top: 24px;
+    }
+
+    .magic-moment::after {
+        display: none;
+    }
+}
+
+/* Team Trophy Dropdown Styles */
+.team-dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.team-dropdown-toggle {
+    background: #55577080;
+    border: none;
+    width: 96px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 10px;
+    font-weight: 600;
+    border-radius: 0 0 0 16px;
+}
+
+.team-dropdown-toggle:focus-visible {
+    outline: 0;
+}
+
+.team-count {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.team-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.team-icon {
+    height: 18px;
+}
+
+.team-dropdown-menu {
+    position: absolute;
+    top: 41px;
+    right: 0;
+    padding: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s;
+    z-index: 1000;
+    overflow: hidden;
+    border-radius: 0 0 0 16px;
+}
+
+.team-dropdown.active .team-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.team-year-item {
+    padding: 10px 16px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    background: #55577080;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.team-year-item:not(:last-child):after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    opacity: 0.1;
+    z-index: 1;
+
+}
+
+.team-year-item:last-child {
+    border-bottom: none;
+}
+
+.team-year-item:hover {
+    background-color: #fff8dc;
+}
+
+.no-trophies {
+    padding: 12px 16px;
+    color: #666;
+    font-size: 13px;
+    font-style: italic;
+    background: white;
+    text-align: center;
+}
+
+/* Ensure dropdown is above other elements */
+.team-item {
+    position: relative;
+}
+
+.login-team-item {
+    position: relative;
+}
+
+/* Engagement */
+.magic-moment {
+    position: relative;
+    isolation: isolate;
+}
+
+.engagement-section {
+    background-color: #EBEBF0;
+}
+
+.engagement-list {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-inline: 16px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.engagement-item {
+    width: 90%;
+    transition: all .3s ease;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.engagement-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.engagement-button {
+    position: absolute;
 }
