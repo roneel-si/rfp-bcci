@@ -8,7 +8,7 @@
     <meta name="robots" content="index, follow">
     <meta name="description" content="BCCI">
     <title>BCCI</title>
-    <link rel="icon" href="/bcci/assets/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="/bcci/assets/images/logo.png?v=4.6" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -16,7 +16,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200;300;400;500;600;700&family=Fjalla+One&family=Bebas+Neue:wght@400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/bcci/assets/css/style.css?v=3.3">
+    <link rel="stylesheet" href="/bcci/assets/css/style.css?v=4.6">
+    <style>
+        html {
+            scroll-padding-top: 100px;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,49 +34,47 @@
         <header class="header">
             <!-- Mobile Header Top -->
             <div class="header-top">
-                <a href="/bcci/index.html" class="header-logo-section">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header-search-icon">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header-search-icon">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
 
-                <div class="header-logo-section">
-                    <img src="/bcci/assets/images/logo.png" alt="BCCI" class="header-logo">
-                </div>
-                <a href="/bcci/game.html" target="_blank" class="header-user-section">
-                    <img src="/bcci/assets/images/user.png" alt="User Icon" class="header-user-icon">
+                <a href="/bcci/index.html" target="_self" class="header-logo-section">
+                    <img src="/bcci/assets/images/logo.png?v=4.6" alt="BCCI" class="header-logo">
+                </a>
+                <a href="https://demo.sportz.io/bcci/game.html" target="_self" class="header-user-section">
+                    <img src="/bcci/assets/images/user-profile.png?v=4.6" alt="User Icon" class="header-user-icon">
                 </a>
             </div>
             <!-- Bottom Navigation -->
             <div class="header-bottom-nav">
-                <div class="header-nav-item active" data-nav="home">
+                <a href="#showcasetop" class="header-nav-item" data-nav="home" style="text-decoration: none;">
                     <svg class="header-nav-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
                     </svg>
                     <span class="header-nav-label">HOME</span>
-                </div>
-                <div class="header-nav-item" data-nav="fixtures">
+                </a>
+                <a href="#fixtures" class="header-nav-item" data-nav="fixtures" style="text-decoration: none;">
                     <svg class="header-nav-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
                     </svg>
                     <span class="header-nav-label">FIXTURES</span>
-                </div>
-                <div class="header-nav-item" data-nav="series">
+                </a>
+                <a href="#series" class="header-nav-item" data-nav="series" style="text-decoration: none;">
                     <svg class="header-nav-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                     </svg>
                     <span class="header-nav-label">SERIES</span>
-                </div>
-                <div class="header-nav-item" data-nav="videos">
+                </a>
+                <a href="#videos" class="header-nav-item" data-nav="videos" style="text-decoration: none;">
                     <svg class="header-nav-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M8 5v14l11-7z" />
                     </svg>
                     <span class="header-nav-label">VIDEOS</span>
-                </div>
+                </a>
                 <div class="header-nav-item" data-nav="menu">
                     <div class="header-nav-icon-container">
                         <div class="header-nav-icon header-hamburger-icon">
@@ -203,25 +206,25 @@
                     <!-- Social Media & Footer -->
                     <div class="nav-panel-footer">
                         <div class="social-media-icons">
-                            <a href="#" class="social-icon" aria-label="Facebook">
+                            <a href="https://www.facebook.com/IndianCricketTeam" target="_blank" class="social-icon" aria-label="Facebook">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                                 </svg>
                             </a>
-                            <a href="#" class="social-icon" aria-label="Instagram">
+                            <a href="https://www.instagram.com/indiancricketteam" target="_blank" class="social-icon" aria-label="Instagram">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                                 </svg>
                             </a>
-                            <a href="#" class="social-icon" aria-label="Twitter">
+                            <a href="https://twitter.com/BCCI" target="_blank" class="social-icon" aria-label="Twitter">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                                 </svg>
                             </a>
-                            <a href="#" class="social-icon" aria-label="YouTube">
+                            <a href="https://www.youtube.com/hashtag/bcci" target="_blank" class="social-icon" aria-label="YouTube">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
@@ -279,12 +282,12 @@
             </div>
         </div>
         <!-- Cricket Showcase Swiper -->
-        <div class="showcase-section">
+        <div class="showcase-section" id="showcasetop">
             <div class="swiper-container">
                 <div class="swiper cricket-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide showcase-slide"
-                            style="background-image: url('/bcci/assets/images/showcase-1.png');">
+                            style="background-image: url('/bcci/assets/images/showcase-1.png?v=4.6');">
                             <div class="slide-overlay"></div>
                             <!-- Play Button in Center -->
                             <div class="play-button-center">
@@ -305,7 +308,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide showcase-slide"
-                            style="background-image: url('/bcci/assets/images/showcase-2.png');">
+                            style="background-image: url('/bcci/assets/images/showcase-2.png?v=4.6');">
                             <div class="slide-overlay"></div>
                             <!-- Play Button in Center -->
                             <div class="play-button-center">
@@ -326,7 +329,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide showcase-slide"
-                            style="background-image: url('/bcci/assets/images/showcase-3.png');">
+                            style="background-image: url('/bcci/assets/images/showcase-3.png?v=4.6');">
                             <div class="slide-overlay"></div>
                             <!-- Play Button in Center -->
                             <div class="play-button-center">
@@ -353,7 +356,7 @@
             </div>
         </div>
         <!-- Match Cards Section -->
-        <div class="match-cards-section">
+        <div class="match-cards-section" id="fixtures">
             <div class="match-cards-container">
                 <div class="match-cards-swiper swiper">
                     <div class="match-cards-grid swiper-wrapper">
@@ -366,7 +369,7 @@
                             <div class="teams-section">
                                 <div class="team team-a">
                                     <div class="team-logo">
-                                        <img src="/bcci/assets/images/team-1.png" alt="India">
+                                        <img src="/bcci/assets/images/team-1.png?v=4.6" alt="India">
                                     </div>
                                     <div class="team-info">
                                         <div class="team-name">INDIA</div>
@@ -376,7 +379,7 @@
                                 <div class="vs-section">VS</div>
                                 <div class="team team-b">
                                     <div class="team-logo">
-                                        <img src="/bcci/assets/images/team-2.png" alt="England">
+                                        <img src="/bcci/assets/images/team-2.png?v=4.6" alt="England">
                                     </div>
                                     <div class="team-info">
                                         <div class="team-name">ENGLAND</div>
@@ -403,7 +406,7 @@
                             <div class="teams-section">
                                 <div class="team team-a">
                                     <div class="team-logo">
-                                        <img src="/bcci/assets/images/team-1.png" alt="India">
+                                        <img src="/bcci/assets/images/team-1.png?v=4.6" alt="India">
                                     </div>
                                     <div class="team-info">
                                         <div class="team-name">INDIA</div>
@@ -413,7 +416,7 @@
                                 <div class="vs-section">VS</div>
                                 <div class="team team-b">
                                     <div class="team-logo">
-                                        <img src="/bcci/assets/images/team-2.png" alt="England">
+                                        <img src="/bcci/assets/images/team-2.png?v=4.6" alt="England">
                                     </div>
                                     <div class="team-info">
                                         <div class="team-name">ENGLAND</div>
@@ -440,7 +443,7 @@
                             <div class="teams-section">
                                 <div class="team team-a">
                                     <div class="team-logo">
-                                        <img src="/bcci/assets/images/team-1.png" alt="India">
+                                        <img src="/bcci/assets/images/team-1.png?v=4.6" alt="India">
                                     </div>
                                     <div class="team-info">
                                         <div class="team-name">INDIA</div>
@@ -449,7 +452,7 @@
                                 <div class="vs-section">VS</div>
                                 <div class="team team-b">
                                     <div class="team-logo">
-                                        <img src="/bcci/assets/images/team-2.png" alt="New Zealand">
+                                        <img src="/bcci/assets/images/team-2.png?v=4.6" alt="New Zealand">
                                     </div>
                                     <div class="team-info">
                                         <div class="team-name">NEW ZEALAND</div>
@@ -500,7 +503,7 @@
                     <!-- News Card 1 -->
                     <div class="news-card">
                         <div class="news-image">
-                            <img src="/bcci/assets/images/card-1.png" alt="Cricket Match">
+                            <img src="/bcci/assets/images/card-1.png?v=4.6" alt="Cricket Match">
                         </div>
                         <div class="news-overlay">
                             <div class="news-content">
@@ -509,7 +512,7 @@
                                 <div class="news-footer">
                                     <span class="news-date">9th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -552,7 +555,7 @@
                     <!-- News Card 2 -->
                     <div class="news-card">
                         <div class="news-image">
-                            <img src="/bcci/assets/images/card-2.png" alt="Cricket Match">
+                            <img src="/bcci/assets/images/card-2.png?v=4.6" alt="Cricket Match">
                         </div>
                         <div class="news-overlay">
                             <div class="news-content">
@@ -562,7 +565,7 @@
                                 <div class="news-footer">
                                     <span class="news-date">6th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -605,7 +608,7 @@
                     <!-- News Card 3 -->
                     <div class="news-card">
                         <div class="news-image">
-                            <img src="/bcci/assets/images/card-3.png" alt="Cricket Match">
+                            <img src="/bcci/assets/images/card-3.png?v=4.6" alt="Cricket Match">
                         </div>
                         <div class="news-overlay">
                             <div class="news-content">
@@ -615,7 +618,7 @@
                                 <div class="news-footer">
                                     <span class="news-date">7th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -658,7 +661,7 @@
                     <!-- News Card 4 -->
                     <div class="news-card">
                         <div class="news-image">
-                            <img src="/bcci/assets/images/card-4.png" alt="Cricket Match">
+                            <img src="/bcci/assets/images/card-4.png?v=4.6" alt="Cricket Match">
                         </div>
                         <div class="news-overlay">
                             <div class="news-content">
@@ -668,7 +671,7 @@
                                 <div class="news-footer">
                                     <span class="news-date">6th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -712,7 +715,7 @@
                     <div class="news-card">
                         <div class="news-image">
                             <div class="news-image">
-                                <img src="/bcci/assets/images/card-5.png" alt="Cricket Match">
+                                <img src="/bcci/assets/images/card-5.png?v=4.6" alt="Cricket Match">
                             </div>
                         </div>
                         <div class="news-overlay">
@@ -722,7 +725,7 @@
                                 <div class="news-footer">
                                     <span class="news-date">5th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -765,7 +768,7 @@
                     <div class="news-card">
                         <div class="news-image">
                             <div class="news-image">
-                                <img src="/bcci/assets/images/card-6.png" alt="Cricket Match">
+                                <img src="/bcci/assets/images/card-6.png?v=4.6" alt="Cricket Match">
                             </div>
                         </div>
                         <div class="news-overlay">
@@ -775,7 +778,7 @@
                                 <div class="news-footer">
                                     <span class="news-date">5th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -818,7 +821,7 @@
                     <div class="news-card">
                         <div class="news-image">
                             <div class="news-image">
-                                <img src="/bcci/assets/images/card-7.png" alt="Cricket Match">
+                                <img src="/bcci/assets/images/card-7.png?v=4.6" alt="Cricket Match">
                             </div>
                         </div>
                         <div class="news-overlay">
@@ -828,7 +831,7 @@
                                 <div class="news-footer">
                                     <span class="news-date">5th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -873,7 +876,9 @@
         </div>
         <!-- App Download Section -->
         <div class="app-download-section">
-            <img src="/bcci/assets/images/app-download.png" width="100%" alt="App Download">
+            <a href="https://apps.apple.com/in/app/bcci/id1374037778" target="_blank" style="display: flex;width: 100%;height: 100%;">
+                <img src="/bcci/assets/images/app-download.png?v=4.6" width="100%" alt="App Download">
+            </a>
         </div>
         <div class="recommended-section">
             <div class="section-title-wrapper">
@@ -883,7 +888,7 @@
             </div>
         </div>
         <!-- Videos Section -->
-        <div class="videos-section">
+        <div class="videos-section" id="videos">
             <!-- Videos Section Title -->
             <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="VIDEOS">
@@ -907,7 +912,7 @@
                     <!-- Video Item 1 -->
                     <div class="video-item">
                         <div class="video-thumbnail">
-                            <img src="/bcci/assets/images/video-1.png" alt="Cricket Video">
+                            <img src="/bcci/assets/images/video-1.png?v=4.6" alt="Cricket Video">
                             <div class="video-play-button">
                                 <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z" />
@@ -920,10 +925,10 @@
                             </h3>
                             <div class="video-footer">
                                 <div class="video-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Eye Icon">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Eye Icon">
                                 </div>
                                 <div class="video-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -965,7 +970,7 @@
                     <!-- Video Item 2 -->
                     <div class="video-item">
                         <div class="video-thumbnail">
-                            <img src="/bcci/assets/images/video-2.png" alt="Cricket Video">
+                            <img src="/bcci/assets/images/video-2.png?v=4.6" alt="Cricket Video">
                             <div class="video-play-button">
                                 <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z" />
@@ -978,10 +983,10 @@
                             </h3>
                             <div class="video-footer">
                                 <div class="video-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Eye Icon">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Eye Icon">
                                 </div>
                                 <div class="video-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1023,7 +1028,7 @@
                     <!-- Video Item 3 -->
                     <div class="video-item">
                         <div class="video-thumbnail">
-                            <img src="/bcci/assets/images/video-3.png" alt="Cricket Video">
+                            <img src="/bcci/assets/images/video-3.png?v=4.6" alt="Cricket Video">
                             <div class="video-play-button">
                                 <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z" />
@@ -1036,10 +1041,10 @@
                             </h3>
                             <div class="video-footer">
                                 <div class="video-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Eye Icon">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Eye Icon">
                                 </div>
                                 <div class="video-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1081,7 +1086,7 @@
                     <!-- Video Item 4 -->
                     <div class="video-item">
                         <div class="video-thumbnail">
-                            <img src="/bcci/assets/images/video-4.png" alt="Cricket Video">
+                            <img src="/bcci/assets/images/video-4.png?v=4.6" alt="Cricket Video">
                             <div class="video-play-button">
                                 <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z" />
@@ -1094,10 +1099,10 @@
                             </h3>
                             <div class="video-footer">
                                 <div class="video-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Eye Icon">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Eye Icon">
                                 </div>
                                 <div class="video-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1139,7 +1144,7 @@
                     <!-- Video Item 4 -->
                     <div class="video-item">
                         <div class="video-thumbnail">
-                            <img src="/bcci/assets/images/video-5.png" alt="Cricket Video">
+                            <img src="/bcci/assets/images/video-5.png?v=4.6" alt="Cricket Video">
                             <div class="video-play-button">
                                 <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z" />
@@ -1152,10 +1157,10 @@
                             </h3>
                             <div class="video-footer">
                                 <div class="video-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Eye Icon">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Eye Icon">
                                 </div>
                                 <div class="video-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1214,7 +1219,7 @@
                     <!-- News Item 1 -->
                     <div class="news-item">
                         <div class="news-item-image">
-                            <img src="/bcci/assets/images/news-1.png" alt="Cricket Match">
+                            <img src="/bcci/assets/images/news-1.png?v=4.6" alt="Cricket Match">
                         </div>
                         <div class="news-item-content">
                             <div class="news-item-date">9th Mar, 2025</div>
@@ -1222,10 +1227,10 @@
                             </h3>
                             <div class="news-item-footer">
                                 <div class="news-item-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Eye Icon">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Eye Icon">
                                 </div>
                                 <div class="news-item-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1267,7 +1272,7 @@
                     <!-- News Item 2 -->
                     <div class="news-item">
                         <div class="news-item-image">
-                            <img src="/bcci/assets/images/news-2.png" alt="Cricket Match">
+                            <img src="/bcci/assets/images/news-2.png?v=4.6" alt="Cricket Match">
                         </div>
                         <div class="news-item-content">
                             <div class="news-item-date">9th Mar, 2025</div>
@@ -1275,10 +1280,10 @@
                             </h3>
                             <div class="news-item-footer">
                                 <div class="news-item-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Eye Icon">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Eye Icon">
                                 </div>
                                 <div class="news-item-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1320,7 +1325,7 @@
                     <!-- News Item 3 -->
                     <div class="news-item">
                         <div class="news-item-image">
-                            <img src="/bcci/assets/images/news-3.png" alt="Cricket Match">
+                            <img src="/bcci/assets/images/news-3.png?v=4.6" alt="Cricket Match">
                         </div>
                         <div class="news-item-content">
                             <div class="news-item-date">9th Mar, 2025</div>
@@ -1328,10 +1333,10 @@
                             </h3>
                             <div class="news-item-footer">
                                 <div class="news-item-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Eye Icon">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Eye Icon">
                                 </div>
                                 <div class="news-item-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1373,7 +1378,7 @@
                     <!-- News Item 4 -->
                     <div class="news-item">
                         <div class="news-item-image">
-                            <img src="/bcci/assets/images/news-4.png" alt="Cricket Match">
+                            <img src="/bcci/assets/images/news-4.png?v=4.6" alt="Cricket Match">
                         </div>
                         <div class="news-item-content">
                             <div class="news-item-date">9th Mar, 2025</div>
@@ -1381,10 +1386,10 @@
                             </h3>
                             <div class="news-item-footer">
                                 <div class="news-item-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Eye Icon">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Eye Icon">
                                 </div>
                                 <div class="news-item-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1425,7 +1430,7 @@
                     </div>
                     <div class="news-item">
                         <div class="news-item-image">
-                            <img src="/bcci/assets/images/news-5.png" alt="Cricket Match">
+                            <img src="/bcci/assets/images/news-5.png?v=4.6" alt="Cricket Match">
                         </div>
                         <div class="news-item-content">
                             <div class="news-item-date">9th Mar, 2025</div>
@@ -1433,10 +1438,10 @@
                             </h3>
                             <div class="news-item-footer">
                                 <div class="news-item-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Eye Icon">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Eye Icon">
                                 </div>
                                 <div class="news-item-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1482,7 +1487,7 @@
         <!-- Hall of Fame Section -->
         <div class="hall-of-fame">
             <div class="hall-of-fame-tshirt">
-                <img src="/bcci/assets/images/hall-of-fans-tshirt.png" alt="Hall of Fame">
+                <img src="/bcci/assets/images/hall-of-fans-tshirt.png?v=4.6" alt="Hall of Fame">
             </div>
             <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="Hall of Fans">
@@ -1493,80 +1498,85 @@
                 <div class="hall-of-fame-card">
                     <div class="hall-of-fame-card-head">
                         <p class="hall-of-fame-count">1000</p>
-                        <img src="/bcci/assets/images/hall-of-user1.png" height="60" width="60" alt="Hall of Fame">
+                        <img src="/bcci/assets/images/hall-of-user1.png?v=4.6" height="60" width="60"
+                            alt="Hall of Fame">
                         <p class="hall-of-fame-title">
                             <span class="fname">Nitesh</span>
                             <span class="lname">Dambe</span>
                         </p>
                     </div>
                     <div class="hall-of-fame-card-footer">
-                        <img src="/bcci/assets/images/coin.png" alt="Hall of Fame">
+                        <img src="/bcci/assets/images/coin.png?v=4.6" alt="Hall of Fame">
                         <span class="points">1000</span>
                     </div>
                 </div>
                 <div class="hall-of-fame-card">
                     <div class="hall-of-fame-card-head">
                         <p class="hall-of-fame-count">1000</p>
-                        <img src="/bcci/assets/images/hall-of-user1.png" height="60" width="60" alt="Hall of Fame">
+                        <img src="/bcci/assets/images/hall-of-user1.png?v=4.6" height="60" width="60"
+                            alt="Hall of Fame">
                         <p class="hall-of-fame-title">
                             <span class="fname">Nitesh</span>
                             <span class="lname">Dambe</span>
                         </p>
                     </div>
                     <div class="hall-of-fame-card-footer">
-                        <img src="/bcci/assets/images/coin.png" alt="Hall of Fame">
+                        <img src="/bcci/assets/images/coin.png?v=4.6" alt="Hall of Fame">
                         <span class="points">1000</span>
                     </div>
                 </div>
                 <div class="hall-of-fame-card">
                     <div class="hall-of-fame-card-head">
                         <p class="hall-of-fame-count">1000</p>
-                        <img src="/bcci/assets/images/hall-of-user1.png" height="60" width="60" alt="Hall of Fame">
+                        <img src="/bcci/assets/images/hall-of-user1.png?v=4.6" height="60" width="60"
+                            alt="Hall of Fame">
                         <p class="hall-of-fame-title">
                             <span class="fname">Nitesh</span>
                             <span class="lname">Dambe</span>
                         </p>
                     </div>
                     <div class="hall-of-fame-card-footer">
-                        <img src="/bcci/assets/images/coin.png" alt="Hall of Fame">
+                        <img src="/bcci/assets/images/coin.png?v=4.6" alt="Hall of Fame">
                         <span class="points">1000</span>
                     </div>
                 </div>
                 <div class="hall-of-fame-card">
                     <div class="hall-of-fame-card-head">
                         <p class="hall-of-fame-count">1000</p>
-                        <img src="/bcci/assets/images/hall-of-user1.png" height="60" width="60" alt="Hall of Fame">
+                        <img src="/bcci/assets/images/hall-of-user1.png?v=4.6" height="60" width="60"
+                            alt="Hall of Fame">
                         <p class="hall-of-fame-title">
                             <span class="fname">Nitesh</span>
                             <span class="lname">Dambe</span>
                         </p>
                     </div>
                     <div class="hall-of-fame-card-footer">
-                        <img src="/bcci/assets/images/coin.png" alt="Hall of Fame">
+                        <img src="/bcci/assets/images/coin.png?v=4.6" alt="Hall of Fame">
                         <span class="points">1000</span>
                     </div>
                 </div>
                 <div class="hall-of-fame-card">
                     <div class="hall-of-fame-card-head">
                         <p class="hall-of-fame-count">1000</p>
-                        <img src="/bcci/assets/images/hall-of-user1.png" height="60" width="60" alt="Hall of Fame">
+                        <img src="/bcci/assets/images/hall-of-user1.png?v=4.6" height="60" width="60"
+                            alt="Hall of Fame">
                         <p class="hall-of-fame-title">
                             <span class="fname">Nitesh</span>
                             <span class="lname">Dambe</span>
                         </p>
                     </div>
                     <div class="hall-of-fame-card-footer">
-                        <img src="/bcci/assets/images/coin.png" alt="Hall of Fame">
+                        <img src="/bcci/assets/images/coin.png?v=4.6" alt="Hall of Fame">
                         <span class="points">1000</span>
                     </div>
                 </div>
             </div>
-            <a href="/bcci/post-login.html" class="hall-of-fame-banner">
-                <img src="/bcci/assets/images/bcc-banner.png" alt=" Hall of Fame Banner">
+            <a href="https://demo.sportz.io/bcci/game.html" target="_blank" class="hall-of-fame-banner">
+                <img src="/bcci/assets/images/bcc-banner.png?v=4.6" alt=" Hall of Fame Banner">
             </a>
         </div>
         <!-- Series Section -->
-        <div class="series-section">
+        <div class="series-section" id="series">
             <div class="section-title-wrapper">
                 <h2 class="section-title" data-title="SERIES">
                     SERIES
@@ -1654,22 +1664,22 @@
                 <div class="players-grid">
                     <div class="player-item">
                         <div class="player-image">
-                            <img src="/bcci/assets/images/player-1.png" alt="Player Image">
+                            <img src="/bcci/assets/images/player-1.png?v=4.6" alt="Player Image">
                         </div>
                     </div>
                     <div class="player-item">
                         <div class="player-image">
-                            <img src="/bcci/assets/images/player-2.png" alt="Player Image">
+                            <img src="/bcci/assets/images/player-2.png?v=4.6" alt="Player Image">
                         </div>
                     </div>
                     <div class="player-item">
                         <div class="player-image">
-                            <img src="/bcci/assets/images/player-3.png" alt="Player Image">
+                            <img src="/bcci/assets/images/player-3.png?v=4.6" alt="Player Image">
                         </div>
                     </div>
                     <div class="player-item">
                         <div class="player-image">
-                            <img src="/bcci/assets/images/player-4.png" alt="Player Image">
+                            <img src="/bcci/assets/images/player-4.png?v=4.6" alt="Player Image">
                         </div>
                     </div>
                 </div>
@@ -1691,9 +1701,9 @@
                 <div class="gallery-grid">
                     <div class="gallery-item">
                         <div class="gallery-image">
-                            <img src="/bcci/assets/images/galarry-1.png" alt="Cricket Gallery">
+                            <img src="/bcci/assets/images/galarry-1.png?v=4.6" alt="Cricket Gallery">
                             <div class="image-count">
-                                <img src="/bcci/assets/images/view-photo.png" alt="">
+                                <img src="/bcci/assets/images/view-photo.png?v=4.6" alt="">
                             </div>
                         </div>
                         <div class="gallery-content">
@@ -1704,10 +1714,10 @@
                             </h3>
                             <div class="gallery-footer">
                                 <div class="gallery-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Gallery Stats">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Gallery Stats">
                                 </div>
                                 <div class="gallery-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1748,9 +1758,9 @@
                     </div>
                     <div class="gallery-item">
                         <div class="gallery-image">
-                            <img src="/bcci/assets/images/galarry-2.png" alt="Cricket Gallery">
+                            <img src="/bcci/assets/images/galarry-2.png?v=4.6" alt="Cricket Gallery">
                             <div class="image-count">
-                                <img src="/bcci/assets/images/view-photo.png" alt="">
+                                <img src="/bcci/assets/images/view-photo.png?v=4.6" alt="">
                             </div>
                         </div>
                         <div class="gallery-content">
@@ -1761,10 +1771,10 @@
                             </h3>
                             <div class="gallery-footer">
                                 <div class="gallery-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Gallery Stats">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Gallery Stats">
                                 </div>
                                 <div class="gallery-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1805,9 +1815,9 @@
                     </div>
                     <div class="gallery-item">
                         <div class="gallery-image">
-                            <img src="/bcci/assets/images/galarry-3.png" alt="Cricket Gallery">
+                            <img src="/bcci/assets/images/galarry-3.png?v=4.6" alt="Cricket Gallery">
                             <div class="image-count">
-                                <img src="/bcci/assets/images/view-photo.png" alt="">
+                                <img src="/bcci/assets/images/view-photo.png?v=4.6" alt="">
                             </div>
                         </div>
                         <div class="gallery-content">
@@ -1818,10 +1828,10 @@
                             </h3>
                             <div class="gallery-footer">
                                 <div class="gallery-stats">
-                                    <img src="/bcci/assets/images/share-strip.png" alt="Gallery Stats">
+                                    <img src="/bcci/assets/images/share-strip.png?v=4.6" alt="Gallery Stats">
                                 </div>
                                 <div class="gallery-share">
-                                    <img src="/bcci/assets/images/share-dark.png" alt="Share Icon">
+                                    <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
                                     <div class="share-tooltip">
                                         <div class="share-options">
                                             <div class="share-option" data-platform="facebook">
@@ -1880,7 +1890,7 @@
                     <!-- Video Highlight Card 1 -->
                     <div class="video-highlight-card">
                         <div class="video-highlight-image">
-                            <img src="/bcci/assets/images/card-1.png" alt="Cricket Video">
+                            <img src="/bcci/assets/images/card-1.png?v=4.6" alt="Cricket Video">
                             <!-- Video Play Icon -->
                             <div class="video-play-icon">
                                 <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
@@ -1897,7 +1907,7 @@
                                 <div class="video-highlight-footer">
                                     <span class="video-highlight-date">9th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -1940,7 +1950,7 @@
                     <!-- Video Highlight Card 2 -->
                     <div class="video-highlight-card">
                         <div class="video-highlight-image">
-                            <img src="/bcci/assets/images/card-2.png" alt="Cricket Video">
+                            <img src="/bcci/assets/images/card-2.png?v=4.6" alt="Cricket Video">
                             <!-- Video Play Icon -->
                             <div class="video-play-icon">
                                 <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
@@ -1957,7 +1967,7 @@
                                 <div class="video-highlight-footer">
                                     <span class="video-highlight-date">6th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -2000,7 +2010,7 @@
                     <!-- Video Highlight Card 3 -->
                     <div class="video-highlight-card">
                         <div class="video-highlight-image">
-                            <img src="/bcci/assets/images/card-3.png" alt="Cricket Video">
+                            <img src="/bcci/assets/images/card-3.png?v=4.6" alt="Cricket Video">
                             <!-- Video Play Icon -->
                             <div class="video-play-icon">
                                 <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
@@ -2016,7 +2026,7 @@
                                 <div class="video-highlight-footer">
                                     <span class="video-highlight-date">7th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -2059,7 +2069,7 @@
                     <!-- Video Highlight Card 4 -->
                     <div class="video-highlight-card">
                         <div class="video-highlight-image">
-                            <img src="/bcci/assets/images/card-4.png" alt="Cricket Video">
+                            <img src="/bcci/assets/images/card-4.png?v=4.6" alt="Cricket Video">
                             <!-- Video Play Icon -->
                             <div class="video-play-icon">
                                 <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
@@ -2076,7 +2086,7 @@
                                 <div class="video-highlight-footer">
                                     <span class="video-highlight-date">6th Mar, 2025</span>
                                     <div class="share-icon">
-                                        <img src="/bcci/assets/images/share.png" alt="Share Icon">
+                                        <img src="/bcci/assets/images/share.png?v=4.6" alt="Share Icon">
                                         <div class="share-tooltip">
                                             <div class="share-options">
                                                 <div class="share-option" data-platform="facebook">
@@ -2148,7 +2158,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide game-player-item">
                             <div class="game-player-image">
-                                <img src="/bcci/assets/images/game-player-1.png" alt="Player Image">
+                                <img src="/bcci/assets/images/game-player-1.png?v=4.6" alt="Player Image">
                             </div>
                             <div class="game-player-button">
                                 <a href="/#">
@@ -2160,7 +2170,7 @@
                         </div>
                         <div class="swiper-slide game-player-item">
                             <div class="game-player-image">
-                                <img src="/bcci/assets/images/game-player-2.png" alt="Player Image">
+                                <img src="/bcci/assets/images/game-player-2.png?v=4.6" alt="Player Image">
                             </div>
                             <div class="game-player-button">
                                 <a href="/#">
@@ -2172,7 +2182,7 @@
                         </div>
                         <div class="swiper-slide game-player-item">
                             <div class="game-player-image">
-                                <img src="/bcci/assets/images/game-player-3.png" alt="Player Image">
+                                <img src="/bcci/assets/images/game-player-3.png?v=4.6" alt="Player Image">
                             </div>
                             <div class="game-player-button">
                                 <a href="/#">
@@ -2202,7 +2212,7 @@
             <div class="shop-container">
                 <div class="shop-product-card">
                     <div class="shop-product-image">
-                        <img src="/bcci/assets/images/shop-1.png" alt="India Cricket Jersey">
+                        <img src="/bcci/assets/images/shop-1.png?v=4.6" alt="India Cricket Jersey">
                     </div>
                     <div class="shop-product-content">
                         <h3 class="shop-product-title">India Cricket One Day International 2025 Jersey</h3>
@@ -2224,7 +2234,7 @@
 
                 <div class="shop-product-card">
                     <div class="shop-product-image">
-                        <img src="/bcci/assets/images/shop-2.png" alt="India Cricket Jersey">
+                        <img src="/bcci/assets/images/shop-2.png?v=4.6" alt="India Cricket Jersey">
                     </div>
                     <div class="shop-product-content">
                         <h3 class="shop-product-title">INDCRI TRVL TEE</h3>
@@ -2245,7 +2255,7 @@
                 </div>
                 <div class="shop-product-card">
                     <div class="shop-product-image">
-                        <img src="/bcci/assets/images/shop-3.png" alt="India Cricket Jersey">
+                        <img src="/bcci/assets/images/shop-3.png?v=4.6" alt="India Cricket Jersey">
                     </div>
                     <div class="shop-product-content">
                         <h3 class="shop-product-title">IND CRI TRN HD
@@ -2267,7 +2277,7 @@
                 </div>
                 <div class="shop-product-card">
                     <div class="shop-product-image">
-                        <img src="/bcci/assets/images/shop-4.png" alt="India Cricket Jersey">
+                        <img src="/bcci/assets/images/shop-4.png?v=4.6" alt="India Cricket Jersey">
                     </div>
                     <div class="shop-product-content">
                         <h3 class="shop-product-title">FW24 India Cricket T20 International Jersey</h3>
@@ -2293,7 +2303,7 @@
             <!-- 2025 Champions Trophy -->
             <div class="trophy-section">
                 <div class="trophy-container">
-                    <img src="/bcci/assets/images/trophy-1.png" class="trophy-img" alt="Trophy 1">
+                    <img src="/bcci/assets/images/trophy-1.png?v=4.6" class="trophy-img" alt="Trophy 1">
                 </div>
                 <div class="trophy-content">
                     <div class="trophy-left">
@@ -2309,7 +2319,7 @@
             <!-- 2024 World Cup -->
             <div class="trophy-section">
                 <div class="trophy-container">
-                    <img src="/bcci/assets/images/thropy-2.png" class="trophy-img" alt="Trophy 2">
+                    <img src="/bcci/assets/images/thropy-2.png?v=4.6" class="trophy-img" alt="Trophy 2">
                 </div>
                 <div class="trophy-content">
                     <div class="trophy-left">
@@ -2325,7 +2335,7 @@
             <!-- 2022 Under-19 World Cup -->
             <div class="trophy-section">
                 <div class="trophy-container">
-                    <img src="/bcci/assets/images/thropy-3.png" class="trophy-img" alt="Trophy 3">
+                    <img src="/bcci/assets/images/thropy-3.png?v=4.6" class="trophy-img" alt="Trophy 3">
                 </div>
                 <div class="trophy-content">
                     <div class="trophy-left">
@@ -2345,7 +2355,7 @@
             <!-- 2011 World Cup -->
             <div class="trophy-section">
                 <div class="trophy-container">
-                    <img src="/bcci/assets/images/thropy-4.png" class="trophy-img" alt="Trophy 4">
+                    <img src="/bcci/assets/images/thropy-4.png?v=4.6" class="trophy-img" alt="Trophy 4">
                 </div>
                 <div class="trophy-content">
                     <div class="trophy-left">
@@ -2362,7 +2372,7 @@
             <!-- 1983 World Cup -->
             <div class="trophy-section">
                 <div class="trophy-container">
-                    <img src="/bcci/assets/images/thropy-5.png" class="trophy-img" alt="Trophy 5">
+                    <img src="/bcci/assets/images/thropy-5.png?v=4.6" class="trophy-img" alt="Trophy 5">
                 </div>
                 <div class="trophy-content">
                     <div class="trophy-left">
@@ -2382,7 +2392,7 @@
             <div class="footer-top">
                 <div class="footer-social-section">
                     <div class="footer-logo">
-                        <img src="/bcci/assets/images/logo.png" alt="BCCI Logo" class="footer-bcci-logo">
+                        <img src="/bcci/assets/images/logo.png?v=4.6" alt="BCCI Logo" class="footer-bcci-logo">
                     </div>
                     <div class="footer-links-text">
                         <div class="footer-links-text-container">
@@ -2394,25 +2404,24 @@
                         </div>
                     </div>
                     <div class="footer-social-icons">
-                        <a href="#" class="social-icon facebook" aria-label="Facebook">
+                        <a href="https://www.facebook.com/IndianCricketTeam" target="_blank" class="social-icon facebook" aria-label="Facebook">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
                         </a>
-                        <a href="#" class="social-icon instagram" aria-label="Instagram">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-2.504 0-4.534-2.03-4.534-4.534s2.03-4.534 4.534-4.534 4.534 2.03 4.534 4.534-2.03 4.534-4.534 4.534zm7.119 0c-2.504 0-4.534-2.03-4.534-4.534s2.03-4.534 4.534-4.534 4.534 2.03 4.534 4.534-2.03 4.534-4.534 4.534z" />
+                        <a href="https://www.instagram.com/indiancricketteam" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
                             </svg>
                         </a>
-                        <a href="#" class="social-icon twitter" aria-label="X (Twitter)">
+                        <a href="https://twitter.com/BCCI" target="_blank" class="social-icon twitter" aria-label="X (Twitter)">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                             </svg>
                         </a>
-                        <a href="#" class="social-icon youtube" aria-label="YouTube">
+                        <a href="https://www.youtube.com/hashtag/bcci" target="_blank" class="social-icon youtube" aria-label="YouTube">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
@@ -2426,39 +2435,39 @@
                 <div class="sponsor-group">
                     <h4 class="sponsor-title">TITLE SPONSOR</h4>
                     <div class="sponsor-logo">
-                        <img src="/bcci/assets/images/idfc-bank.png" alt="IDFC FIRST Bank">
+                        <img src="/bcci/assets/images/idfc-bank.png?v=4.6" alt="IDFC FIRST Bank">
                     </div>
                 </div>
                 <div class="sponsor-group">
                     <h4 class="sponsor-title">LEAD SPONSOR</h4>
                     <div class="sponsor-logo">
-                        <img src="/bcci/assets/images/dream11.png" width="120px" alt="Dream11">
+                        <img src="/bcci/assets/images/dream11.png?v=4.6" width="120px" alt="Dream11">
                     </div>
                 </div>
                 <div class="sponsor-group">
                     <h4 class="sponsor-title">KIT SPONSOR</h4>
                     <div class="sponsor-logo">
-                        <img src="/bcci/assets/images/kit.png" width="50px" alt="adidas">
+                        <img src="/bcci/assets/images/kit.png?v=4.6" width="50px" alt="adidas">
                     </div>
                 </div>
                 <div class="sponsor-group official-partners">
                     <h4 class="sponsor-title">OFFICIAL PARTNERS</h4>
                     <div class="sponsor-logos-row">
-                        <img src="/bcci/assets/images/sbi-life.png" alt="SBI Life">
-                        <img src="/bcci/assets/images/campus.png" alt="CAMPUS">
-                        <img src="/bcci/assets/images/atomberg.png" alt="atomberg">
+                        <img src="/bcci/assets/images/sbi-life.png?v=4.6" alt="SBI Life">
+                        <img src="/bcci/assets/images/campus.png?v=4.6" alt="CAMPUS">
+                        <img src="/bcci/assets/images/atomberg.png?v=4.6" alt="atomberg">
                     </div>
                 </div>
                 <div class="sponsor-group">
                     <h4 class="sponsor-title">OFFICIAL BROADCASTER</h4>
                     <div class="sponsor-logo">
-                        <img src="/bcci/assets/images/star-sports.png" alt="Star Sports">
+                        <img src="/bcci/assets/images/star-sports.png?v=4.6" alt="Star Sports">
                     </div>
                 </div>
                 <div class="sponsor-group">
                     <h4 class="sponsor-title">OFFICIAL DIGITAL STREAMING PARTNER</h4>
                     <div class="sponsor-logo">
-                        <img src="/bcci/assets/images/jio-hotstar.png" alt="JioHotstar">
+                        <img src="/bcci/assets/images/jio-hotstar.png?v=4.6" alt="JioHotstar">
                     </div>
                 </div>
             </div>
@@ -2565,7 +2574,7 @@
                 <div class="score-team-section score-team-section-1">
                     <div class="score-team-header">
                         <span class="score-flag">
-                            <img src="/bcci/assets/images/logo.png" alt="India Flag">
+                            <img src="/bcci/assets/images/logo.png?v=4.6" alt="India Flag">
                         </span>
                         <span class="score-team-name">IND</span>
                     </div>
@@ -2585,7 +2594,7 @@
                 <div class="score-team-section score-team-section-2">
                     <div class="score-team-header">
                         <span class="score-flag">
-                            <img src="/bcci/assets/images/england-logo.png" alt="India Flag">
+                            <img src="/bcci/assets/images/england-logo.png?v=4.6" alt="India Flag">
                         </span>
                         <span class="score-team-name">ENG</span>
                     </div>
@@ -2850,10 +2859,11 @@
             });
         });
 
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        // Set default theme as light
+        const savedTheme = 'light';
         document.body.setAttribute('data-theme', savedTheme);
         document.querySelector(`[data-theme="${savedTheme}"]`).classList.add('active');
+        localStorage.setItem('theme', savedTheme);
 
         // Expandable sections functionality
         const expandableSections = document.querySelectorAll('.nav-section.expandable');
