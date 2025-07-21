@@ -1505,16 +1505,19 @@ body.dark-mode .navbar__logo span {
 
 .ipl-app-promo {
 	background: var(--color-bg-light);
-	/* box-shadow: 0 2px 12px var(--color-shadow-secondary); */
-	padding: 20.5rem 0 3rem;
+	padding: 0;
 	margin-inline: auto;
-	/* max-width: 100%;
-	margin-top: -200px;
-	padding-top: 250px; */
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	padding-bottom: 25px;
+}
+
+.ipl-app-promo__img-wrap {
+	height: 300px;
+	width: 100%;
 	position: relative;
 }
 
@@ -3215,7 +3218,7 @@ login-preferences-form {
 	width: 124px;
 	height: 101px;
 	right: 27px;
-	top: 17%;
+	top: 35%;
 	z-index: 1;
 }
 
@@ -3226,7 +3229,7 @@ login-preferences-form {
 	position: absolute;
 	z-index: 1;
 	left: 14px;
-	top: 23%;
+	top: 35%;
 	width: 124px;
 	height: 101px;
 }
@@ -3236,7 +3239,9 @@ login-preferences-form {
 	animation-delay: 6s;
 	height: 240px;
 	position: absolute;
-	top: 27%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 200px;
 
 }
