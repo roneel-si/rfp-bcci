@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="WPL">
+    <link rel="icon" href="/wpl/assets/image/wpl-logo.svg?v=3.3" type="image/x-icon">
+    <title>WPL</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/wpl/assets/css/style.css?v=3.3">
+</head>
+
+<body>
+    <div class="main-container login-page">
+        <!-- Header Section -->
+        <header class="header-section">
+            <div class="header-bar">
+                <a href="index.html" target="_blank" class="header-bar-left">
+                    <img src="/wpl/assets/image/wpl-logo.svg?v=3.3" alt="WPL Logo" class="header-bar-logo">
+                </a>
+                <div class="header-bar-right">
+                    <button class="header-bar-login">
+                        LOGIN
+                        <span class="header-bar-login-icon">
+                            <img src="/wpl/assets/image/user-login.svg?v=3.3" alt="user-login">
+                        </span>
+                    </button>
+                    <span class="header-bar-divider"></span>
+                    <!-- Header Bar Toggle Button (Two Bar Only) -->
+                    <button class="header-bar-toggle" id="headerBarToggle" aria-label="Open menu">
+                        <span class="header-bar-toggle-icon">
+                            <span class="header-bar-bars">
+                                <span class="header-bar-bar"></span>
+                                <span class="header-bar-bar"></span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="header-sheet" id="headerSheet">
+                <div class="header-sheet-inner">
+                    <div class="header-sheet-top">
+                        <div class="header-social-list">
+                            <div class="header-social-item">
+                                <a href="#" class="header-social-link">
+                                    <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="header-social-item">
+                                <a href="#" class="header-social-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#fff"
+                                        viewBox="0 0 24 24" aria-label="Instagram Icon">
+                                        <path
+                                            d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25-.75a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="header-social-item">
+                                <a href="#" class="header-social-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20"
+                                        height="20" fill="#fff" aria-label="X (Twitter) Icon">
+                                        <path
+                                            d="M714.1 558.8L1169.1 0h-107.2L673.5 480.1 309.6 0H0l482.5 660.6L0 1227h107.2l423.3-488.4L897.9 1227H1200L714.1 558.8zM599.4 708.5l-49.1-67.2L152.1 78.6h119.6l351 480.1 49.1 67.2L1054 1148.4H934.4L599.4 708.5z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <!-- <div class="header-social-item">
+                                    <a href="#" class="header-social-link">
+                                        <img src="/wpl/assets/image/header-social-1.svg?v=3.3" alt="Facebook">
+                                    </a>
+                                </div> -->
+                        </div>
+                        <div class="header-sheet-search">
+                            <input type="text" placeholder="Search" class="header-search-input">
+                            <button class="header-search-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="11" cy="11" r="8" stroke="#fff" stroke-width="2" />
+                                    <line x1="18" y1="18" x2="22" y2="22" stroke="#fff" stroke-width="2" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header-sheet-section header-sheet-teams-section">
+                        <div class="header-sheet-label">TEAMS</div>
+                        <div class="header-sheet-teams">
+                            <div class="header-team-card">
+                                <img src="/wpl/assets/image/header-team-1.png?v=3.3" alt="Delhi Capitals">
+                            </div>
+                            <div class="header-team-card">
+                                <img src="/wpl/assets/image/header-team-2.png?v=3.3" alt="Gujarat Giants">
+                            </div>
+                            <div class="header-team-card">
+                                <img src="/wpl/assets/image/header-team-3.png?v=3.3" alt="Mumbai Indians">
+                            </div>
+                            <div class="header-team-card">
+                                <img src="/wpl/assets/image/header-team-4.png?v=3.3" alt="Mumbai Indians">
+                            </div>
+                            <div class="header-team-card">
+                                <img src="/wpl/assets/image/header-team-5.png?v=3.3" alt="Mumbai Indians">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-sheet-section">
+                        <div class="header-sheet-label">WHAT ARE YOU LOOKING FOR?</div>
+                        <div class="header-sheet-links">
+                            <a href="#" class="header-sheet-link">TICKETS
+                                <img src="/wpl/assets/image/redirect.svg?v=3.3" alt="arrow-right">
+                            </a>
+                            <a href="#" class="header-sheet-link">FAN ZONE
+                                <svg class="header-arrow" width="25" height="25" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41L12.7 15.29c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.03-.39 1.42 0z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="header-sheet-link">MATCHES
+                                <svg class="header-arrow" width="25" height="25" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41L12.7 15.29c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.03-.39 1.42 0z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="header-sheet-link">VIDEOS
+                                <svg class="header-arrow" width="25" height="25" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41L12.7 15.29c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.03-.39 1.42 0z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-sheet-bottom">
+                        <div class="header-sheet-logos">
+                            <img src="/wpl/assets/image/bcc-wpl-logo.svg?v=3.3" alt="BCCI" height="22">
+                        </div>
+                        <div class="header-sheet-theme-toggle">
+                            <span>LIGHT</span>
+                            <label class="header-switch">
+                                <input type="checkbox" id="headerThemeSwitch">
+                                <span class="header-slider"></span>
+                            </label>
+                            <span>DARK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- OTP Verification Section -->
+        <div class="form-container">
+            <div class="login-container">
+                <div class="login-logo">
+                    <img src="/wpl/assets/image/wpl-logo-color.png?v=3.3" alt="TATA WPL">
+                </div>
+
+                <h1 class="login-title">OTP VERIFICATION</h1>
+
+                <p class="login-description">
+                    Enter the OTP sent to 9167616038. Be careful not to share the
+                    code with anyone.
+                </p>
+
+                <div class="login-otp-container check-otp">
+                    <input type="text" class="login-otp-input" maxlength="1" id="otp1" value="1">
+                    <input type="text" class="login-otp-input" maxlength="1" id="otp2" value="2">
+                    <input type="text" class="login-otp-input" maxlength="1" id="otp3" value="3">
+                    <input type="text" class="login-otp-input" maxlength="1" id="otp4" value="4">
+                    <input type="text" class="login-otp-input" maxlength="1" id="otp5" value="5">
+                    <input type="text" class="login-otp-input" maxlength="1" id="otp6" value="6">
+                </div>
+
+                <div class="login-resend-container">
+                    <a href="#" class="login-resend-link">Didn't receive the OTP? <span
+                            class="login-resend-link-text">Resend
+                            OTP</span></a>
+                </div>
+
+                <div class="login-timer">
+                    Time Remaining : <span id="timer">20</span> sec
+                </div>
+
+                <div class="login-disclaimer">
+                    <div class="login-checkbox-container">
+                        <input type="checkbox" class="login-checkbox" id="disclaimer1">
+                        <label for="disclaimer1" class="login-checkbox-label">
+                            Disclaimer: Your information may be used by IPL and made available to our sponsors and
+                            third-parties
+                            to provide you with news and promotional communications directly related to the Indian
+                            Premier
+                            League. <a href="#">Online Privacy Policy</a>. <a href="#">Privacy Policy</a>.
+                        </label>
+                    </div>
+
+                    <div class="login-checkbox-container">
+                        <input type="checkbox" class="login-checkbox" id="disclaimer2">
+                        <label for="disclaimer2" class="login-checkbox-label">
+                            I acknowledge that I have read and agree to the <a href="#">Terms of Service and Privacy
+                                Policy</a>.
+                        </label>
+                    </div>
+                </div>
+
+                <div class="login-button-container">
+                    <a href="#" class="login-button" id="verifyProceedBtn">VERFIY AND PROCEED</a>
+                </div>
+            </div>
+
+            <!-- Profile Completion Section -->
+            <div class="login-profile-container" id="profileSection" style="display: none;">
+                <div class="login-logo">
+                    <img src="/wpl/assets/image/wpl-logo-color.png?v=3.3" alt="TATA WPL">
+                </div>
+
+                <h1 class="login-title">COMPLETE YOUR PROFILE</h1>
+
+                <div class="login-form">
+                    <div class="login-input-group">
+                        <label class="login-label">First Name <span class="login-required">*</span></label>
+                        <input type="text" class="login-input" placeholder="Enter your first name" id="firstName">
+                    </div>
+
+                    <div class="login-input-group">
+                        <label class="login-label">Last Name <span class="login-required">*</span></label>
+                        <input type="text" class="login-input" placeholder="Enter your last name" id="lastName">
+                    </div>
+
+                    <div class="login-input-group">
+                        <label class="login-label">Mobile No.</label>
+                        <div class="login-input-wrapper">
+                            <input type="tel" class="login-input login-mobile-input"
+                                placeholder="Enter your mobile number" id="mobileNo" value="9167616038">
+                            <div class="login-check-icon" id="mobileCheck" disabled>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" fill="#22c55e" />
+                                    <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="login-input-group">
+                        <label class="login-label">Country <span class="login-required">*</span></label>
+                        <div class="login-dropdown" id="countryDropdown">
+                            <div class="login-dropdown-selected" id="countrySelected">
+                                <span class="login-dropdown-text">Enter your Country</span>
+                                <svg class="login-dropdown-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="login-dropdown-options" id="countryOptions">
+                                <div class="login-dropdown-option" data-value="india">India</div>
+                                <div class="login-dropdown-option" data-value="usa">United States</div>
+                                <div class="login-dropdown-option" data-value="uk">United Kingdom</div>
+                                <div class="login-dropdown-option" data-value="canada">Canada</div>
+                                <div class="login-dropdown-option" data-value="australia">Australia</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="login-input-group">
+                        <label class="login-label">City <span class="login-required">*</span></label>
+                        <div class="login-dropdown" id="cityDropdown">
+                            <div class="login-dropdown-selected" id="citySelected">
+                                <span class="login-dropdown-text">Enter your City</span>
+                                <svg class="login-dropdown-arrow" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="login-dropdown-options" id="cityOptions">
+                                <div class="login-dropdown-option" data-value="mumbai">Mumbai</div>
+                                <div class="login-dropdown-option" data-value="delhi">Delhi</div>
+                                <div class="login-dropdown-option" data-value="bangalore">Bangalore</div>
+                                <div class="login-dropdown-option" data-value="pune">Pune</div>
+                                <div class="login-dropdown-option" data-value="hyderabad">Hyderabad</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-button-container">
+                        <a href="#" class="login-button" id="nextBtn">NEXT</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Preferences Section -->
+            <div class="login-preferences-container" id="preferencesSection" style="display: none;">
+                <div class="login-logo">
+                    <img src="/wpl/assets/image/wpl-logo-color.png?v=3.3" alt="TATA WPL">
+                </div>
+
+                <h1 class="login-title">MY PREFERENCES</h1>
+                <p class="login-preferences-subtitle">Select your Favourite Team</p>
+
+                <div class="login-teams-container">
+                    <!-- Swiper Container -->
+                    <div class="swiper login-teams-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="login-team-item" data-team="rcb" data-index="0">
+                                    <div class="login-team-circle">
+                                        <img src="/wpl/assets/image/circle-team-logo-1.png?v=3.3"
+                                            alt="Royal Challengers Bengaluru">
+                                        <div class="login-team-check">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" fill="#BF0071" />
+                                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="login-team-item" data-team="mi" data-index="1">
+                                    <div class="login-team-circle">
+                                        <img src="/wpl/assets/image/circle-team-logo-2.png?v=3.3" alt="Mumbai Indians">
+                                        <div class="login-team-check">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" fill="#BF0071" />
+                                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="login-team-item" data-team="csk" data-index="2">
+                                    <div class="login-team-circle">
+                                        <img src="/wpl/assets/image/circle-team-logo-3.png?v=3.3"
+                                            alt="Chennai Super Kings">
+                                        <div class="login-team-check">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" fill="#BF0071" />
+                                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="login-team-item" data-team="dc" data-index="3">
+                                    <div class="login-team-circle">
+                                        <img src="/wpl/assets/image/circle-team-logo-4.png?v=3.3" alt="Delhi Capitals">
+                                        <div class="login-team-check">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" fill="#BF0071" />
+                                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="login-team-item" data-team="upw" data-index="4">
+                                    <div class="login-team-circle">
+                                        <img src="/wpl/assets/image/circle-team-logo-5.png?v=3.3" alt="UP Warriorz">
+                                        <div class="login-team-check">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" fill="#BF0071" />
+                                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="login-team-item" data-team="gt" data-index="5">
+                                    <div class="login-team-circle">
+                                        <img src="/wpl/assets/image/circle-team-logo-1.png?v=3.3" alt="Gujarat Titans">
+                                        <div class="login-team-check">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" fill="#BF0071" />
+                                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="login-team-item" data-team="kkr" data-index="6">
+                                    <div class="login-team-circle">
+                                        <img src="/wpl/assets/image/circle-team-logo-2.png?v=3.3"
+                                            alt="Kolkata Knight Riders">
+                                        <div class="login-team-check">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" fill="#BF0071" />
+                                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="login-team-item" data-team="lsg" data-index="7">
+                                    <div class="login-team-circle">
+                                        <img src="/wpl/assets/image/circle-team-logo-3.png?v=3.3"
+                                            alt="Lucknow Super Giants">
+                                        <div class="login-team-check">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" fill="#BF0071" />
+                                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="login-team-item" data-team="rr" data-index="8">
+                                    <div class="login-team-circle">
+                                        <img src="/wpl/assets/image/circle-team-logo-4.png?v=3.3"
+                                            alt="Rajasthan Royals">
+                                        <div class="login-team-check">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" fill="#BF0071" />
+                                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="login-team-item" data-team="srh" data-index="9">
+                                    <div class="login-team-circle">
+                                        <img src="/wpl/assets/image/circle-team-logo-5.png?v=3.3"
+                                            alt="Sunrisers Hyderabad">
+                                        <div class="login-team-check">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" fill="#BF0071" />
+                                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-button-container">
+                    <a href="/wpl/post-login.html" class="login-button" id="letsGetStartedBtn">LETS GET STARTED</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        let teamSwiper;
+        let selectedTeamIndex = 1; // Start with Mumbai Indians
+
+        // Initialize Swiper on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            initTeamSwiper();
+        });
+
+        function initTeamSwiper() {
+            teamSwiper = new Swiper('.login-teams-swiper', {
+                slidesPerView: 2,
+                centeredSlides: true,
+                loop: false,
+                initialSlide: selectedTeamIndex,
+                allowTouchMove: true,
+                effect: 'slide',
+                speed: 400,
+                grabCursor: true,
+
+
+                // Scale effect for center slide
+                on: {
+                    init: function () {
+                        updateSlideStates(this);
+                    },
+                    slideChange: function () {
+                        updateSlideStates(this);
+                    },
+                    transitionEnd: function () {
+                        updateSlideStates(this);
+                    }
+                }
+            });
+        }
+
+        function updateSlideStates(swiper) {
+            const slides = swiper.slides;
+            const activeIndex = swiper.activeIndex;
+
+            slides.forEach((slide, index) => {
+                const teamItem = slide.querySelector('.login-team-item');
+                if (teamItem) {
+                    // Remove all scale and selection classes
+                    teamItem.classList.remove('swiper-active', 'swiper-prev', 'swiper-next');
+
+                    // Add appropriate class based on position
+                    if (index === activeIndex) {
+                        teamItem.classList.add('swiper-active');
+                        // Automatically select the center team
+                        selectTeam(teamItem);
+                    } else if (index === activeIndex - 1) {
+                        teamItem.classList.add('swiper-prev');
+                    } else if (index === activeIndex + 1) {
+                        teamItem.classList.add('swiper-next');
+                    }
+                }
+            });
+        }
+
+        // OTP Input Navigation
+        const otpInputs = document.querySelectorAll('.login-otp-input');
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', function (e) {
+                e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                if (e.target.value.length === 1 && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Backspace' && e.target.value === '' && index > 0) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+        });
+
+        // Timer Countdown
+        let timeLeft = 20;
+        const timerElement = document.getElementById('timer');
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timerElement.textContent = '0';
+            }
+        }, 1000);
+
+        // Section Switching
+        document.getElementById('verifyProceedBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.login-container').style.display = 'none';
+            document.getElementById('profileSection').style.display = 'block';
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('profileSection').style.display = 'none';
+            document.getElementById('preferencesSection').style.display = 'block';
+        });
+
+        // Dropdown Functionality
+        function initDropdown(dropdownId, optionsId, selectedId) {
+            const dropdown = document.getElementById(dropdownId);
+            const options = document.getElementById(optionsId);
+            const selected = document.getElementById(selectedId);
+            const selectedText = selected.querySelector('.login-dropdown-text');
+
+            selected.addEventListener('click', function (e) {
+                e.stopPropagation();
+                dropdown.classList.toggle('active');
+                document.querySelectorAll('.login-dropdown').forEach(dd => {
+                    if (dd !== dropdown) dd.classList.remove('active');
+                });
+            });
+
+            options.addEventListener('click', function (e) {
+                if (e.target.classList.contains('login-dropdown-option')) {
+                    selectedText.textContent = e.target.textContent;
+                    selectedText.classList.add('selected');
+                    dropdown.classList.remove('active');
+                }
+            });
+        }
+
+        initDropdown('countryDropdown', 'countryOptions', 'countrySelected');
+        initDropdown('cityDropdown', 'cityOptions', 'citySelected');
+
+        document.addEventListener('click', function () {
+            document.querySelectorAll('.login-dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        });
+
+        // Team Selection
+        function selectTeam(teamElement) {
+            // Remove selection from all teams
+            document.querySelectorAll('.login-team-item').forEach(team => {
+                team.classList.remove('selected', 'selecting');
+            });
+
+            // Add selection to clicked team
+            teamElement.classList.add('selecting');
+            setTimeout(() => {
+                teamElement.classList.add('selected');
+                teamElement.classList.remove('selecting');
+            }, 150);
+
+            // Store selected team index
+            selectedTeamIndex = parseInt(teamElement.getAttribute('data-index'));
+        }
+
+        // Team Click Handlers
+        document.addEventListener('click', function (e) {
+            const teamItem = e.target.closest('.login-team-item');
+            if (teamItem) {
+                e.preventDefault();
+                selectTeam(teamItem);
+
+                // Move clicked team to center using Swiper
+                const teamIndex = parseInt(teamItem.getAttribute('data-index'));
+                if (teamIndex !== undefined && !isNaN(teamIndex) && teamSwiper) {
+                    teamSwiper.slideTo(teamIndex);
+                }
+            }
+        });
+
+        // HEADER SHEET TOGGLE LOGIC
+        const headerBarToggle = document.getElementById('headerBarToggle');
+        const headerSheet = document.getElementById('headerSheet');
+        headerBarToggle.addEventListener('click', function () {
+            const isOpen = headerSheet.classList.toggle('active');
+            if (isOpen) {
+                headerBarToggle.classList.add('open');
+            } else {
+                headerBarToggle.classList.remove('open');
+            }
+        });
+        // Optional: close sheet on overlay click or swipe down (mobile UX)
+
+        // HEADER THEME SWITCH LOGIC
+        const headerThemeSwitch = document.getElementById('headerThemeSwitch');
+        const body = document.body;
+
+        headerThemeSwitch.addEventListener('change', function () {
+            if (headerThemeSwitch.checked) {
+                // Dark mode - add dark class to body
+                body.classList.add('dark-theme');
+            } else {
+                // Light mode - remove dark class from body
+                body.classList.remove('dark-theme');
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
