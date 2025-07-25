@@ -877,7 +877,7 @@ body.dark-mode .navbar__logo span {
 }
 
 .match-card .match-card__content .match-card__date {
-	font-size: 1.1rem;
+	font-size: 14px;
 	color: var(--color-text-secondary);
 	margin-top: 0.5rem;
 	font-family: Arial, sans-serif;
