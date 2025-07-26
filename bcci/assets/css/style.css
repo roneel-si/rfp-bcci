@@ -2663,11 +2663,11 @@
 
    .floating-score-close {
        position: absolute;
-       top: -8px;
+       top: -16px;
        right: 0;
        background: #1e40af;
        border: none;
-       
+       border-radius: 4px 4px 0 0;
        color: white;
        font-size: 9px;
        font-weight: 600;
