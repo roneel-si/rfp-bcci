@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200;300;400;500;600;700&family=Fjalla+One&family=Bebas+Neue:wght@400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/bcci/assets/css/style.css?v=5.5">
+    <link rel="stylesheet" href="/bcci/assets/css/style.css?v=5.7">
     <style>
         html {
             scroll-padding-top: 100px;
@@ -429,7 +429,7 @@
                                 <button class="center-btn">Match Centre</button>
                             </div>
                             <div class="tournament-description">
-                                India A Tour Of England 2025
+                               Stumps Day 2 - England Trial By 262 Runs
                             </div>
                             <div class="match-status live-status">
                                 🟢 LIVE MATCH
@@ -2311,6 +2311,27 @@
                 }
             });
         }
+
+        // Close video modal when clicking share icon
+        const videoModalShareIcon = document.querySelector('#videoModal .share-icon');
+        if (videoModalShareIcon) {
+            videoModalShareIcon.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (videoModal && videoIframe) {
+                    videoModal.classList.remove('show');
+                    videoIframe.src = '';
+                    document.body.style.overflow = 'auto';
+                    
+                    // Reset the play button overlay for next time
+                    const videoBody = document.querySelector('.video-modal-body');
+                    if (videoBody) {
+                        videoBody.classList.remove('playing');
+                    }
+                }
+            });
+        }
     });
 </script>
 
@@ -2323,8 +2344,15 @@
             </svg>
         </button>
         <div class="video-modal-header">
-            <div id="videoModalDate" class="video-modal-date"></div>
-            <h3 id="videoModalTitle" class="video-modal-title"></h3>
+            <div class="video-modal-content-left">
+                <h3 id="videoModalTitle" class="video-modal-title"></h3>
+                <div class="video-modal-date-row">
+                    <div id="videoModalDate" class="video-modal-date"></div>
+                    <div class="share-icon">
+                        <img src="/bcci/assets/images/share-dark.png?v=4.6" alt="Share Icon">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="video-modal-body">
             <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
