@@ -235,6 +235,19 @@ body.dark-theme {
     .auction-team-card-image {
         display: none;
     }
+
+    .engagement-section {
+        background: #28293DBF;
+    }
+
+    .engagement-section h1 {
+        color: #fff;
+    }
+    
+    .engagement-section h1 span {
+                color: #fff;
+    }
+
 }
 
 @media screen and (min-width: 576px) {
@@ -2733,16 +2746,67 @@ body {
 }
 
 .auction-header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
+    
 }
 
-.auction-title {
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 1px;
+.auction-title-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.auction-title-main {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
     margin: 0;
     color: #fff;
+    line-height: 1.2;
+}
+
+.auction-title-subtitle {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.auction-header a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+}
+
+.auction-header a svg {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.auction-header a:hover {
+    color: var(--color-pink);
+}
+
+.auction-header a:hover svg {
+    transform: translateX(3px);
+    stroke: var(--color-pink);
+}
+
+.auction-header a .title-arrow {
+    stroke: #fff;
+}
+
+.auction-header a:hover .title-arrow {
+    stroke: var(--color-pink);
 }
 
 .auction-content {
