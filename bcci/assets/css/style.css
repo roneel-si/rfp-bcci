@@ -2672,7 +2672,7 @@
        position: absolute;
        top: -16px;
        right: 0;
-       background: #1e40af;
+       background: var(--primary);
        border: none;
        border-radius: 4px 4px 0 0;
        color: white;
