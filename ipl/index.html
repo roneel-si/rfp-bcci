@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- <link rel="stylesheet" href="/assets/css/styles.css?v=1.5"> -->
-    <link rel="stylesheet" href="/ipl/assets/css/styles.css?v=2.3">
+    <link rel="stylesheet" href="/ipl/assets/css/styles.css?v=2.9">
 </head>
 
 <body class="">
@@ -426,9 +426,9 @@
                     </div>
                     <div class="match-card-box__body">
                         <div class="match-card-box__team match-card-box__team--top">
-                            <img src="/ipl/assets/images/teams/gt-logo.png?v=1.1" alt="Gujarat Titans"
-                                class="match-card-box__team-logo" />
                             <img src="/ipl/assets/images/teams/lsg-logo.png?v=1.1" alt="Lucknow Super Giants"
+                                class="match-card-box__team-logo" />
+                            <img src="/ipl/assets/images/teams/gt-logo.png?v=1.1" alt="Gujarat Titans"
                                 class="match-card-box__team-logo" />
                         </div>
                    <div class="match-card-box__team match-card-box__team--bottom">
@@ -817,6 +817,29 @@
                 </a>
             </div>
             <div class="videos-list">
+                <div class="video-item" data-video-url="https://youtube.com/shorts/ffyAbKFP0CI?si=mTJPZKMpvgQBfSBx" data-video-title=" Glenn Maxwell's Sensational Effort on the Boundary Line" data-video-date="03 May, 2025">
+                    <div class="video-thumb">
+                        <img src="/ipl/assets/images/videos/lates-videos-7.jpg?v=1.3"
+                            alt="Maxwell's Catch" />
+                    </div>
+                    <div class="ipl-exclusive-card">
+                        <div class="ipl-exclusive-tag">IPL EXCLUSIVE</div>
+                        <h2 class="ipl-exclusive-title">
+                           Glenn Maxwell's Sensational Effort on the Boundary Line
+                        </h2>
+                        <div class="ipl-exclusive-meta">
+                            <span class="ipl-exclusive-date">03 May, 2025</span>
+                            <span class="ipl-exclusive-sep">|</span>
+                            <span class="ipl-exclusive-views">
+                                <svg class="ipl-eye-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <ellipse cx="10" cy="10" rx="8" ry="5" stroke="currentColor" stroke-width="1.5" />
+                                    <circle cx="10" cy="10" r="2" fill="currentColor" />
+                                </svg>
+                                83.k
+                            </span>
+                        </div>
+                    </div>
+                </div>
                 <div class="video-item">
                     <div class="video-thumb">
                         <img src="/ipl/assets/images/videos/latest-videos-1.png?v=1.1"
@@ -887,29 +910,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="video-item">
-                    <div class="video-thumb">
-                        <img src="/ipl/assets/images/videos/latest-videos-4.png?v=1.2"
-                            alt="Mumbai Indians Sign Raghu Sharma" />
-                    </div>
-                    <div class="ipl-exclusive-card">
-                        <div class="ipl-exclusive-tag">IPL EXCLUSIVE</div>
-                        <h2 class="ipl-exclusive-title">
-                            TATA IPL 2025 Match 37, PBKS vs RCB - Match Report
-                        </h2>
-                        <div class="ipl-exclusive-meta">
-                            <span class="ipl-exclusive-date">05 Jun, 2025</span>
-                            <span class="ipl-exclusive-sep">|</span>
-                            <span class="ipl-exclusive-views">
-                                <svg class="ipl-eye-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <ellipse cx="10" cy="10" rx="8" ry="5" stroke="currentColor" stroke-width="1.5" />
-                                    <circle cx="10" cy="10" r="2" fill="currentColor" />
-                                </svg>
-                                83.k
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="video-item">
                     <div class="video-thumb">
                         <img src="/ipl/assets/images/videos/latest-videos-5.png?v=1.2"
@@ -1224,6 +1225,27 @@
     </div>
     <!-- magic moments section end -->
 
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <button id="videoModalClose" class="video-modal-close">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </button>
+            <div class="video-modal-header">
+                <div class="video-modal-content-left">
+                    <h3 id="videoModalTitle" class="video-modal-title"></h3>
+                    <div class="video-modal-date-row">
+                        <div id="videoModalDate" class="video-modal-date"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-modal-body">
+                <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -1342,6 +1364,107 @@
                 }
             });
         });
+
+        // Video Modal Functionality
+        const videoItems = document.querySelectorAll('.video-item[data-video-url]');
+        const videoModal = document.getElementById('videoModal');
+        const videoModalClose = document.getElementById('videoModalClose');
+        const videoIframe = document.getElementById('videoIframe');
+        const videoModalTitle = document.getElementById('videoModalTitle');
+        const videoModalDate = document.getElementById('videoModalDate');
+        
+        // YouTube Player API for better autoplay control
+        let player;
+        function onYouTubeIframeAPIReady() {
+            // This will be called when YouTube API is ready
+        }
+
+        // Open video modal
+        videoItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const videoUrl = this.getAttribute('data-video-url');
+                const videoTitle = this.getAttribute('data-video-title');
+                const videoDate = this.getAttribute('data-video-date');
+                
+                // Convert YouTube URL to embed URL without autoplay initially
+                let embedUrl;
+                if (videoUrl.includes('youtube.com/shorts/')) {
+                    // Handle YouTube Shorts URLs
+                    const shortsId = videoUrl.match(/\/shorts\/([^?]+)/)?.[1];
+                    embedUrl = `https://www.youtube.com/embed/${shortsId}?rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=${window.location.origin}&playsinline=1`;
+                } else {
+                    // Handle regular YouTube URLs
+                    embedUrl = videoUrl.replace('youtu.be/', 'youtube.com/embed/') + '?rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=' + window.location.origin + '&playsinline=1';
+                }
+                
+                if (videoIframe && videoModalTitle && videoModalDate && videoModal) {
+                    videoModalTitle.textContent = videoTitle;
+                    videoModalDate.textContent = videoDate;
+                    videoModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Set iframe src without autoplay
+                    videoIframe.src = embedUrl;
+                    
+                    // Add click handler to play button overlay
+                    const videoBody = document.querySelector('.video-modal-body');
+                    if (videoBody) {
+                        videoBody.addEventListener('click', function(e) {
+                            // Remove play button overlay
+                            this.classList.add('playing');
+                            
+                            // Update iframe src to play with sound
+                            let playUrl;
+                            if (videoUrl.includes('youtube.com/shorts/')) {
+                                // Handle YouTube Shorts URLs for autoplay
+                                const shortsId = videoUrl.match(/\/shorts\/([^?]+)/)?.[1];
+                                playUrl = `https://www.youtube.com/embed/${shortsId}?autoplay=1&mute=0&rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=${window.location.origin}&playsinline=1`;
+                            } else {
+                                // Handle regular YouTube URLs for autoplay
+                                playUrl = videoUrl.replace('youtu.be/', 'youtube.com/embed/') + '?autoplay=1&mute=0&rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=' + window.location.origin + '&playsinline=1';
+                            }
+                            videoIframe.src = playUrl;
+                        }, { once: true });
+                    }
+                }
+            });
+        });
+
+        // Close video modal
+        if (videoModalClose) {
+            videoModalClose.addEventListener('click', function() {
+                if (videoModal && videoIframe) {
+                    videoModal.classList.remove('show');
+                    videoIframe.src = '';
+                    document.body.style.overflow = 'auto';
+                    
+                    // Reset the play button overlay for next time
+                    const videoBody = document.querySelector('.video-modal-body');
+                    if (videoBody) {
+                        videoBody.classList.remove('playing');
+                    }
+                }
+            });
+        }
+
+        // Close modal when clicking outside
+        if (videoModal) {
+            videoModal.addEventListener('click', function(e) {
+                if (e.target === this && videoIframe) {
+                    videoModal.classList.remove('show');
+                    videoIframe.src = '';
+                    document.body.style.overflow = 'auto';
+                    
+                    // Reset the play button overlay for next time
+                    const videoBody = document.querySelector('.video-modal-body');
+                    if (videoBody) {
+                        videoBody.classList.remove('playing');
+                    }
+                }
+            });
+        }
+
+
     </script>
 </body>
 
