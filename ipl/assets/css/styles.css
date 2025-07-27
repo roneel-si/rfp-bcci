@@ -3237,9 +3237,9 @@ login-preferences-form {
 .ipl-app-promo-middle {
 	animation: middleElementSequence 18s ease-in-out infinite;
 	animation-delay: 6s;
-	height: 240px;
+	height: 270px;
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 200px;
