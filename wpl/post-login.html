@@ -10,7 +10,7 @@
     <link rel="icon" href="/wpl/assets/image/wpl-logo.svg?v=3.3" type="image/x-icon">
     <title>WPL</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/wpl/assets/css/style.css?v=3.8">
+    <link rel="stylesheet" href="/wpl/assets/css/style.css?v=3.9">
 </head>
 
 <body class="post-login">
@@ -422,8 +422,8 @@
                                 <div class="match-scores">
                                     <div class="match-score match-score-left">
                                         <div class="match-score-main">
-                                            <span class="match-runs">170/6</span>
-                                            <span class="match-overs">(20.0 ovs)</span>
+                                            <span class="match-runs">127/8</span>
+                                            <span class="match-overs">(18.0 ovs)</span>
                                         </div>
                                         <!-- <div class="match-score-current">
                                             <span class="match-runs">13/1</span>
@@ -857,7 +857,8 @@
                 </a>
             </div>
             <div class="magic-moment-list">
-                <div class="magic-moment-card">
+                <div class="magic-moment-card" data-video-url="https://youtube.com/shorts/HzT53TwTtVg?si=SGwzfMou-alpbDCX" data-video-title="Brilliant spell by Shreyanka Patil seals the game" data-video-date="MAY 20, 2025">
+                    
                     <div class="magic-moment-image-wrapper">
                         <img src="/wpl/assets/image/magic-card-bg-1.png?v=3.3" alt="magic moment"
                             class="magic-moment-image">
@@ -1818,6 +1819,31 @@
         </div>
     </div>
 
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <button id="videoModalClose" class="video-modal-close">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </button>
+            <div class="video-modal-header">
+                <div class="video-modal-content-left">
+                    <h3 id="videoModalTitle" class="video-modal-title"></h3>
+                    <div class="video-modal-date-row">
+                        <div id="videoModalDate" class="video-modal-date"></div>
+                        <div class="share-icon">
+                            <img src="/wpl/assets/image/share-white.svg?v=3.3" alt="Share Icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-modal-body">
+                <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
@@ -2114,6 +2140,126 @@
 
         // Initialize counter animation
         initCounterAnimation();
+
+        // Video Modal Functionality
+        const videoItems = document.querySelectorAll('.magic-moment-card[data-video-url]');
+        const videoModal = document.getElementById('videoModal');
+        const videoModalClose = document.getElementById('videoModalClose');
+        const videoIframe = document.getElementById('videoIframe');
+        const videoModalTitle = document.getElementById('videoModalTitle');
+        const videoModalDate = document.getElementById('videoModalDate');
+        
+        // YouTube Player API for better autoplay control
+        let player;
+        function onYouTubeIframeAPIReady() {
+            // This will be called when YouTube API is ready
+        }
+
+        // Open video modal
+        videoItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const videoUrl = this.getAttribute('data-video-url');
+                const videoTitle = this.getAttribute('data-video-title');
+                const videoDate = this.getAttribute('data-video-date');
+                
+                // Convert YouTube URL to embed URL without autoplay initially
+                let embedUrl;
+                if (videoUrl.includes('youtube.com/shorts/')) {
+                    // Handle YouTube Shorts URLs
+                    const shortsId = videoUrl.match(/\/shorts\/([^?]+)/)?.[1];
+                    embedUrl = `https://www.youtube.com/embed/${shortsId}?rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=${window.location.origin}&playsinline=1`;
+                } else {
+                    // Handle regular YouTube URLs
+                    embedUrl = videoUrl.replace('youtu.be/', 'youtube.com/embed/') + '?rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=' + window.location.origin + '&playsinline=1';
+                }
+                
+                if (videoIframe && videoModalTitle && videoModalDate && videoModal) {
+                    videoModalTitle.textContent = videoTitle;
+                    videoModalDate.textContent = videoDate;
+                    videoModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Set iframe src without autoplay
+                    videoIframe.src = embedUrl;
+                    
+                    // Add click handler to play button overlay
+                    const videoBody = document.querySelector('.video-modal-body');
+                    if (videoBody) {
+                        videoBody.addEventListener('click', function(e) {
+                            // Remove play button overlay
+                            this.classList.add('playing');
+                            
+                            // Update iframe src to play with sound
+                            let playUrl;
+                            if (videoUrl.includes('youtube.com/shorts/')) {
+                                // Handle YouTube Shorts URLs for autoplay
+                                const shortsId = videoUrl.match(/\/shorts\/([^?]+)/)?.[1];
+                                playUrl = `https://www.youtube.com/embed/${shortsId}?autoplay=1&mute=0&rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=${window.location.origin}&playsinline=1`;
+                            } else {
+                                // Handle regular YouTube URLs for autoplay
+                                playUrl = videoUrl.replace('youtu.be/', 'youtube.com/embed/') + '?autoplay=1&mute=0&rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=' + window.location.origin + '&playsinline=1';
+                            }
+                            videoIframe.src = playUrl;
+                        }, { once: true });
+                    }
+                }
+            });
+        });
+
+        // Close video modal
+        if (videoModalClose) {
+            videoModalClose.addEventListener('click', function() {
+                if (videoModal && videoIframe) {
+                    videoModal.classList.remove('show');
+                    videoIframe.src = '';
+                    document.body.style.overflow = 'auto';
+                    
+                    // Reset the play button overlay for next time
+                    const videoBody = document.querySelector('.video-modal-body');
+                    if (videoBody) {
+                        videoBody.classList.remove('playing');
+                    }
+                }
+            });
+        }
+
+        // Close modal when clicking outside
+        if (videoModal) {
+            videoModal.addEventListener('click', function(e) {
+                if (e.target === this && videoIframe) {
+                    videoModal.classList.remove('show');
+                    videoIframe.src = '';
+                    document.body.style.overflow = 'auto';
+                    
+                    // Reset the play button overlay for next time
+                    const videoBody = document.querySelector('.video-modal-body');
+                    if (videoBody) {
+                        videoBody.classList.remove('playing');
+                    }
+                }
+            });
+        }
+
+        // Close video modal when clicking share icon
+        const videoModalShareIcon = document.querySelector('#videoModal .share-icon');
+        if (videoModalShareIcon) {
+            videoModalShareIcon.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (videoModal && videoIframe) {
+                    videoModal.classList.remove('show');
+                    videoIframe.src = '';
+                    document.body.style.overflow = 'auto';
+                    
+                    // Reset the play button overlay for next time
+                    const videoBody = document.querySelector('.video-modal-body');
+                    if (videoBody) {
+                        videoBody.classList.remove('playing');
+                    }
+                }
+            });
+        }
     });
 </script>
 
