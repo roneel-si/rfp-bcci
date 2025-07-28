@@ -1663,7 +1663,7 @@
        display: flex;
        flex-direction: column;
        justify-content: space-between;
-       background: url("/bcci/assets/images/series-bg.png?v=6.4") center center / cover no-repeat;
+       background: url("/bcci/assets/images/series-bg.png?v=6.5") center center / cover no-repeat;
    
    }
    
@@ -2410,7 +2410,7 @@
    .trophy-section {
        position: relative;
        padding: 40px 20px;
-       background: url("/bcci/assets/images/thropy-bg.png?v=6.4") no-repeat center center / cover fixed;
+       background: url("/bcci/assets/images/thropy-bg.png?v=6.5") no-repeat center center / cover fixed;
        display: flex;
        flex-direction: column;
        align-items: center;
