@@ -890,8 +890,7 @@ body.dark-mode .navbar__logo span {
 }
 
 .shorts-section {
-	padding-inline:16px;
-	padding-top:30px;
+	padding:30px 16px;
 }
 
 .shorts-section__title {
@@ -1654,7 +1653,7 @@ body.dark-mode .navbar__logo span {
 	color: var(--color-primary);
 	font-size: 30px;
 	font-weight: 700;
-	margin-top: 30px;
+	margin-top: 60px;
 	margin-bottom: 1rem;
 	letter-spacing: 0.01em;
 	font-family: 'Teko', Arial, sans-serif;
@@ -1683,6 +1682,7 @@ body.dark-mode .navbar__logo span {
 	display: block;
 	transition: transform 0.2s ease;
 	height: 40px;
+	width: 120px;
 }
 
 .ipl-app-promo__store-btn:hover {
