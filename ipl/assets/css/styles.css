@@ -3237,7 +3237,7 @@ login-preferences-form {
 .ipl-app-promo-middle {
 	animation: middleElementSequence 18s ease-in-out infinite;
 	animation-delay: 6s;
-	height: 270px;
+	height: 100%;
 	position: absolute;
 	top: 60%;
 	left: 50%;
@@ -3598,3 +3598,41 @@ body.dark-mode .video-modal-date {
     height: 100%;
     object-fit: cover;
 }
+
+    /* Number Animation Styles for IPL */
+	.animate-number {
+		transition: all 0.3s ease;
+	}
+	
+	.animate-number.animating {
+		transform: scale(1.05);
+		color: #e79100;
+	}
+	
+	.run-item .value,
+	.stats-data-player .number,
+	.stats-orange .text,
+	.stat-list-item-wrap .value {
+		transition: all 0.2s ease;
+	}
+	
+	.run-item .value.animating {
+		color: #e79100;
+		text-shadow: 0 0 10px rgba(231, 145, 0, 0.5);
+		transform: scale(1.1);
+	}
+	
+	.stats-data-player .number.animating {
+		color: #ff6b35;
+		transform: scale(1.15);
+	}
+	
+	.stats-orange .text.animating {
+		color: #ffffff;
+		text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+	}
+	
+	.stat-list-item-wrap .value.animating {
+		color: #e79100;
+		transform: scale(1.05);
+	}
