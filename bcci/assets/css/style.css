@@ -1693,18 +1693,18 @@
        display: flex;
        flex-direction: column;
        justify-content: space-between;
-       background: url("/bcci/assets/images/series-bg-new.png?v=7.1") center center / cover no-repeat;
+       background: url("/bcci/assets/images/series-bg-new.png?v=7.2") center center / cover no-repeat;
    }
    .series-item::before {
         content: '';
-        background: url("/bcci/assets/images/india-logo.png?v=7.1") center center / cover no-repeat;
+        background: url("/bcci/assets/images/india-logo.png?v=7.2") center center / cover no-repeat;
         position: absolute;
         top: -65px;
         right: -65px;
         width: 170px;
         height: 170px;
         z-index: 1;
-        animation: rotateInfinite 20s linear infinite;
+        animation: rotateInfinite 40s linear infinite;
    }
    @keyframes rotateInfinite {
     from {
@@ -2492,7 +2492,7 @@
    .trophy-section {
        position: relative;
        padding: 40px 20px;
-       background: url("/bcci/assets/images/thropy-bg.png?v=7.1") no-repeat center center / cover fixed;
+       background: url("/bcci/assets/images/thropy-bg.png?v=7.2") no-repeat center center / cover fixed;
        display: flex;
        flex-direction: column;
        align-items: center;
