@@ -1663,7 +1663,7 @@
        display: flex;
        flex-direction: column;
        justify-content: space-between;
-       background: url("/bcci/assets/images/series-bg.png?v=6.7") center center / cover no-repeat;
+       background: url("/bcci/assets/images/series-bg.png?v=6.8") center center / cover no-repeat;
    
    }
    
@@ -2410,7 +2410,7 @@
    .trophy-section {
        position: relative;
        padding: 40px 20px;
-       background: url("/bcci/assets/images/thropy-bg.png?v=6.7") no-repeat center center / cover fixed;
+       background: url("/bcci/assets/images/thropy-bg.png?v=6.8") no-repeat center center / cover fixed;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -5472,6 +5472,7 @@
 
    .video-modal-date-row .share-icon {
        margin-left: 8px;
+       filter: brightness(.5);
    }
 
    .video-modal-date {
@@ -5557,7 +5558,7 @@
    .video-modal-body {
        position: relative;
        width: 100%;
-       height: calc(100% - 120px); /* Subtract header height */
+       height: calc(100% - 140px); /* Subtract header height */
        padding-bottom: 0;
        overflow: hidden;
    }
@@ -5566,7 +5567,9 @@
    body[data-theme="dark"] .video-modal-content {
        background: #1a1a1a;
    }
-
+   body[data-theme="dark"] .video-modal-header {
+    background: var(--background-light);
+   }
    body[data-theme="dark"] .video-modal-title {
        color: #fff;
    }
