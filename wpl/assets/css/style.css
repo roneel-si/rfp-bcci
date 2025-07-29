@@ -168,7 +168,7 @@ body.dark-theme {
     }
 
     .stats-desc {
-        color: #EBEBF0;
+        color: var(--color-text-gray);
     }
 
     .match-status-completed {
@@ -2950,7 +2950,7 @@ body {
     width: 100%;
     height: 1px;
     opacity: 0.4;
-    background: var(--color-background-light);
+    background: #FAFAFC;
 }
 
 .auction-video-wrapper {
@@ -3374,7 +3374,7 @@ body {
 
 .login-label {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     color: #28293D;
 }
 
@@ -3388,6 +3388,7 @@ body {
     color: #1a1a1a;
     background: #ffffff;
     outline: none;
+    font-weight: 600;
     transition: border-color 0.2s ease;
 }
 
@@ -3441,6 +3442,7 @@ body {
 
 .login-dropdown-text {
     font-size: 14px;
+    font-weight: 600;
     color: #999999;
 }
 
