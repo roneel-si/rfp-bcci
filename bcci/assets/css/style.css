@@ -1514,16 +1514,30 @@
      padding: 0 0 25px 0;
    }
    .videos-container .nav-container {
-    padding-left: 0;
+    padding-left: 16px;
    }
    .videos-section .nav-tabs {
        padding: 0 16px 16px;
+       margin-inline: -16px;
    }
    .videos-section .nav-tabs .nav-tab {
     background: #D6EDF6;
    }
    .videos-section .nav-tabs .nav-tab.active {
     background: var(--red-variant);
+   }
+   body[data-theme="dark"] .players-section .nav-tab.active,
+   body[data-theme="dark"] .videos-section .nav-tab.active {
+    color: var(--white);
+   }
+   body[data-theme="dark"] .players-section .nav-tab,
+   body[data-theme="dark"] .videos-section .nav-tab {
+    color: var(--gray-light);
+   }
+   body[data-theme="dark"] .players-section .nav-tab:not(.active):hover,
+   body[data-theme="dark"] .videos-section .nav-tab:not(.active):hover {
+    background: #D6EDF6;
+    color: var(--gray-light);
    }
    .videos-grid {
        display: flex;
@@ -1679,9 +1693,27 @@
        display: flex;
        flex-direction: column;
        justify-content: space-between;
-       background: url("/bcci/assets/images/series-bg.png?v=6.9") center center / cover no-repeat;
-   
+       background: url("/bcci/assets/images/series-bg-new.png?v=7.2") center center / cover no-repeat;
    }
+   .series-item::before {
+        content: '';
+        background: url("/bcci/assets/images/india-logo.png?v=7.2") center center / cover no-repeat;
+        position: absolute;
+        top: -65px;
+        right: -65px;
+        width: 170px;
+        height: 170px;
+        z-index: 1;
+        animation: rotateInfinite 40s linear infinite;
+   }
+   @keyframes rotateInfinite {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
    
    .series-format {
        background: var(--primary-dark);
@@ -1859,6 +1891,13 @@
 
     .game-content.active {
         display: block;
+    }
+    .video-nav-content {
+        display: none;
+    }
+
+    .video-nav-content.active {
+        display: flex;
     }
    .gallery-image{
     position: relative;
@@ -2453,7 +2492,7 @@
    .trophy-section {
        position: relative;
        padding: 40px 20px;
-       background: url("/bcci/assets/images/thropy-bg.png?v=6.9") no-repeat center center / cover fixed;
+       background: url("/bcci/assets/images/thropy-bg.png?v=7.2") no-repeat center center / cover fixed;
        display: flex;
        flex-direction: column;
        align-items: center;
