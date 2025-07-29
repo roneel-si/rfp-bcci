@@ -10,7 +10,7 @@
     <link rel="icon" href="/wpl/assets/image/wpl-logo.svg?v=3.3" type="image/x-icon">
     <title>WPL</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/wpl/assets/css/style.css?v=4.1">
+    <link rel="stylesheet" href="/wpl/assets/css/style.css?v=4.4">
 </head>
 
 <body>
@@ -1450,7 +1450,7 @@
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                        </svg>
+                            </svg>
                     </div>
                     <div class="share-option" data-platform="instagram" title="Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
@@ -1464,13 +1464,13 @@
                             fill="currentColor" aria-label="X (Twitter) Icon">
                             <path
                                 d="M714.1 558.8L1169.1 0h-107.2L673.5 480.1 309.6 0H0l482.5 660.6L0 1227h107.2l423.3-488.4L897.9 1227H1200L714.1 558.8zM599.4 708.5l-49.1-67.2L152.1 78.6h119.6l351 480.1 49.1 67.2L1054 1148.4H934.4L599.4 708.5z" />
-                        </svg>
+                            </svg>
                     </div>
                     <div class="share-option" data-platform="copy" title="Copy Link">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v11z" />
-                        </svg>
+                            </svg>
                     </div>
                 </div>
                 <button class="share-tooltip-close-btn" id="shareTooltipCloseBtn">Cancel</button>
@@ -1478,19 +1478,22 @@
         </div>
 
         <!-- Video Modal -->
-        <div class="video-modal" id="videoModal">
+        <div id="videoModal" class="video-modal">
             <div class="video-modal-content">
+                <button id="videoModalClose" class="video-modal-close">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
                 <div class="video-modal-header">
-                    <h3 class="video-modal-title" id="videoModalTitle"></h3>
-                    <p class="video-modal-date" id="videoModalDate"></p>
-                    <button class="video-modal-close" id="videoModalClose">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    <div class="share-icon">
-                        <img src="/wpl/assets/image/share-white.svg?v=3.3" alt="Share Icon">
+                    <div class="video-modal-content-left">
+                        <h3 id="videoModalTitle" class="video-modal-title"></h3>
+                        <div class="video-modal-date-row">
+                            <div id="videoModalDate" class="video-modal-date"></div>
+                            <div class="share-icon">
+                                <img src="/wpl/assets/image/share-white.svg?v=3.3" alt="Share Icon">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="video-modal-body">
@@ -1498,6 +1501,9 @@
                 </div>
             </div>
         </div>
+
+        <!-- Share Tooltip Overlay -->
+        <div class="share-tooltip-overlay" id="shareTooltipOverlay"></div>
 
     </div>
 </body>
@@ -1903,17 +1909,9 @@
                 e.preventDefault();
                 e.stopPropagation();
                 
-                if (videoModal && videoIframe) {
-                    videoModal.classList.remove('show');
-                    videoIframe.src = '';
-                    document.body.style.overflow = 'auto';
-                    
-                    // Reset the play button overlay for next time
-                    const videoBody = document.querySelector('.video-modal-body');
-                    if (videoBody) {
-                        videoBody.classList.remove('playing');
-                    }
-                }
+                // Open share tooltip instead of closing modal
+                document.body.classList.add('overflow-hidden');
+                window.openShareTooltip();
             });
         }
         
