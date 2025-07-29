@@ -1917,34 +1917,6 @@
             });
         }
         
-        function playInlineVideo(button) {
-        const card = button.closest('.magic-moment-card');
-        const wrapper = card.querySelector('.magic-moment-image-wrapper');
-        const img = wrapper.querySelector('.magic-moment-image');
-        let iframe = wrapper.querySelector('.magic-moment-video');
-        const videoUrl = card.getAttribute('data-video-url');
-
-        if (videoUrl) {
-            // If video is already playing, stop it
-            if (iframe.style.display === 'block') {
-                iframe.style.display = 'none';
-                img.style.display = 'block';
-                iframe.src = '';
-                return;
-            }
-
-            // Play the video
-            iframe.src = videoUrl + '?autoplay=1&rel=0&modestbranding=1';
-            iframe.style.display = 'block';
-            iframe.style.position = 'absolute';
-            iframe.style.top = '0';
-            iframe.style.left = '0';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            img.style.display = 'none';
-        }
-    }
-
     });
 </script>
 
