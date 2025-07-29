@@ -1663,7 +1663,7 @@
        display: flex;
        flex-direction: column;
        justify-content: space-between;
-       background: url("/bcci/assets/images/series-bg.png?v=6.5") center center / cover no-repeat;
+       background: url("/bcci/assets/images/series-bg.png?v=6.7") center center / cover no-repeat;
    
    }
    
@@ -2410,7 +2410,7 @@
    .trophy-section {
        position: relative;
        padding: 40px 20px;
-       background: url("/bcci/assets/images/thropy-bg.png?v=6.5") no-repeat center center / cover fixed;
+       background: url("/bcci/assets/images/thropy-bg.png?v=6.7") no-repeat center center / cover fixed;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -5420,8 +5420,8 @@
 
    .video-modal-close {
        position: absolute;
-       top: 16px;
-       right: 16px;
+       top: 5px;
+       right: 5px;
        background: rgba(0, 0, 0, 0.6);
        border: none;
        border-radius: 50%;
@@ -5447,16 +5447,20 @@
    }
 
    .video-modal-header {
-       padding: 20px 20px 0 20px;
+       padding: 20px 20px 20px 20px;
        background: white;
        display: flex;
        justify-content: space-between;
        align-items: flex-start;
+       height: 140px;
    }
 
    .video-modal-content-left {
        flex: 1;
-       padding-bottom: 13px;
+       display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
    }
 
    .video-modal-date-row {
@@ -5491,7 +5495,7 @@
    .video-modal-body {
        position: relative;
        width: 100%;
-       height: calc(100% - 120px); /* Subtract header height */
+       height: calc(100% - 140px); /* Subtract header height */
        padding-bottom: 0;
    }
 
@@ -5509,13 +5513,13 @@
 
    /* Add a play button overlay for better user experience */
    .video-modal-body::before {
-       content: "";
+       /* content: ""; */
        position: absolute;
        top: 50%;
        left: 50%;
        transform: translate(-50%, -50%);
-       width: 100px;
-       height: 100px;
+       width: 70px;
+       height: 70px;
        background: #ff0000;
        border-radius: 50%;
        z-index: 100;
@@ -5528,7 +5532,7 @@
    }
 
    .video-modal-body::after {
-       content: "▶";
+       /* content: "▶"; */
        position: absolute;
        top: 50%;
        left: 50%;
@@ -5540,6 +5544,8 @@
        cursor: pointer;
        pointer-events: none;
        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+       line-height: 1;
+        padding: 0 0 6px 9px;
    }
 
    .video-modal-body.playing::before,
@@ -5594,7 +5600,7 @@
        }
 
        .video-modal-header {
-           padding: 16px 16px 0 16px;
+           padding: 16px 16px 16px 16px;
        }
 
        .video-modal-title {
@@ -5606,8 +5612,8 @@
        }
 
        .video-modal-close {
-           top: 12px;
-           right: 12px;
+           top: 5px;
+           right: 5px;
            width: 36px;
            height: 36px;
        }
