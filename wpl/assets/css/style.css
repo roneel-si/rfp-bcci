@@ -168,7 +168,7 @@ body.dark-theme {
     }
 
     .stats-desc {
-        color: #EBEBF0;
+        color: var(--color-text-gray);
     }
 
     .match-status-completed {
@@ -1283,7 +1283,7 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
-    height: 33px;
+    height: 34px;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1582,6 +1582,28 @@ body {
     gap: 16px;
     overflow-x: auto;
     padding: 24px 16px;
+    position: relative;
+}
+
+.footer-sponsor-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/wpl/assets/image/border.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.footer-sponsor-wrapper > * {
+    position: relative;
+    z-index: 1;
 }
 
 .footer-sponsor-wrapper::-webkit-scrollbar {
@@ -2170,7 +2192,7 @@ body {
 .stats-label {
     font-size: 10px;
     font-weight: 500;
-    color: var(--color-overlay-light);
+    color: var(--color-background-light);
     text-transform: uppercase;
     line-height: 1.2;
 }
@@ -2914,9 +2936,21 @@ body {
     color: var(--color-orange);
 }
 
-/* Video Section */
 .auction-video-section {
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.auction-video-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0.4;
+    background: #FAFAFC;
 }
 
 .auction-video-wrapper {
@@ -2979,7 +3013,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     line-height: 1.3;
-    color: var(--color-text-gray);
+    color: var(--color-text-dark);
 }
 
 .auction-stat-value {
@@ -3141,15 +3175,15 @@ body {
 .download-content {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 7px;
     position: absolute;
-    top: 210px;
+    top: 177px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .download-content img {
-    width: 110px;
+    width: 136px;
     height: 80%;
 }
 
@@ -3340,7 +3374,7 @@ body {
 
 .login-label {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     color: #28293D;
 }
 
@@ -3354,6 +3388,7 @@ body {
     color: #1a1a1a;
     background: #ffffff;
     outline: none;
+    font-weight: 600;
     transition: border-color 0.2s ease;
 }
 
@@ -3407,6 +3442,7 @@ body {
 
 .login-dropdown-text {
     font-size: 14px;
+    font-weight: 600;
     color: #999999;
 }
 
@@ -3796,7 +3832,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 2;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
