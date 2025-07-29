@@ -950,6 +950,21 @@ body.dark-mode .navbar__logo span {
 		top: -15px;
 	}
 }
+.announcement-section.photo-gallery  .tag {
+
+		height: 20px;
+		gap: 5px;
+	}
+	.announcement-section.photo-gallery  .tag img {
+		object-fit: contain;
+		height: 14px;
+	}
+	.announcement-section.photo-gallery .tag p {
+	font-family: 'Teko', Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	padding-top: 3px;
+	}
 .article-video-card {
     width: 280px;
     overflow: hidden;
@@ -1015,13 +1030,45 @@ body.dark-mode .navbar__logo span {
 
   .article-video-card .video-meta {
 	font-size: 12px;
+	gap: 5px;
 	color: #ccc;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
   }
 
   .article-video-card .video-meta i {
 	margin-right: 4px;
+  }
+  .article-video-card .video-meta-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    line-height: .8;
+	color: #CDDBFF;
+  }
+
+  .article-video-card .video-meta-date::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #CDDBFF;
+	opacity: .5;
+  }
+
+  .article-video-card .video-meta-views {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+  }
+  .article-video-card .views-icon {
+	width: 14px;
+    height: 9px;
+	color: #CDDBFF;
+  }
+  .article-video-card .views-count {
+	line-height: .8;
+	color: #CDDBFF;
   }
 
 .announcement-section {
@@ -3030,9 +3077,9 @@ login-preferences-form {
 }
 
 /* Default (light mode) */
-.arrow-icon {
+/* .arrow-icon {
 	content: url('/ipl/assets/images/up-right.png?v=1.2');
-}
+} */
 
 /* Dark mode */
 
@@ -3589,7 +3636,7 @@ login-preferences-form {
 }
 
 /* Custom Play Button Overlay */
-.video-modal-body::before {
+/* .video-modal-body::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -3606,9 +3653,9 @@ login-preferences-form {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 20px rgba(255, 0, 0, 0.5);
-}
+} */
 
-.video-modal-body::after {
+/* .video-modal-body::after {
     content: "▶";
     position: absolute;
     top: 50%;
@@ -3626,7 +3673,7 @@ login-preferences-form {
 .video-modal-body.playing::before,
 .video-modal-body.playing::after {
     display: none;
-}
+} */
 
 /* Dark theme support */
 body.dark-mode .video-modal-content {
