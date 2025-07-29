@@ -321,7 +321,7 @@
          SECTION TITLES
          ========================================================================== */
    .section-title-wrapper {
-       padding: 55px 20px 0;
+       padding: 70px 20px 0;
        width: 100%;
        overflow: hidden;
    }
@@ -332,7 +332,7 @@
        justify-content: center;
        gap: 12px;
        font-family: 'Montserrat', sans-serif;
-       font-size: 35px;
+       font-size: 36px;
        font-weight: 800;
        color: var(--navy);
        text-transform: uppercase;
@@ -344,7 +344,7 @@
        content: attr(data-title);
        display: block;
        font-family: 'Montserrat', sans-serif;
-       font-size: 55px;
+       font-size: 65px;
        font-weight: 900;
        text-transform: uppercase;
        background: linear-gradient(180deg, rgba(21, 58, 115, 0.05) 0%, rgba(21, 58, 115, 0) 100%);
@@ -354,7 +354,7 @@
        color: var(--transparent);
        -webkit-text-fill-color: var(--transparent);
        position: absolute;
-       top: -30px;
+       top: -40px;
    }
     body[data-theme="dark"] .section-title::before{
         background: linear-gradient(180deg, #EFEFEF 0%, rgba(254, 254, 254, 0) 100%);
@@ -851,7 +851,8 @@
        left: 0;
        width: 100%;
        height: 100%;
-       background: linear-gradient(to bottom, var(--black-20) 0%, var(--black-30) 50%, var(--black-60) 100%);
+       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #000000 87.21%);
+       /* background: linear-gradient(to bottom, var(--black-20) 0%, var(--black-30) 50%, var(--black-60) 100%); */
        z-index: 1
    }
    
@@ -893,11 +894,12 @@
    }
    
    .slide-title {
-       font-size: 18px;
-       font-weight: 800;
-       margin-bottom: 15px;
-       text-shadow: 2px 2px 4px var(--black-40);
-       line-height: 1.2
+       font-size: 20px;
+       font-weight: 700;
+       margin-bottom: 20px;
+       /* text-shadow: 2px 2px 4px var(--black-40); */
+       line-height: 1.2;
+       font-family: 'montserrat', sans-serif;
    }
    
    
@@ -906,7 +908,7 @@
        display: flex;
        align-items: center;
        gap: 8px;
-       background: var(--gold-alpha);
+       background: var(--gold-variant);
        color: var(--gray-darker);
        padding: 0 20px;
        border: none;
@@ -918,9 +920,11 @@
        width: max-content;
        justify-content: center;
        margin-inline: auto;
+       font-weight: 500;
        overflow: hidden;
        position: relative;
        isolation: isolate;
+       border-radius: 20px;
    }
    
    .slide-button svg {
@@ -994,7 +998,8 @@
    }
    
    .match-card {
-       background: linear-gradient(180deg, var(--gradient-light-1) 0%, var(--gradient-light-2) 100%);
+    background: #B9E5F8;
+       /* background: linear-gradient(180deg, var(--gradient-light-1) 0%, var(--gradient-light-2) 100%); */
        transition: all .3s ease;
        position: relative;
        min-height: 240px;
@@ -1002,7 +1007,7 @@
        flex-direction: column;
        flex-shrink: 0;
        width: 330px;
-       border: 1px solid var(--border-light);
+       /* border: 1px solid var(--border-light); */
        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
    }
    
@@ -1022,14 +1027,14 @@
    
    .match-date {
        font-size: 10px;
-       font-weight: 600;
+       font-weight: 400;
        color: var(--navy-dark)
    }
    
    .match-venue {
        font-size: 10px;
        color: var(--navy-dark);
-       font-weight: 600
+       font-weight: 400;
    }
    
    .teams-section {
@@ -1050,7 +1055,7 @@
    
    .team-a {
        flex-direction: row-reverse;
-       width: 40%;
+       width: 41%;
        text-align: right
    }
    
@@ -1060,7 +1065,7 @@
    
    .team-b {
        flex-direction: row;
-       width: 40%;
+       width: 41%;
        text-align: left
    }
    
@@ -1181,9 +1186,9 @@
    .match-status {
        text-align: center;
        padding: 12px;
-       font-size: 13px;
+       font-size: 12px;
        font-weight: 700;
-       height: 45px;
+       height: 50px;
        display: flex;
        align-items: center;
        justify-content: center
@@ -1196,7 +1201,11 @@
    
    .live-status {
        background-color: var(--primary-dark);
-       color: var(--white)
+       color: var(--white);
+   }
+   .live-status img {
+    width: 30px;
+    height: 30px;
    }
    
    .match-buttons {
@@ -1284,7 +1293,7 @@
    .news-container {
        width: 100%;
        margin: 0;
-       padding: 0;
+       padding: 0 0 20px 0;
        overflow-x: hidden;
    }
    .news-cards-grid .news-card .news-play-icon {
@@ -1305,7 +1314,7 @@
    .news-cards-grid,
    .news-listing-grid {
        display: flex;
-       gap: 8px;
+       gap: 15px;
        overflow-x: auto;
        overflow-y: hidden;
        scroll-behavior: smooth;
@@ -1457,13 +1466,15 @@
    
    .news-item-date {
        font-size: 12px;
-       font-weight: 500;
-       color: var(--gray);
+       font-weight: 400;
+       color: var(--dark-gray);
        margin-bottom: 8px
    }
-   
+   .news-listing-container {
+    padding-bottom: 20px;
+   }
    .news-item-title {
-       font-size: 14px;
+       font-size: 16px;
        font-weight: 400;
        color: var(--dark-gray);
        line-height: 1.4;
@@ -1499,7 +1510,12 @@
        padding: 0;
        overflow-x: hidden;
    }
-   
+   .videos-container .nav-tabs {
+     padding: 0 0 25px 0;
+   }
+   .videos-container .nav-container {
+    padding-left: 0;
+   }
    .videos-section .nav-tabs {
        padding: 0 16px 16px;
    }
@@ -1594,7 +1610,7 @@
    .video-title {
        font-size: 14px;
        font-weight: 400;
-       color: var(--navy-dark);
+       color: var(--dark-gray);
        line-height: 1.4;
        margin: 0 0 16px;
        display: -webkit-box;
@@ -1663,7 +1679,7 @@
        display: flex;
        flex-direction: column;
        justify-content: space-between;
-       background: url("/bcci/assets/images/series-bg.png?v=6.8") center center / cover no-repeat;
+       background: url("/bcci/assets/images/series-bg.png?v=6.9") center center / cover no-repeat;
    
    }
    
@@ -1736,17 +1752,43 @@
     content: attr(data-title);
     display: block;
     font-family: 'Montserrat', sans-serif;
-    font-size: 55px;
+    font-size: 65px;
     font-weight: 900;
     text-transform: uppercase;
     background: linear-gradient(180deg, #EFEFEF 0%, rgba(254, 254, 254, 0) 100%);
+    /* background: linear-gradient(180deg, rgba(21, 58, 115, 0.05) 0%, rgba(21, 58, 115, 0) 100%); */
     -webkit-background-clip: text;
     background-clip: text;
     opacity: .2;
     color: var(--transparent);
     -webkit-text-fill-color: var(--transparent);
     position: absolute;
-    top: -30px;
+    top: -40px;
+   }
+   body[data-theme="dark"] .gallery-section .game-section .section-title::before,
+   body[data-theme="dark"] .gallery-section .shop-section .section-title::before {
+    background: linear-gradient(180deg, #EFEFEF 0%, rgba(254, 254, 254, 0) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: .2;
+   }
+   .gallery-section .game-section .section-title::before,
+   .gallery-section .shop-section .section-title::before {
+    content: attr(data-title);
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 65px;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* background: linear-gradient(180deg, #EFEFEF 0%, rgba(254, 254, 254, 0) 100%); */
+    background: linear-gradient(180deg, rgba(21, 58, 115, 0.05) 0%, rgba(21, 58, 115, 0) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 1;
+    color: var(--transparent);
+    -webkit-text-fill-color: var(--transparent);
+    position: absolute;
+    top: -40px;
    }
    .grade-tab {
     background: #D6EDF6;
@@ -1915,14 +1957,14 @@
    
    .gallery-date {
        font-size: 11px;
-       color: var(--gray-dark);
-       margin-bottom: 6px;
-       font-weight: 500
+       color: var(--white);
+       margin-bottom: 10px;
+       font-weight: 400;
    }
    
    .gallery-title {
-       font-size: 14px;
-       font-weight: 600;
+       font-size: 16px;
+       font-weight: 500;
        color: var(--white);
        line-height: 1.4;
        margin-bottom: 12px;
@@ -1995,7 +2037,7 @@
          GAME SECTION
          ========================================================================== */
    .game-section {
-       padding: 20px 0 0;
+       padding: 0;
        width: 100%;
        background-color: var(--light-blue);
    }
@@ -2030,6 +2072,7 @@
    .game-section .nav-tab.active {
     background: var(--red-variant);
     color: var(--white);
+    font-weight: 700;
    }
    
    .game-section .title1,
@@ -2410,7 +2453,7 @@
    .trophy-section {
        position: relative;
        padding: 40px 20px;
-       background: url("/bcci/assets/images/thropy-bg.png?v=6.8") no-repeat center center / cover fixed;
+       background: url("/bcci/assets/images/thropy-bg.png?v=6.9") no-repeat center center / cover fixed;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -2806,7 +2849,7 @@
    
    .floating-score {
        position: fixed;
-       bottom: 118px;
+       bottom: 117px;
        left: 50%;
        transform: translateX(-50%);
        width: 100%;
