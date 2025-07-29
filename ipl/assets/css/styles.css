@@ -890,7 +890,7 @@ body.dark-mode .navbar__logo span {
 }
 
 .shorts-section {
-	padding: 40px 16px;
+	padding:30px 16px;
 }
 
 .shorts-section__title {
@@ -1255,7 +1255,7 @@ body.dark-mode .navbar__logo span {
 }
 
 .match-card-section {
-	padding-block: 2.5rem;
+	padding-block: 2.5rem 1rem;
 	padding-inline: 1rem;
 	background: url(/ipl/assets/images/pattern/matches-pattern.png?v=1.3) var(--color-bg-light);
 }
@@ -1653,7 +1653,7 @@ body.dark-mode .navbar__logo span {
 	color: var(--color-primary);
 	font-size: 30px;
 	font-weight: 700;
-	margin-top: 30px;
+	margin-top: 60px;
 	margin-bottom: 1rem;
 	letter-spacing: 0.01em;
 	font-family: 'Teko', Arial, sans-serif;
@@ -1682,6 +1682,7 @@ body.dark-mode .navbar__logo span {
 	display: block;
 	transition: transform 0.2s ease;
 	height: 40px;
+	width: 120px;
 }
 
 .ipl-app-promo__store-btn:hover {
@@ -2797,7 +2798,7 @@ login-preferences-form {
 
 .recommended-section {
 	background-color: #F9F9F9;
-	padding-block: 40px 16px;
+	padding-block: 30px 16px;
 	position: relative;
 	overflow: hidden;
 	isolation: isolate;
@@ -2828,7 +2829,7 @@ login-preferences-form {
 	line-height: 1;
 }
 
-.recommended-content {
+.recommended-content:not(:last-child) {
 	margin-bottom: 40px;
 }
 
@@ -3237,7 +3238,7 @@ login-preferences-form {
 .ipl-app-promo-middle {
 	animation: middleElementSequence 18s ease-in-out infinite;
 	animation-delay: 6s;
-	height: 270px;
+	height: 100%;
 	position: absolute;
 	top: 60%;
 	left: 50%;
@@ -3598,3 +3599,41 @@ body.dark-mode .video-modal-date {
     height: 100%;
     object-fit: cover;
 }
+
+    /* Number Animation Styles for IPL */
+	.animate-number {
+		transition: all 0.3s ease;
+	}
+	
+	.animate-number.animating {
+		transform: scale(1.05);
+		color: #e79100;
+	}
+	
+	.run-item .value,
+	.stats-data-player .number,
+	.stats-orange .text,
+	.stat-list-item-wrap .value {
+		transition: all 0.2s ease;
+	}
+	
+	.run-item .value.animating {
+		color: #e79100;
+		text-shadow: 0 0 10px rgba(231, 145, 0, 0.5);
+		transform: scale(1.1);
+	}
+	
+	.stats-data-player .number.animating {
+		color: #ff6b35;
+		transform: scale(1.15);
+	}
+	
+	.stats-orange .text.animating {
+		color: #ffffff;
+		text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+	}
+	
+	.stat-list-item-wrap .value.animating {
+		color: #e79100;
+		transform: scale(1.05);
+	}
