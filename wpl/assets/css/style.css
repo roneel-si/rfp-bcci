@@ -983,11 +983,13 @@ body {
 .standing-item {
     width: 90%;
     flex-shrink: 0;
+    height: 185px;
 }
 
 .standing-item img {
-    height: 185px;
+    height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 .white-title .title a,
@@ -3958,7 +3960,7 @@ body {
 }
 
 /* Custom Play Button Overlay */
-.video-modal-body::before {
+/* .video-modal-body::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -3990,7 +3992,7 @@ body {
     cursor: pointer;
     pointer-events: none;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .video-modal-body.playing::before,
 .video-modal-body.playing::after {
