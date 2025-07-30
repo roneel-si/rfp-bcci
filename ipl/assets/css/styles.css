@@ -199,7 +199,7 @@ body {
 
 .navbar__toggle::after {
 	content: '';
-	background: url(../images/bg-header.png?v=5.5) no-repeat;
+	background: url(../images/bg-header.png?v=5.6) no-repeat;
 	position: absolute;
 	top: -10px;
 	right: -16px;
@@ -567,7 +567,7 @@ body {
 }
 
 body.dark-mode .navbar {
-	background: var(--color-dark-header) url('../images/bg-header.png?v=5.5') no-repeat center center;
+	background: var(--color-dark-header) url('../images/bg-header.png?v=5.6') no-repeat center center;
 	background-size: cover;
 	box-shadow: 0 4px 8px var(--color-shadow-dark);
 }
@@ -968,7 +968,7 @@ body.dark-mode .navbar__logo span {
 .article-video-card {
     width: 280px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
     flex-shrink: 0;
 	position: relative;
 	color: #fff;
@@ -984,9 +984,10 @@ body.dark-mode .navbar__logo span {
 	top: 8px;
 	left: 8px;
 	background: rgba(0, 0, 0, 0.7);
-	padding: 2px 6px;
-	border-radius: 4px;
-	font-size: 12px;
+	padding: 2px 10px;
+	border-radius: 20px;
+	font-family: Manrope;
+	font-size: 10px;
   }
 
   .article-video-card .play-button {
@@ -1024,13 +1025,13 @@ body.dark-mode .navbar__logo span {
   .article-video-card .video-title {
     font-size: 20px;
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     line-height: 1.2;
   }
 
   .article-video-card .video-meta {
 	font-size: 12px;
-	gap: 5px;
+	gap: 20px;
 	color: #ccc;
 	display: flex;
 	justify-content: flex-start;
@@ -1043,8 +1044,11 @@ body.dark-mode .navbar__logo span {
     display: flex;
     align-items: center;
     gap: 5px;
-    line-height: .8;
+    line-height: 14px;
 	color: #CDDBFF;
+	font-family: Manrope;
+	position: relative;
+	font-family: 400;
   }
 
   .article-video-card .video-meta-date::after {
@@ -1053,7 +1057,11 @@ body.dark-mode .navbar__logo span {
     width: 1px;
     height: 100%;
     background: #CDDBFF;
-	opacity: .5;
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+	right: -10px;
+	opacity: .6;
   }
 
   .article-video-card .video-meta-views {
@@ -1067,8 +1075,11 @@ body.dark-mode .navbar__logo span {
 	color: #CDDBFF;
   }
   .article-video-card .views-count {
-	line-height: .8;
+	line-height: 14px;
+	font-family: Manrope;
+	font-size: 10px;
 	color: #CDDBFF;
+	font-weight: 400;
   }
 
 .announcement-section {
@@ -1408,7 +1419,7 @@ body.dark-mode .navbar__logo span {
 	padding: 0;
 	background: none;
 	position: absolute;
-	top: -25px;
+	top: -24px;
 	left: 0;
 	width: 100%;
 	z-index: 2;
@@ -1531,6 +1542,7 @@ body.dark-mode .navbar__logo span {
 	letter-spacing: 0.01em;
 	display: flex;
 	flex-direction: column;
+	text-transform: uppercase;
 }
 
 .match-card-box__score {
@@ -1553,13 +1565,22 @@ body.dark-mode .navbar__logo span {
 .buy-tickets {
 	margin-left: auto;
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.02em;
-	color: var(--color-text-secondary);
+	color: #FFF;
 	text-decoration: none;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	font-family: 'Teko', Arial, sans-serif;
 }
-
+.buy-tickets img {
+	width: 15px;
+    object-fit: contain;
+    height: 13px;
+}
 .match-card-box__footer {
 	color: var(--color-text-light);
 	font-size: 12px;
@@ -1569,6 +1590,7 @@ body.dark-mode .navbar__logo span {
 	display: flex;
 	align-items: center;
 	font-weight: 400;
+	height: 57px;
     font-family: 'Manrope', Arial, sans-serif;
 }
 
@@ -2172,7 +2194,7 @@ body.dark-mode .navbar__logo span {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	background: url('/ipl/assets/images/circle-play.png?v=5.5') no-repeat center center;
+	background: url('/ipl/assets/images/circle-play.png?v=5.6') no-repeat center center;
 	background-size: contain;
 	width: 32px;
 	height: 32px;
@@ -2956,7 +2978,7 @@ login-preferences-form {
 	position: relative;
 	overflow: hidden;
 	isolation: isolate;
-	background-image: url('../images/pattern/recommended-pattern.png?v=5.5');
+	background-image: url('../images/pattern/recommended-pattern.png?v=5.6');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: bottom;
@@ -2984,9 +3006,11 @@ login-preferences-form {
 }
 
 .recommended-content:not(:last-child) {
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
-
+.recommended-content .ipl-exclusive-card {
+	background: #f9f9f9;
+}
 .recommended-videos-section {
 	padding-block: 0px;
 }
@@ -3010,7 +3034,7 @@ login-preferences-form {
 
 /* Dark Mode */
 .dark-mode .navbar__toggle::after {
-	background: url(../images/bg-header-dark.png?v=5.5) no-repeat;
+	background: url(../images/bg-header-dark.png?v=5.6) no-repeat;
 }
 
 .dark-mode .match-card .match-card__overlay {
@@ -3102,7 +3126,7 @@ login-preferences-form {
 
 /* Default (light mode) */
 /* .arrow-icon {
-	content: url('/ipl/assets/images/up-right.png?v=5.5');
+	content: url('/ipl/assets/images/up-right.png?v=5.6');
 } */
 
 /* Dark mode */
