@@ -174,7 +174,7 @@ body {
   
   .navbar__toggle::after {
     content: '';
-    background: url(../images/bg-header.png?v=1.1) no-repeat;
+    background: url(../images/bg-header.png?v=5.5) no-repeat;
     position: absolute;
     top: -10px;
     right: -16px;
@@ -586,7 +586,7 @@ body {
 
   /* Dark Mode */
 .dark-mode .navbar__toggle::after {
-	background: url(../images/bg-header-dark.png?v=1.1) no-repeat;
+	background: url(../images/bg-header-dark.png?v=5.5) no-repeat;
 }
 .dark-mode .match-card .match-card__overlay{
 	background: linear-gradient(0.78deg, #10172B 20.38%, rgba(11, 38, 104, 0.5) 42.49%, rgba(16, 23, 43, 0) 56.34%);

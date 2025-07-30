@@ -199,7 +199,7 @@ body {
 
 .navbar__toggle::after {
 	content: '';
-	background: url(../images/bg-header.png?v=1.1) no-repeat;
+	background: url(../images/bg-header.png?v=5.5) no-repeat;
 	position: absolute;
 	top: -10px;
 	right: -16px;
@@ -567,7 +567,7 @@ body {
 }
 
 body.dark-mode .navbar {
-	background: var(--color-dark-header) url('../images/bg-header.png?v=1.1') no-repeat center center;
+	background: var(--color-dark-header) url('../images/bg-header.png?v=5.5') no-repeat center center;
 	background-size: cover;
 	box-shadow: 0 4px 8px var(--color-shadow-dark);
 }
@@ -2151,8 +2151,32 @@ body.dark-mode .navbar__logo span {
 	filter: opacity(1);
 	z-index: 2;
 	position: relative;
+	opacity: .5;
 }
-
+.latest-videos-section .video-thumb span {
+	position: absolute;
+	height: 15px;
+	top: 12px;
+	left: 12px;
+	font-size: 10px;
+	font-weight: 500;
+	color: #fff;
+	border-radius: 20px;
+	padding-inline: 10px;
+	font-family: Manrope;
+	background: rgba(16, 23, 43, 1);
+}
+.latest-videos-section .video-thumb:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: url('/ipl/assets/images/circle-play.png?v=5.5') no-repeat center center;
+	background-size: contain;
+	width: 32px;
+	height: 32px;
+}
 /* Add shadow effect for elevated items */
 .stats-image.active::after,
 .stats-image:nth-child(1)::after {
@@ -2932,7 +2956,7 @@ login-preferences-form {
 	position: relative;
 	overflow: hidden;
 	isolation: isolate;
-	background-image: url('../images/pattern/recommended-pattern.png?v=1.1');
+	background-image: url('../images/pattern/recommended-pattern.png?v=5.5');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: bottom;
@@ -2986,7 +3010,7 @@ login-preferences-form {
 
 /* Dark Mode */
 .dark-mode .navbar__toggle::after {
-	background: url(../images/bg-header-dark.png?v=1.1) no-repeat;
+	background: url(../images/bg-header-dark.png?v=5.5) no-repeat;
 }
 
 .dark-mode .match-card .match-card__overlay {
@@ -3078,7 +3102,7 @@ login-preferences-form {
 
 /* Default (light mode) */
 /* .arrow-icon {
-	content: url('/ipl/assets/images/up-right.png?v=1.2');
+	content: url('/ipl/assets/images/up-right.png?v=5.5');
 } */
 
 /* Dark mode */
