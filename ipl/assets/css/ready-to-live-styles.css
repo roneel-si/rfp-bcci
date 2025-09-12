@@ -928,7 +928,7 @@ body.dark-mode .navbar__logo span {
 .shorts-item {
 	/* flex: 0 0 200px; */
 	/* background: var(--color-bg-surface); */
-	box-shadow: 0 2px 8px var(--color-shadow-secondary);
+	/* box-shadow: 0 2px 8px var(--color-shadow-secondary); */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1089,7 +1089,7 @@ body.dark-mode .navbar__logo span {
 	padding-inline: 16px;
 	padding-block: 20px;
 }
-.announcement-section 	.title {
+.announcement-section  .title {
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: 500;
@@ -1097,9 +1097,11 @@ body.dark-mode .navbar__logo span {
 	color: var(--color-primary);
 	letter-spacing: 0.02em;
 	margin-bottom: 12px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
 	/* Number of lines to show */
-	white-space: nowrap;
+	/* white-space: nowrap; */
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -1449,7 +1451,7 @@ body.dark-mode .navbar__logo span {
 	padding: 0 1rem;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 }
 
 .match-card-box__status--live {
@@ -1483,7 +1485,7 @@ body.dark-mode .navbar__logo span {
 	color: var(--color-text-light);
 	font-weight: 500;
 	font-size: 12px;
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 }
 
 .match-card-box__time {
@@ -1606,7 +1608,7 @@ body.dark-mode .navbar__logo span {
 	align-items: center;
 	font-weight: 400;
 	height: 57px;
-    font-family: 'Manrope', Arial, sans-serif;
+    font-family: 'Rubik', sans-serif;;
 }
 
 /* IPL Banner Styles */
@@ -2395,7 +2397,7 @@ section[id] {
 .stat-label {
 	font-size: 10px;
 	color: rgba(255, 255, 255, 0.7);
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -2617,7 +2619,7 @@ footer {
 	font-size: 12px;
 	line-height: 20px;
 	margin-bottom: 20px;
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 }
 
 .login-otp-inputs {
@@ -2655,7 +2657,7 @@ footer {
 	margin-bottom: 16px;
 	font-size: 14px;
 	color: #0B2668;
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 	text-align: right;
 }
 
@@ -2670,7 +2672,7 @@ footer {
 	font-size: 14px;
 	font-weight: 700;
 	cursor: pointer;
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 }
 
 .login-otp-resend-btn:hover {
@@ -2681,7 +2683,7 @@ footer {
 	font-size: 14px;
 	color: #5C5C5C;
 	margin-bottom: 20px;
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 	text-align: right;
 }
 
@@ -2745,7 +2747,7 @@ footer {
 	text-decoration: none;
 	font-weight: 700;
 	font-size: 12px;
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 }
 
 .login-otp-disclaimer-text .privacy-link:hover,
@@ -2833,7 +2835,7 @@ footer {
 	font-weight: 500;
 	color: #19398A;
 	margin-bottom: 10px;
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 }
 
 .login-profile-form-label span {
@@ -2866,7 +2868,7 @@ footer {
 }
 
 .login-profile-form-input::placeholder {
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 	font-size: 14px;
 	color: hsla(0, 0%, 36%, .8);
 }
@@ -3005,6 +3007,7 @@ login-preferences-form {
 	width: 90%;
 	margin-inline: auto;
 }
+.recommended-content{	}
 
 .recommended-section>.announcement-header {
 	padding-inline: 16px;
@@ -3035,15 +3038,23 @@ login-preferences-form {
 .recommended-magic-moments-section .video-item{
 	border-radius: 10px;
 }
+.recommended-magic-moments-section{
+	margin-inline: -1rem;
+}
+.recommended-magic-moments-section .moments-list{
+	padding-inline: 1rem;
+}
 .recommended-content .moments-list{
 	margin-inline: 0;
 }
 .recommended-magic-moments-section .announcement-header.recommended-header{
 	width: 100%;
+	padding-inline: 1rem;
 }
 .recommended-videos-section .recommended-videos-list{
 	margin-inline: 0;
 	gap: 1rem;
+	padding-inline: 1rem;
 }
 .recommended-videos-list .video-thumb img{
 	border-radius: 12px;
@@ -3057,6 +3068,10 @@ login-preferences-form {
 }
 .recommended-videos-section {
 	padding-block: 0px;
+	margin-inline: -1rem;
+}
+.recommended-videos-section .recommended-header{
+	padding-inline: 1rem;
 }
 .recommended-content .shorts-section {
 	background: #EFF4FF;
@@ -3193,11 +3208,11 @@ login-preferences-form {
 }
 .magic-moments-section .announcement-link,
 .latest-videos-section .announcement-link {
-	border-color: #fff;
+	/* border-color: #fff; */
 }
 .magic-moments-section .announcement-link  img,
 .latest-videos-section .announcement-link  img{
-	filter: brightness(0) invert(1);
+	/* filter: brightness(0) invert(1); */
 }
 
 .stats-row {
@@ -3233,7 +3248,7 @@ login-preferences-form {
 .stats-label {
 	color: var(--stats-label-color);
 	font-size: 12px;
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 	margin-top: 2px;
 	font-weight: 500;
 	letter-spacing: 0.01em;
@@ -3337,7 +3352,7 @@ login-preferences-form {
 	display: inline-block;
 	background: var(--ipl-tag-bg);
 	color: var(--ipl-tag-color);
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 	font-size: 12px;
 	font-weight: 500;
 	padding: 4px 18px 4px 10px;
@@ -3368,7 +3383,7 @@ login-preferences-form {
 	align-items: center;
 	gap: 12px;
 	color: var(--ipl-meta-color);
-	font-family: 'Manrope', Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;;
 	font-size: 1.1rem;
 	font-weight: 400;
 }
