@@ -56,6 +56,9 @@
 	--color-bg-surface: hsla(0, 0%, 100%, 1);
 	--color-bg-light: hsla(223, 69%, 97%, 1);
 	--color-bg-dark: hsla(223, 69%, 22%, 1);
+	--color-bg-neu-surface: hsla(0, 0%, 98%, 1);
+	--color-bg-sec-card: hsla(223, 59%, 54%, 1);
+	--color-bg-sec-surface-2:hsla(223, 81%, 23%, 1);
 
 	/* Text Colors */
 	--color-text-primary: hsla(223, 69%, 32%, 1);
@@ -63,6 +66,9 @@
 	--color-text-muted: hsla(0, 0%, 53%, 1);
 	--color-text-light: hsla(0, 0%, 100%, 1);
 	--color-text-dark: hsla(0, 0%, 13%, 1);
+	--color-text-sec-medium: hsla(223, 100%, 90%, 1);
+	--color-text-sec-high: hsla(223, 100%, 83%, 0.4);
+	--color-text-sec-high-2: hsla(221, 100%, 97%, 1);
 
 	/* Border Colors */
 	--color-border-primary: hsla(0, 0%, 88%, 1);
@@ -72,7 +78,7 @@
 	/* Status Colors */
 	--color-status-live: hsla(147, 83%, 30%, 1);
 	--color-status-upcoming: hsla(223, 69%, 12%, 1);
-	--color-status-completed: hsla(6, 100%, 55%, 1);
+	--color-status-completed: hsla(0, 76%, 48%, 1);
 	--color-status-active: hsla(203, 70%, 35%, 1);
 
 	/* Shadow Colors */
@@ -197,7 +203,7 @@ body {
 	width: 1px;
 	height: 60px;
 	opacity: 20%;
-	background-color: hsla(223, 100%, 83%, 0.4);
+	background-color: var(--color-text-sec-high);
 }
 
 .separator-both {
@@ -218,6 +224,26 @@ body {
 .separator-both::after {
 	content: '';
 	left: -1rem;
+}
+
+.semi-circle {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: hsl(223, 68%, 22%);
+	border-radius: 50vmax;
+	z-index: 0;
+	pointer-events: none;
+}
+
+.semi-circle.circle-up {
+	top: -9px;
+	left: 60px;
+}
+
+.semi-circle.circle-down {
+	bottom: -9px;
+	right: 60px;
 }
 
 .navbar__logo a {    
@@ -290,9 +316,9 @@ body {
 	position: fixed;
 	top: 60px;
 	left: 0;
-	width: 100vw;
-	height: calc(100dvh - 60px);
-	background: var(--color-bg-surface);
+	width: calc(100vw + 1px);
+    height: calc(100dvh - 59px);
+	background: var(--color-bg-neu-surface);
 	z-index: 100;
 	box-shadow: 0 4px 24px var(--color-shadow-primary);
 	transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -513,7 +539,7 @@ body {
 	border-radius: 50vmax;
 	width: 32px;
 	height: 32px;
-	color: hsla(221, 100%, 97%, 1);
+	color: var(--color-text-sec-medium);
 }
 
 .navbar__menu .navbar__menu-footer .navbar__socials a img {
@@ -528,7 +554,7 @@ body {
 
 .navbar__menu .navbar__menu-footer .navbar__footer-actions button {
 	background: transparent;
-	color: hsla(223, 100%, 90%, 1);
+	color: var(--color-text-sec-medium);
 	border: 1px solid var(--color-text-light);
 	border-radius: 32px;
 	font-size: 12px;
@@ -844,7 +870,7 @@ body.dark-mode .navbar__logo span {
 	left: 0;
 	bottom: 1rem;
 	width: auto;
-	padding-left: 1.2rem;
+	padding-left: 12px;
 	position: absolute;
 	z-index: 10;
 	gap: 0.3rem;
@@ -874,6 +900,21 @@ body.dark-mode .navbar__logo span {
 	justify-content: flex-end;
 }
 
+.match-card::after {
+	content: '01';
+	color: var(--color-primary-dark);
+	font: normal 100px 'Rubik', sans-serif;
+	background: linear-gradient(180.71deg, #EFF4FF 0.61%, rgba(255, 255, 255, 0) 99.4%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-stroke: 1px transparent;
+	font-weight: 700;
+	position: absolute;
+	bottom: -20px;
+	right: 16px;
+	z-index: 3;
+}
+
 .match-card-list {
 	display: flex;
 	overflow-x: auto;
@@ -881,6 +922,8 @@ body.dark-mode .navbar__logo span {
 	margin-inline: -1rem;
 	padding-inline: 1rem;
 	scrollbar-width: none;
+	z-index: 1;
+    position: relative;
 }
 
 .match-card .match-card__img {
@@ -932,8 +975,8 @@ body.dark-mode .navbar__logo span {
 }
 
 .match-card .match-card__content h2 {
-	font-size: 2rem;
-	font-weight: 500;
+	font-size: 24px;
+	font-weight: 700;
 	/* margin: 0 0 0.7rem 0; */
 	margin-bottom: 32px;
 	line-height: 1.1;
@@ -941,10 +984,11 @@ body.dark-mode .navbar__logo span {
 }
 
 .match-card .match-card__content .match-card__date {
-	font-size: 14px;
-	color: var(--color-text-secondary);
+	font-size: 12px;
+	color: var(--color-text-sec-medium);
 	margin-top: 0.5rem;
-	font-family: Arial, sans-serif;
+	font-family: 'Rubik', sans-serif;
+	opacity: 70%;
 }
 
 .match-card .match-card__content .play-logo {
@@ -1193,7 +1237,7 @@ body.dark-mode .navbar__logo span {
 .announcement-link {
     width: 32px;
     height: 32px;
-    border: 1px solid #19398A;
+    border: 1px solid var(--color-text-sec-high-2);
     display: flex;
 	border-radius: 50%;
     align-items: center;
@@ -1202,6 +1246,7 @@ body.dark-mode .navbar__logo span {
 	img {
 		width: 70%;
         height: 70%;
+		filter: brightness(0) invert(1);
 	}
 }
 
@@ -1210,7 +1255,9 @@ body.dark-mode .navbar__logo span {
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 24px;
-	border-radius: 8px;
+	border-radius: 8px;    
+	z-index: 1;
+    position: relative;
 }
 
 .announcement-title {
@@ -1224,6 +1271,10 @@ body.dark-mode .navbar__logo span {
 	display: flex;
 		flex-direction: column;
 		align-items: center;
+}
+
+.announcement-title.title-sec {
+	color: var(--color-text-sec-high-2);
 }
 
 .announcement-section .announcement-card {
@@ -1322,8 +1373,6 @@ body.dark-mode .navbar__logo span {
 	gap: 1rem;
 	overflow-x: auto;
 	margin-inline: -1rem;
-	/* padding-inline: 1rem; */
-	padding-bottom: 0.5rem;
 	scrollbar-width: none;
 }
 
@@ -1472,21 +1521,35 @@ body.dark-mode .navbar__logo span {
 	text-align: center;
 }
 
+.matches-section-wrap {
+	padding: 50px 16px;
+	background: hsl(223, 68%, 22%);
+}
+
 .match-card-section {
-	padding-block: 2.5rem 1rem;
-	padding-inline: 1rem;
-	background: url(/ipl/assets/images/pattern/matches-pattern.png?v=1.3) var(--color-bg-light);
+	padding: 20px 16px;
+	border-radius: 16px;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(180deg, #436ACE -233.7%, #19398A -89.46%);
+		border-radius: 16px;
+		opacity: 0.4;
+		z-index: 0;
+		pointer-events: none;
+	}
 }
 
 .match-card-box {
-	background: linear-gradient(180deg, var(--color-primary-dark) 0%, var(--color-primary-light) 100%);
-	box-shadow: 0 2px 8px var(--color-shadow-secondary);
-	/* max-width: 22rem; */
-	width: 90%;
+	width: 100%;
 	flex-shrink: 0;
 	font-family: 'Rubik', sans-serif;
 	position: relative;
-	margin-top: 25px;
 
 	/* flex: 0 0 332px; */
 	&:not(:last-child) {
@@ -1499,23 +1562,55 @@ body.dark-mode .navbar__logo span {
 	align-items: stretch;
 	padding: 0;
 	background: none;
-	position: absolute;
-	top: -24px;
-	left: 0;
 	width: 100%;
-	z-index: 2;
+	padding-block: 20px;
+	position: relative;
+	padding-left: 16px;
+}
+
+.match-card-box__header::before,
+.match-card-box__team--top::after,
+.match-card-box__footer::before {
+	position: relative;
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 1px;
+	background: var(--color-text-sec-high);
+	opacity: 0.2;
+	left: 0;
+}
+
+.match-card-box__team--top {
+	padding: 16px;
+	position: relative;
+}
+
+.match-card-box__team--top::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background: var(--color-text-sec-high);
+	opacity: 0.2;
+	left: 0;
+	border-top-right-radius: 16px;
+	border-bottom-right-radius: 16px;
 }
 
 .match-card-box__status {
 	display: flex;
 	align-items: center;
-	font-size: 0.7rem;
+	font-size: 10px;
 	font-weight: 700;
 	color: var(--color-text-light);
 	padding: 0 1rem;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
-	font-family: 'Rubik', sans-serif;;
+	font-family: 'Manrope', sans-serif;;
+	border-radius: 32px;
 }
 
 .match-card-box__status--live {
@@ -1534,34 +1629,57 @@ body.dark-mode .navbar__logo span {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	background: var(--color-accent);
 	padding: 0 1.2rem 0 0.8rem;
 	height: 25px;
 	font-size: 1rem;
 	color: var(--color-text-light);
-	clip-path: polygon(0 0, 87% 0, 100% 100%, 0% 100%);
-	border-radius: 0 0.3rem 0.3rem 0;
 	width: auto;
 }
 
 .match-card-box__date,
 .match-card-box__time {
 	color: var(--color-text-light);
-	font-weight: 500;
-	font-size: 12px;
-	font-family: 'Rubik', sans-serif;;
+	font-weight: 400;
+	font-size: 10px;
+	font-family: 'Manrope', sans-serif;;
 }
 
 .match-card-box__time {
 	border-left: 1px solid var(--color-text-light);
 	padding-left: 8px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .match-card-box__body {
-	padding: 16px 16px 0 16px;
+	padding: 0 16px 0 0;
 	display: flex;
 	flex-direction: row;
 	gap: 0.7rem;
+	position: relative;
+}
+
+.match-card-box__body::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: var(--color-text-sec-high);
+	opacity: 0.2;
+}
+
+.match-card-box__body::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: var(--color-text-sec-high);
+	opacity: 0.2;
 }
 
 .match-card-box__score-wrapper {
@@ -1584,18 +1702,17 @@ body.dark-mode .navbar__logo span {
 	justify-content: space-between;
 	gap: 16px;
 	padding-bottom: 16px;
+	padding-top: 16px;
 }
 
 .match-card-box__team--bottom {
 	width: 100%;
 	position: relative;
-	border-left: 1px dashed #fff;
 	padding-left: 1rem;
 }
 
 .match-card-box__team--bottom:before {
 	content: '';
-	border-top: 1px dashed #fff;
 	width: 100%;
 	height: 1px;
 	position: absolute;
@@ -1610,14 +1727,13 @@ body.dark-mode .navbar__logo span {
 	background: var(--color-bg-surface);
 	border-radius: 50%;
 	border: 1px solid var(--color-border-light);
-	margin-right: 0.5rem;
 	padding: 5px;
 }
 
 .match-card-box__team-name {
 	flex: 1 1 auto;
-	font-size: 16px;
-	line-height: 18px;
+	font-size: 12px;
+	line-height: 16px;
 	color: var(--color-text-light);
 	font-weight: 500;
 	letter-spacing: 0.01em;
@@ -1627,9 +1743,9 @@ body.dark-mode .navbar__logo span {
 }
 
 .match-card-box__score {
-	font-size: 20px;
+	font-size: 14px;
 	line-height: 20px;
-	font-weight: 500;
+	font-weight: 700;
 	color: var(--color-text-light);
 	margin-left: 0.5rem;
 	display: flex;
@@ -1637,7 +1753,7 @@ body.dark-mode .navbar__logo span {
 }
 
 .match-card-box__overs {
-	font-size: 0.9rem;
+	font-size: 10px;
 	color: var(--color-bg-light);
 	font-weight: 400;
 	text-align: right;
@@ -1645,7 +1761,7 @@ body.dark-mode .navbar__logo span {
 
 .buy-tickets {
 	margin-left: auto;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.02em;
@@ -1654,25 +1770,64 @@ body.dark-mode .navbar__logo span {
 	flex-shrink: 0;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 7px;
 	font-family: 'Rubik', sans-serif;
+	background: var(--color-bg-sec-card);
+	border-radius: 16px;
+	padding: 4px 8px;
 }
 .buy-tickets img {
-	width: 15px;
+	width: 12px;
     object-fit: contain;
-    height: 13px;
+    height: 10px;
+	margin-bottom: -3px;
 }
-.match-card-box__footer {
+
+.match-card-box__countdown {
+	display: flex;
+	gap: 4px;
+	margin-left: auto;
+	margin-right: 16px;
+	padding-top: 5px;
+}
+
+.match-card-box__count-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-bg-sec-card);
+	border-radius: 4px;
+	width: 44px;
+	height: 44px;
+	font-family: 'Rubik', sans-serif;
 	color: var(--color-text-light);
-	font-size: 12px;
-	padding: 0.7rem 1rem;
-	border-top: 1px dashed var(--color-border-light);
+}
+
+.match-card-box__count-item .value {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.match-card-box__count-item .label {
+	font-size: 8px;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.match-card-box__footer {
+	color: var(--color-text-sec-medium);
+	font-size: 10px;
+	padding: 10px 1rem;
 	text-align: left;
 	display: flex;
 	align-items: center;
 	font-weight: 400;
-	height: 57px;
-    font-family: 'Rubik', sans-serif;;
+    font-family: 'Rubik', sans-serif;
+	position: relative;
 }
 
 /* IPL Banner Styles */
@@ -2301,7 +2456,9 @@ section[id] {
 }
 
 .stats-section {
-	padding: 20px 0;
+	padding: 20px 16px;
+	margin-inline: -1rem;
+	background: var(--color-bg-sec-surface-2);
 }
 
 .stats-bottom {
