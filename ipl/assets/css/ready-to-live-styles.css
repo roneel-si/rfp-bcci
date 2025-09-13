@@ -3454,7 +3454,7 @@ login-preferences-form {
 }
 
 .dark-mode .ipl-banner{
-		background: #10172b;
+		background: hsla(223, 69%, 32%, 1);
 }
 
 .dark-mode.post-login .ipl-banner {
