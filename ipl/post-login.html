@@ -5,69 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indian Premier League</title>
-    <link rel="icon" type="image/png" href="/ipl/assets/favicon/favicon-96x96.png?v=5.8" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/ipl/assets/favicon/favicon.svg?v=5.8" />
-    <link rel="shortcut icon" href="/ipl/assets/favicon/favicon.ico?v=5.8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/ipl/assets/favicon/apple-touch-icon.png?v=5.8" />
-    <link rel="manifest" href="/ipl/assets/favicon/site.webmanifest?v=5.8" />
+    <link rel="icon" type="image/png" href="/ipl/assets/favicon/favicon-96x96.png?v=6.4" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/ipl/assets/favicon/favicon.svg?v=6.4" />
+    <link rel="shortcut icon" href="/ipl/assets/favicon/favicon.ico?v=6.4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/ipl/assets/favicon/apple-touch-icon.png?v=6.4" />
+    <link rel="manifest" href="/ipl/assets/favicon/site.webmanifest?v=6.4" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/ipl/assets/css/ready-to-live-styles.css?v=5.9">
+    <link rel="stylesheet" href="/ipl/assets/css/ready-to-live-styles.css?v=6.4">
 </head>
 
-<body>
+<body class="post-login">
     <div class="main">
         <!-- header -->
         <nav class="navbar">
             <!-- <div class="navbar__logo">
-                <img src="/ipl/assets/images/ipl-n.png?v=5.8" alt="Indian Premier League Logo">
+                <img src="/ipl/assets/images/ipl-n.png?v=6.4" alt="Indian Premier League Logo">
             </div> -->
             <div class="navbar__actions">
+                <div class="separator separator-right">
+                    <div class="navbar__switch" id="theme-toggle" tabindex="0" aria-label="Toggle light/dark mode">
+                        <span class="toggle-knob">
+                            <span class="icon-sun">
+                                <!-- Sun SVG -->
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="9" cy="9" r="4" stroke="white" stroke-width="2" fill="none" />
+                                    <g stroke="white" stroke-width="2">
+                                        <line x1="9" y1="1" x2="9" y2="3" />
+                                        <line x1="9" y1="15" x2="9" y2="17" />
+                                        <line x1="1" y1="9" x2="3" y2="9" />
+                                        <line x1="15" y1="9" x2="17" y2="9" />
+                                        <line x1="3.64" y1="3.64" x2="5.05" y2="5.05" />
+                                        <line x1="12.95" y1="12.95" x2="14.36" y2="14.36" />
+                                        <line x1="3.64" y1="14.36" x2="5.05" y2="12.95" />
+                                        <line x1="12.95" y1="5.05" x2="14.36" y2="3.64" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="toggle-knob toggle-knob-dark">
+                            <span class="icon-moon">
+                                <!-- Moon SVG -->
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.5 11.5A6 6 0 016.5 3.5a5 5 0 108 8z" stroke="white"
+                                        stroke-width="2" fill="none" />
+                                </svg>
+                            </span>
+                        </span>
+    
+                        </span>
+                    </div>
+                </div>
                 <div class="navbar__logo">
                     <a href="/ipl/index.html" title="Indian Premier League">
-                        <img src="/ipl/assets/images/ipl-n.png?v=5.8" alt="Indian Premier League Logo">
+                        <img src="/ipl/assets/images/ipl-n.png?v=6.4" alt="Indian Premier League Logo">
                     </a>
                 </div>
-                <div class="nav-actions-wrap">
-                    <div class="nav-border">
-                        <div class="navbar__switch" id="theme-toggle" tabindex="0" aria-label="Toggle light/dark mode">
-                            <span class="toggle-knob">
-                                <span class="icon-sun">
-                                    <!-- Sun SVG -->
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="9" cy="9" r="4" stroke="white" stroke-width="2" fill="none" />
-                                        <g stroke="white" stroke-width="2">
-                                            <line x1="9" y1="1" x2="9" y2="3" />
-                                            <line x1="9" y1="15" x2="9" y2="17" />
-                                            <line x1="1" y1="9" x2="3" y2="9" />
-                                            <line x1="15" y1="9" x2="17" y2="9" />
-                                            <line x1="3.64" y1="3.64" x2="5.05" y2="5.05" />
-                                            <line x1="12.95" y1="12.95" x2="14.36" y2="14.36" />
-                                            <line x1="3.64" y1="14.36" x2="5.05" y2="12.95" />
-                                            <line x1="12.95" y1="5.05" x2="14.36" y2="3.64" />
-                                        </g>
-                                    </svg>
-                                </span>
-                            </span>
-                            <span class="toggle-knob toggle-knob-dark">
-                                <span class="icon-moon">
-                                    <!-- Moon SVG -->
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.5 11.5A6 6 0 016.5 3.5a5 5 0 108 8z" stroke="white"
-                                            stroke-width="2" fill="none" />
-                                    </svg>
-                                </span>
-                            </span>
-
-                            </span>
-                        </div>
+                <div class="separator separator-both">
+                    <div class="navbar__profile">
+                        <a href="/ipl/login.html">
+                            <!-- User profile SVG icon -->
+                            <img src="/ipl/assets/images/user.png?v=6.4" alt="User Profile">
+                        </a>
                     </div>
-                    <a href="https://demo.sportz.io/ipl/games/arcade/trumps/index.html" class=" navbar__profile-login">
-                        <!-- User profile SVG icon -->
-                        <span class="profile-icon">P</span>
-                    </a>
                 </div>
                 <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false"
                     aria-controls="navbar-menu">
@@ -178,40 +180,27 @@
                         <div class="navbar__socials">
                             <a href="https://www.facebook.com/IPL/" target="_blank" aria-label="Facebook">
                                 <!-- Facebook SVG -->
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <title>Facebook</title>
-                                    <rect width="20" height="20" rx="4" fill="#3050A6" />
-                                    <path
-                                        d="M13.5 10.5H11.5V17H9V10.5H7.5V8.5H9V7.5C9 6.11929 10.1193 5 11.5 5H13V7H12C11.7239 7 11.5 7.22386 11.5 7.5V8.5H13L12.5 10.5Z"
-                                        fill="white" />
-                                </svg>
+                                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.23646 15.8368V8.68578H8.68544L9.05279 5.89394H6.23646V4.10619C6.23646 3.29802 6.45687 2.75925 7.65687 2.75925H9.17524V0.261289C8.88136 0.236799 7.99973 0.16333 6.94667 0.16333C4.76708 0.16333 3.2732 1.46129 3.2732 3.8368V5.89394H0.824219V8.68578H3.2732V15.8368H6.23646Z" fill="#EFF4FF"/>
+                                    </svg>
+                                    
                             </a>
                             <a href="https://www.instagram.com/iplt20/" target="_blank" aria-label="Instagram">
                                 <!-- Instagram SVG -->
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <title>Instagram</title>
-                                    <rect width="20" height="20" rx="4" fill="#3050A6" />
-                                    <rect x="5" y="5" width="10" height="10" rx="3" stroke="white" stroke-width="1.5" />
-                                    <circle cx="10" cy="10" r="2.5" stroke="white" stroke-width="1.5" />
-                                    <circle cx="13.5" cy="6.5" r="0.7" fill="white" />
-                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.578003 11.0782C0.541348 10.282 0.533203 10.0281 0.533203 7.99989C0.533203 5.97167 0.542027 5.7178 0.578003 4.92226C0.613978 4.12672 0.740912 3.58369 0.924863 3.10854C1.11289 2.61099 1.4068 2.1596 1.78692 1.78626C2.15958 1.40614 2.61029 1.1129 3.10852 0.925558C3.58368 0.740928 4.12671 0.614673 4.92089 0.578019C5.71846 0.541364 5.97233 0.533219 7.99987 0.533219C10.0281 0.533219 10.282 0.542042 11.0782 0.578019C11.8724 0.613994 12.4154 0.740927 12.8905 0.925558C13.3888 1.11291 13.8403 1.40663 14.2135 1.78626C14.5936 2.15959 14.8869 2.61099 15.0742 3.10854C15.2588 3.58369 15.3851 4.12672 15.4217 4.9209C15.4584 5.7178 15.4665 5.97167 15.4665 7.99989C15.4665 10.0281 15.4577 10.282 15.4217 11.0782C15.3858 11.8724 15.2588 12.4154 15.0742 12.8906C14.8868 13.3888 14.5931 13.8403 14.2135 14.2135C13.8406 14.5934 13.3894 14.8873 12.8912 15.0749C12.4161 15.2588 11.873 15.3851 11.0789 15.4218C10.2813 15.4584 10.0274 15.4666 7.99987 15.4666C5.97165 15.4666 5.71779 15.4577 4.92225 15.4218C4.12671 15.3858 3.58368 15.2588 3.10852 15.0749C2.61035 14.8871 2.15911 14.5929 1.78625 14.2128C1.40646 13.8401 1.11251 13.3891 0.924864 12.8912C0.740912 12.4161 0.614658 11.873 0.578003 11.0789L0.578003 11.0782ZM1.922 4.98267C1.88603 5.77007 1.87856 6.00629 1.87856 7.99989C1.87856 9.99349 1.88603 10.2297 1.922 11.0171C1.95526 11.7454 2.07677 12.1405 2.17926 12.4039C2.31502 12.7521 2.47589 13.0012 2.73723 13.2625C2.97823 13.5103 3.27163 13.7009 3.59589 13.8205C3.85926 13.923 4.25432 14.0445 4.98266 14.0778C5.77005 14.1137 6.00627 14.1212 7.99987 14.1212C9.99347 14.1212 10.2297 14.1137 11.0171 14.0778C11.7454 14.0445 12.1405 13.923 12.4038 13.8205C12.7276 13.701 13.0215 13.5103 13.2625 13.2625C13.5103 13.0216 13.701 12.7276 13.8205 12.4039C13.923 12.1405 14.0445 11.7454 14.0777 11.0171C14.1137 10.2297 14.1212 9.99416 14.1212 7.99989C14.1212 6.00561 14.1137 5.77007 14.0777 4.98267C14.0445 4.25433 13.923 3.85928 13.8205 3.59591C13.6847 3.24769 13.5238 2.99858 13.2625 2.73724C13.0215 2.48949 12.7276 2.29875 12.4038 2.17928C12.1405 2.07678 11.7454 1.95528 11.0171 1.92202C10.2297 1.88604 9.99347 1.87858 7.99987 1.87858C6.00627 1.87858 5.77005 1.88604 4.98266 1.92202C4.25432 1.95528 3.85926 2.07678 3.59589 2.17928C3.24768 2.31504 2.99856 2.47591 2.73723 2.73724C2.48952 2.97826 2.29887 3.27165 2.17926 3.59591C2.07677 3.85928 1.95526 4.25433 1.922 4.98267ZM10.3016 8.95358C10.5234 8.42097 10.5533 7.8279 10.3863 7.27567C10.2193 6.72344 9.8658 6.24631 9.38612 5.92577C8.90644 5.60524 8.33035 5.46118 7.75626 5.51821C7.18216 5.57523 6.64567 5.8298 6.23841 6.23843C5.97808 6.49892 5.77875 6.8139 5.65476 7.16068C5.53077 7.50746 5.48521 7.87741 5.52135 8.24391C5.5575 8.61041 5.67446 8.96434 5.86381 9.28021C6.05316 9.59609 6.31019 9.86605 6.6164 10.0707C6.92261 10.2753 7.27037 10.4095 7.63466 10.4635C7.99894 10.5176 8.37069 10.4903 8.72313 10.3834C9.07557 10.2766 9.39994 10.0929 9.67289 9.8457C9.94584 9.59846 10.1606 9.29377 10.3016 8.95358ZM5.28608 10.7137C4.9297 10.3573 4.647 9.93421 4.45413 9.46858C4.26126 9.00295 4.16199 8.50388 4.16199 7.99989C4.16199 7.49589 4.26125 6.99682 4.45413 6.53119C4.647 6.06556 4.9297 5.64247 5.28608 5.28609C5.64246 4.92971 6.06554 4.64701 6.53117 4.45414C6.99681 4.26127 7.49587 4.162 7.99987 4.162C8.50387 4.162 9.00293 4.26127 9.46856 4.45414C9.9342 4.64701 10.3573 4.92971 10.7137 5.28609C11.4334 6.00583 11.8378 6.98202 11.8378 7.99989C11.8378 9.01776 11.4334 9.99394 10.7137 10.7137C9.99392 11.4334 9.01774 11.8378 7.99987 11.8378C6.982 11.8378 6.00582 11.4334 5.28608 10.7137ZM4.73354 3.31082C4.65023 3.2225 4.55005 3.1518 4.43893 3.1029C4.32781 3.054 4.208 3.02789 4.08661 3.02612C3.96522 3.02435 3.8447 3.04696 3.7322 3.0926C3.6197 3.13824 3.5175 3.20599 3.43165 3.29184C3.34581 3.37769 3.27806 3.47989 3.23241 3.59239C3.18677 3.70489 3.16417 3.8254 3.16594 3.9468C3.16771 4.06819 3.19382 4.18799 3.24272 4.29912C3.29162 4.41024 3.36232 4.51042 3.45063 4.59373C3.62239 4.75575 3.85052 4.84445 4.08661 4.84101C4.3227 4.83757 4.54815 4.74225 4.71511 4.57529C4.88207 4.40834 4.97738 4.18288 4.98082 3.9468C4.98427 3.71071 4.89556 3.48257 4.73354 3.31082Z" fill="#EFF4FF"/>
+                                    </svg>
                             </a>
                             <a href="https://twitter.com/IPL" target="_blank" aria-label="Twitter">
                                 <!-- Twitter/X SVG -->
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <title>X (Twitter)</title>
-                                    <rect width="20" height="20" rx="4" fill="#3050A6" />
-                                    <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5"
-                                        stroke-linecap="round" />
-                                </svg>
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.2941 0.466553L14.584 0.466553L9.58125 6.00146L15.4665 13.5332H10.8584L7.24915 8.96525L3.11935 13.5332H0.82809L6.17898 7.61301L0.533203 0.466553L5.25832 0.466553L8.52077 4.64186L12.2941 0.466553ZM11.4904 12.2065H12.7593L4.56886 1.72363L3.20726 1.72363L11.4904 12.2065Z" fill="#EFF4FF"/>
+                                    </svg>
                             </a>
                         </div>
                         <div class="navbar__footer-actions">
                             <button>FAN POLL</button>
-                            <button>VIEWERS CHOICE</button>
+                            <button>FAN CHOICE</button>
                         </div>
                     </div>
                 </div>
@@ -302,10 +291,10 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="match-card" data-video-url="https://www.youtube.com/shorts/iXLX6ddd7cI?feature=share" data-video-title="TATA IPL 2025 Match 70 , LSG vs RCB - Match Report" data-video-date="27 May, 2025">
-                        <img src="/ipl/assets/images/showcase-1.png?v=5.8" alt="Match" class="match-card__img" />
+                        <img src="/ipl/assets/images/showcase-1.png?v=6.4" alt="Match" class="match-card__img" />
                         <div class="match-card__overlay">
                             <div class="match-card__content">
-                                <img src="/ipl/assets/images/play-showcase.png?v=5.8" alt="Match" class="play-logo" />
+                                <img src="/ipl/assets/images/play-showcase.png?v=6.4" alt="Match" class="play-logo" />
                                 <h2 class="match-card__title">TATA IPL 2025 Match 70 , LSG vs RCB - Match Report</h2>
                                 <div class="match-card__date">27 May, 2025</div>
                             </div>
@@ -314,10 +303,10 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="match-card" data-video-url="https://www.youtube.com/shorts/iFnxW-Z3QiA?feature=share" data-video-title="Match 63 - TATA IPL 2025: MI vs DC" data-video-date="21 May, 2025">
-                        <img src="/ipl/assets/images/showcase-4.png?v=5.8" alt="Match" class="match-card__img" />
+                        <img src="/ipl/assets/images/showcase-4.png?v=6.4" alt="Match" class="match-card__img" />
                         <div class="match-card__overlay">
                             <div class="match-card__content">
-                                <img src="/ipl/assets/images/play-showcase.png?v=5.8" alt="Match" class="play-logo" />
+                                <img src="/ipl/assets/images/play-showcase.png?v=6.4" alt="Match" class="play-logo" />
                                 <h2 class="match-card__title">Match 63 - TATA IPL 2025: MI vs DC</h2>
                                 <div class="match-card__date">21 May, 2025</div>
                             </div>
@@ -326,10 +315,10 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="match-card" data-video-url="https://youtube.com/shorts/fFJpps6fBAY?feature=shared" data-video-title="TATA IPL 2025 Match 52, RCB vs CSK - Match Report" data-video-date="3 May, 2025">
-                        <img src="/ipl/assets/images/showcase-2.png?v=5.8" alt="Match" class="match-card__img" />
+                        <img src="/ipl/assets/images/showcase-2.png?v=6.4" alt="Match" class="match-card__img" />
                         <div class="match-card__overlay">
                             <div class="match-card__content">
-                                <img src="/ipl/assets/images/play-showcase.png?v=5.8" alt="Match" class="play-logo" />
+                                <img src="/ipl/assets/images/play-showcase.png?v=6.4" alt="Match" class="play-logo" />
                                 <h2 class="match-card__title">TATA IPL 2025 Match 52, RCB vs CSK - Match Report</h2>
                                 <div class="match-card__date">3 May, 2025</div>
                             </div>
@@ -340,139 +329,155 @@
             <div class="swiper-pagination"></div>
             </div>
         <!-- Match Card Section Start -->
-        <section class="match-card-section" id="fixtures">
-            <div class="announcement-header">
-                <h2 class="announcement-title">matches</h2>
-                <a href="#" class="announcement-link">
-                    <img src="/ipl/assets/images/up-right.png?v=5.8" alt="Arrow Right"
-                    class="arrow-icon arrow-icon-light" />
-                   
-                </a>
-            </div>
-            <div class="match-card-list">
-                <div class="match-card-box">
-                    <div class="match-card-box__header">
-                        <span class="match-card-box__status match-card-box__status--completed">COMPLETED</span>
-                        <div class="match-status">
-                            <span class="match-card-box__date">30 APR</span>
-                            <span class="match-card-box__time">
-                                <svg class="match-card-box__clock" width="14" height="14" viewBox="0 0 14 14"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    style="vertical-align:middle;margin-right:0.2rem;">
-                                    <circle cx="7" cy="7" r="6" stroke="#fff" stroke-width="1.5" fill="none" />
-                                    <path d="M7 4.5V7L9 8" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
-                                </svg>
-                                19:30 (IST)
-                            </span>
-                        </div>
-                    </div>
-                    <div class="match-card-box__body">
-                        <div class="match-card-box__team match-card-box__team--top">
-                            <img src="/ipl/assets/images/teams/gt-logo.png?v=5.8" alt="Punjab Kings"
-                                class="match-card-box__team-logo" />
-                            <img src="/ipl/assets/images/team/mi.png?v=5.8" alt="Mumbai Indians"
-                                class="match-card-box__team-logo" />
-                        </div>
-                        <div class="match-card-box__team match-card-box__team--bottom">
-                            <div class="match-card-box__score-wrapper winner">
-                                <span class="match-card-box__team-name">Gujarat <span>Titans</span></span>
-                                <span class="match-card-box__score">208/6 <span
-                                        class="match-card-box__overs">(20.0)</span></span>
-                            </div>
-                            <div class="match-card-box__score-wrapper">
-                                <span class="match-card-box__team-name">MUMBAI <span>INDIANS</span></span>
-                                <span class="match-card-box__score">228/5 <span
-                                        class="match-card-box__overs">(20.0)</span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="match-card-box__footer">
-                        Mumbai Indians Won by 20 Runs (Qualified)
-                    </div>
+        
+        <div class="matches-section-wrap">
+            <!-- Match Card Section Start -->
+            <section class="match-card-section" id="fixtures">
+                <span class="semi-circle circle-up"></span>
+                <span class="semi-circle circle-down"></span>
+                <div class="announcement-header">
+                    <h2 class="announcement-title title-sec">matches</h2>
+                    <a href="#" class="announcement-link">
+                        <img src="/ipl/assets/images/up-right.png?v=6.4" alt="Arrow Right"
+                        class="arrow-icon arrow-icon-light" />
+                       
+                    </a>
                 </div>
-                <div class="match-card-box">
-                    <div class="match-card-box__header">
-                        <span class="match-card-box__status match-card-box__status--live">LIVE</span>
-                        <div class="match-status">
-                            <span class="match-card-box__date">1 June</span>
-                            <span class="match-card-box__time">
-                                <svg class="match-card-box__clock" width="14" height="14" viewBox="0 0 14 14"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    style="vertical-align:middle;margin-right:0.2rem;">
-                                    <circle cx="7" cy="7" r="6" stroke="#fff" stroke-width="1.5" fill="none" />
-                                    <path d="M7 4.5V7L9 8" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
-                                </svg>
-                                19:30 (IST)
-                            </span>
-                        </div>
-                    </div>
-                    <div class="match-card-box__body">
-                        <div class="match-card-box__team match-card-box__team--top">
-                            <img src="/ipl/assets/images/teams/pbks-logo.png?v=5.8" alt="Lucknow Super Giants"
-                                class="match-card-box__team-logo" />
-                            <img src="/ipl/assets/images/teams/mi-logo.png?v=5.8" alt="Gujarat Titans"
-                                class="match-card-box__team-logo" />
-                        </div>
-                   <div class="match-card-box__team match-card-box__team--bottom">
-                        <div class="match-card-box__score-wrapper">
-                            <span class="match-card-box__team-name">Punjab <span>Kings</span></span>
-                            <span class="match-card-box__score">297/5 <span class="match-card-box__overs">(19.0)</span></span>
-                        </div>
-                        <div class="match-card-box__score-wrapper">
-                            <span class="match-card-box__team-name">Mumbai <span>Indians</span></span>
-                            <span class="match-card-box__score">203/6 <span class="match-card-box__overs">(20.0)</span></span>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="match-card-box__footer">
-                        Punjab Kings Won by 5 Wickets (Qualified)
-                    </div>
-                </div>
-                <div class="match-card-box">
-                    <div class="match-card-box__header">
-                        <span class="match-card-box__status match-card-box__status--upcoming">UPCOMING</span>
-                        <div class="match-status">
-                            <span class="match-card-box__date">3 June</span>
-                            <span class="match-card-box__time">
-                                <svg class="match-card-box__clock" width="14" height="14" viewBox="0 0 14 14"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    style="vertical-align:middle;margin-right:0.2rem;">
-                                    <circle cx="7" cy="7" r="6" stroke="#fff" stroke-width="1.5" fill="none" />
-                                    <path d="M7 4.5V7L9 8" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
-                                </svg>
-                                19:30 (IST)
-                            </span>
-                        </div>
-                    </div>
-                    <div class="match-card-box__body">
-                        <div class="match-card-box__team match-card-box__team--top">
-                            <img src="/ipl/assets/images/teams/rcb-logo.png?v=5.8" alt="Rajasthan Royals"
-                                class="match-card-box__team-logo" />
-                            <img src="/ipl/assets/images/teams/pbks-logo.png?v=5.8" alt="Sunrisers Hyderabad"
-                                class="match-card-box__team-logo" />
-                        </div>
-                        <div class="match-card-box__team match-card-box__team--bottom">
-                            <div class="match-card-box__score-wrapper">
-                                <span class="match-card-box__team-name">Royal Challengers <span>Bangalore</span></span>
+                <div class="match-card-list">
+                    <div class="match-card-box">
+                        <div class="match-card-box__header">
+                            <span class="match-card-box__status match-card-box__status--completed">COMPLETED</span>
+                            <div class="match-status">
+                                <span class="match-card-box__date">30 APR</span>
+                                <span class="match-card-box__time">
+                                    <svg class="match-card-box__clock" width="14" height="10" viewBox="0 0 14 14"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        style="vertical-align:middle;margin-right:0.2rem;">
+                                        <circle cx="7" cy="7" r="6" stroke="#fff" stroke-width="1.5" fill="none" />
+                                        <path d="M7 4.5V7L9 8" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
+                                    </svg>
+                                    19:30 (IST)
+                                </span>
                             </div>
+                        </div>
+                        <div class="match-card-box__body">
+                            <div class="match-card-box__team match-card-box__team--top">
+                                <img src="/ipl/assets/images/teams/gt-logo.png?v=6.4" alt="Punjab Kings"
+                                    class="match-card-box__team-logo" />
+                                <img src="/ipl/assets/images/team/mi.png?v=6.4" alt="Mumbai Indians"
+                                    class="match-card-box__team-logo" />
+                            </div>
+                            <div class="match-card-box__team match-card-box__team--bottom">
+                                <div class="match-card-box__score-wrapper winner">
+                                    <span class="match-card-box__team-name">Gujarat <span>Titans</span></span>
+                                    <span class="match-card-box__score">208/6 <span
+                                            class="match-card-box__overs">(20.0)</span></span>
+                                </div>
+                                <div class="match-card-box__score-wrapper">
+                                    <span class="match-card-box__team-name">MUMBAI <span>INDIANS</span></span>
+                                    <span class="match-card-box__score">228/5 <span
+                                            class="match-card-box__overs">(20.0)</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="match-card-box__footer">
+                            Mumbai Indians Won by 20 Runs (Qualified)
+                        </div>
+                    </div>
+                    <div class="match-card-box">
+                        <div class="match-card-box__header">
+                            <span class="match-card-box__status match-card-box__status--live">LIVE</span>
+                            <div class="match-status">
+                                <span class="match-card-box__date">1 June</span>
+                                <span class="match-card-box__time">
+                                    <svg class="match-card-box__clock" width="14" height="10" viewBox="0 0 14 14"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        style="vertical-align:middle;margin-right:0.2rem;">
+                                        <circle cx="7" cy="7" r="6" stroke="#fff" stroke-width="1.5" fill="none" />
+                                        <path d="M7 4.5V7L9 8" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
+                                    </svg>
+                                    19:30 (IST)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="match-card-box__body">
+                            <div class="match-card-box__team match-card-box__team--top">
+                                <img src="/ipl/assets/images/teams/pbks-logo.png?v=6.4" alt="Lucknow Super Giants"
+                                    class="match-card-box__team-logo" />
+                                <img src="/ipl/assets/images/teams/mi-logo.png?v=6.4" alt="Gujarat Titans"
+                                    class="match-card-box__team-logo" />
+                            </div>
+                       <div class="match-card-box__team match-card-box__team--bottom">
                             <div class="match-card-box__score-wrapper">
                                 <span class="match-card-box__team-name">Punjab <span>Kings</span></span>
+                                <span class="match-card-box__score">297/5 <span class="match-card-box__overs">(19.0)</span></span>
+                            </div>
+                            <div class="match-card-box__score-wrapper winner">
+                                <span class="match-card-box__team-name">Mumbai <span>Indians</span></span>
+                                <span class="match-card-box__score">203/6 <span class="match-card-box__overs">(20.0)</span></span>
                             </div>
                         </div>
+                        </div>
+                        <div class="match-card-box__footer">
+                            Punjab Kings Won by 5 Wickets (Qualified)
+                        </div>
                     </div>
-                    <div class="match-card-box__footer">
-                        Narendra Modi Stadium, Ahmedabad
-                        <a class="buy-tickets"><img src="/ipl/assets/images/buy-ticket.png?v=5.8" alt="Buy Tickets" /> <span style="padding-top: 2px;">BUY TICKETS</span></a>
+                    <div class="match-card-box">
+                        <div class="match-card-box__header">
+                            <span class="match-card-box__status match-card-box__status--upcoming">UPCOMING</span>
+                            <div class="match-status">
+                                <span class="match-card-box__date">29 APR</span>
+                                <span class="match-card-box__time">
+                                    <svg class="match-card-box__clock" width="14" height="10" viewBox="0 0 14 14"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        style="vertical-align:middle;margin-right:0.2rem;">
+                                        <circle cx="7" cy="7" r="6" stroke="#fff" stroke-width="1.5" fill="none" />
+                                        <path d="M7 4.5V7L9 8" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
+                                    </svg>
+                                    19:30 (IST)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="match-card-box__body">
+                            <div class="match-card-box__team match-card-box__team--top">
+                                <img src="/ipl/assets/images/teams/dc-logo.png?v=6.4" alt="Delhi Capitals"
+                                    class="match-card-box__team-logo" />
+                                <img src="/ipl/assets/images/teams/csk-logo.png?v=6.4" alt="Chennai Super Kings"
+                                    class="match-card-box__team-logo" />
+                            </div>
+                            <div class="match-card-box__team match-card-box__team--bottom">
+                                <span class="match-card-box__team-name">DELHI <span>CAPITALS</span></span>
+                                <div class="match-card-box__countdown">
+                                    <div class="match-card-box__count-item">
+                                        <span class="value">11</span>
+                                        <span class="label">HRS</span>
+                                    </div>
+                                    <div class="match-card-box__count-item">
+                                        <span class="value">10</span>
+                                        <span class="label">MINS</span>
+                                    </div>
+                                    <div class="match-card-box__count-item">
+                                        <span class="value">57</span>
+                                        <span class="label">SECS</span>
+                                    </div>
+                                </div>
+                                <span class="match-card-box__team-name">CHENNAI <span>SUPER KINGS</span></span>
+                            </div>
+                        </div>
+                        <div class="match-card-box__footer">
+                            Arun Jaitley Stadium, Delhi
+                            <a class="buy-tickets"><img src="/ipl/assets/images/buy-ticket.png?v=6.4" alt="Buy Tickets" /> <span style="padding-top: 2px;">BUY TICKETS</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Match Card Section End -->
-
-        <section class="recommended-section">
+            </section>
             <div class="announcement-header recommended-header-head">
                 <h2 class="announcement-title recommended-head-title"><span>recommended</span> for you</h2>
             </div>
+        </div>
+        <!-- Match Card Section End -->
+
+        <section class="recommended-section">
             <!-- recommended curated shorts -->
             <div class="recommended-content">
                 <!-- shorts section start -->
@@ -482,19 +487,19 @@
                     </div>
                     <div class="shorts-list">
                         <div class="shorts-item">
-                            <img src="/ipl/assets/images/shorts/7.png?v=5.8" alt="MI v PBKS" />
+                            <img src="/ipl/assets/images/shorts/7.png?v=6.4" alt="MI v PBKS" />
                         </div>
                         <div class="shorts-item">
-                            <img src="/ipl/assets/images/shorts/8.png?v=5.8" alt="MI v DC" />
+                            <img src="/ipl/assets/images/shorts/8.png?v=6.4" alt="MI v DC" />
                         </div>
                         <div class="shorts-item">
-                            <img src="/ipl/assets/images/shorts/9.png?v=5.8" alt="MI v SRH" />
+                            <img src="/ipl/assets/images/shorts/9.png?v=6.4" alt="MI v SRH" />
                         </div>
                         <div class="shorts-item">
-                            <img src="/ipl/assets/images/shorts/10.png?v=5.8" alt="MI v RCB" />
+                            <img src="/ipl/assets/images/shorts/10.png?v=6.4" alt="MI v RCB" />
                         </div>
                         <div class="shorts-item">
-                            <img src="/ipl/assets/images/shorts/11.png?v=5.8" alt="MI v RR" />
+                            <img src="/ipl/assets/images/shorts/11.png?v=6.4" alt="MI v RR" />
                         </div>
                         <!-- Add more shorts-item blocks as needed -->
                     </div>
@@ -509,7 +514,7 @@
                     <div class="announcement-header recommended-header">
                         <h2 class="recommended-title">videos</h2>
                         <a href="#" class="announcement-link">
-                            <img src="/ipl/assets/images/up-right.png?v=5.8" alt="Arrow Right"
+                            <img src="/ipl/assets/images/up-right.png?v=6.4" alt="Arrow Right"
                                 class="arrow-icon arrow-icon-light" />
                             
                         </a>
@@ -517,7 +522,7 @@
                     <div class="videos-list recommended-videos-list">
                         <div class="video-item" data-video-url="https://youtube.com/shorts/RlONXD7aaCk?feature=shared" data-video-title="Mumbai Indians sign Raghu Sharma as a replacement for the injured Vignesh Puthur" data-video-date="02 May, 2025">
                             <div class="video-thumb">
-                                <img src="/ipl/assets/images/videos/video-card-1.png?v=5.8"
+                                <img src="/ipl/assets/images/videos/video-card-1.png?v=6.4"
                                     alt="Mumbai Indians Sign Raghu Sharma" />
                             </div>
                             <div class="ipl-exclusive-card">
@@ -542,7 +547,7 @@
                         </div>
                         <div class="video-item" data-video-url="https://youtube.com/shorts/-mmzAeHzw7I?feature=shared" data-video-title="Chennai Super Kings sign Dewald Brevis as a replacement for the injured Gurjapneet Singh" data-video-date="20 May, 2025">
                             <div class="video-thumb">
-                                <img src="/ipl/assets/images/videos/video-card-2.png?v=5.8"
+                                <img src="/ipl/assets/images/videos/video-card-2.png?v=6.4"
                                     alt="Chennai Super Kings sign Dewald Brevis" />
                             </div>
                             <div class="ipl-exclusive-card">
@@ -568,7 +573,7 @@
                         </div>
                         <div class="video-item" data-video-url="https://youtube.com/shorts/2vke3-haSis?feature=shared" data-video-title="Code of Conduct Breach - Match 9 - GTvMI" data-video-date="12 Apr, 2025">
                             <div class="video-thumb">
-                                <img src="/ipl/assets/images/videos/video-card-3.png?v=5.8"
+                                <img src="/ipl/assets/images/videos/video-card-3.png?v=6.4"
                                     alt="Code of Conduct Breach - Match 9 - GTvMI" />
                             </div>
                             <div class="ipl-exclusive-card">
@@ -593,7 +598,7 @@
                         </div>
                         <div class="video-item" data-video-url="https://youtube.com/shorts/uL7DR-cmCdI?feature=shared" data-video-title="Game-Changing Over Match 03 - TATA IPL 2025: CSK vs MI" data-video-date="05 Jun, 2025">
                             <div class="video-thumb">
-                                <img src="/ipl/assets/images/videos/video-card-4.png?v=5.8"
+                                <img src="/ipl/assets/images/videos/video-card-4.png?v=6.4"
                                     alt="Match 03 - TATA IPL 2025: CSK vs MI" />
                             </div>
                             <div class="ipl-exclusive-card">
@@ -620,7 +625,7 @@
                         </div>
                         <!-- <div class="video-item">
                             <div class="video-thumb">
-                                <img src="/ipl/assets/images/videos/video-card-5.png?v=5.8" alt="Match 63 - TATA IPL 2025: MI vs DC" />
+                                <img src="/ipl/assets/images/videos/video-card-5.png?v=6.4" alt="Match 63 - TATA IPL 2025: MI vs DC" />
                             </div>
                         </div> -->
                     </div>
@@ -634,7 +639,7 @@
                     <div class="announcement-header recommended-header">
                         <h2 class="recommended-title">magic moments</h2>
                         <a href="#" class="announcement-link">
-                            <img src="/ipl/assets/images/up-right.png?v=5.8" alt="Arrow Right"
+                            <img src="/ipl/assets/images/up-right.png?v=6.4" alt="Arrow Right"
                                 class="arrow-icon arrow-icon-light" />
                             
                         </a>
@@ -642,7 +647,7 @@
                     <div class="moments-list">
                         <div class="article-video-card video-item" data-video-url="https://youtube.com/shorts/RlONXD7aaCk?feature=shared" data-video-title="Dhoni And Jadeja Share A Moment After CSK's Win" data-video-date="05 Jun, 2025">
                             <div class="article-video-thumbnail">
-                              <img src="/ipl/assets/images/moments/7.png?v=5.8" alt="Dhoni And Jadeja Share A Moment">
+                              <img src="/ipl/assets/images/moments/7.png?v=6.4" alt="Dhoni And Jadeja Share A Moment">
                              </div>
                           <div class="duration">4:07</div>
                           <div class="play-button"></div>
@@ -651,7 +656,7 @@
                             <div class="video-meta">
                               <span class="video-meta-date">30 May, 2025</span>
                               <span class="video-meta-views">
-                                <img class="views-icon" src="/ipl/assets/images/views.svg?v=5.8" alt="views">
+                                <img class="views-icon" src="/ipl/assets/images/views.svg?v=6.4" alt="views">
                                 <span class="views-count">83k</span>
                               </span>
                             </div>
@@ -659,7 +664,7 @@
                         </div>
                         <div class="article-video-card video-item" data-video-url="https://youtube.com/shorts/-mmzAeHzw7I?feature=shared" data-video-title="Pant frontflips away to a century" data-video-date="08 Jun, 2025">
                             <div class="article-video-thumbnail">
-                              <img src="/ipl/assets/images/moments/8.png?v=5.8" alt="Pant's Century">
+                              <img src="/ipl/assets/images/moments/8.png?v=6.4" alt="Pant's Century">
                              </div>
                           <div class="duration">2:56</div>
                           <div class="play-button"></div>
@@ -668,7 +673,7 @@
                             <div class="video-meta">
                               <span class="video-meta-date">21 May, 2025</span>
                               <span class="video-meta-views">
-                                <img class="views-icon" src="/ipl/assets/images/views.svg?v=5.8" alt="views">
+                                <img class="views-icon" src="/ipl/assets/images/views.svg?v=6.4" alt="views">
                                 <span class="views-count">73k</span>
                               </span>
                             </div>
@@ -676,7 +681,7 @@
                         </div>
                         <div class="article-video-card video-item" data-video-url="https://youtube.com/shorts/2vke3-haSis?feature=shared" data-video-title="Harsh Dubey gives Andre Russell a golden duck" data-video-date="11 Jun, 2025">
                             <div class="article-video-thumbnail">
-                              <img src="/ipl/assets/images/moments/9.png?v=5.8" alt="Harsh Dubey's Wicket">
+                              <img src="/ipl/assets/images/moments/9.png?v=6.4" alt="Harsh Dubey's Wicket">
                             </div>
                             <div class="duration">10:05</div>
                             <div class="play-button"></div>
@@ -685,7 +690,7 @@
                                 <div class="video-meta">
                                     <span class="video-meta-date">20 Apr, 2025</span>
                                     <span class="video-meta-views">
-                                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=5.8" alt="views">
+                                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=6.4" alt="views">
                                         <span class="views-count">63k</span>
                                     </span>
                                 </div>
@@ -693,7 +698,7 @@
                         </div>
                         <div class="article-video-card video-item" data-video-url="https://youtube.com/shorts/uL7DR-cmCdI?feature=shared" data-video-title="Shreyas and Arshdeep are thrilled after the powerplay" data-video-date="12 Jun, 2025">
                             <div class="article-video-thumbnail">
-                              <img src="/ipl/assets/images/moments/11.png?v=5.8" alt="Shreyas and Arshdeep">
+                              <img src="/ipl/assets/images/moments/11.png?v=6.4" alt="Shreyas and Arshdeep">
                             </div>
                             <div class="duration">4:43</div>
                             <div class="play-button"></div>
@@ -702,7 +707,7 @@
                                 <div class="video-meta">
                                     <span class="video-meta-date">17 Apr, 2025</span>
                                     <span class="video-meta-views">
-                                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=5.8" alt="views">
+                                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=6.4" alt="views">
                                         <span class="views-count">83k</span>
                                     </span>
                                 </div>
@@ -710,7 +715,7 @@
                         </div>
                         <div class="article-video-card video-item" data-video-url="https://www.youtube.com/shorts/iXLX6ddd7cI?feature=share" data-video-title="Jitesh is ecstatic after a thrilling chase" data-video-date="13 Jun, 2025">
                             <div class="article-video-thumbnail">
-                              <img src="/ipl/assets/images/moments/12.png?v=5.8" alt="Jitesh's Celebration">
+                              <img src="/ipl/assets/images/moments/12.png?v=6.4" alt="Jitesh's Celebration">
                             </div>
                             <div class="duration">05:05</div>
                             <div class="play-button"></div>
@@ -719,7 +724,7 @@
                                 <div class="video-meta">
                                     <span class="video-meta-date">13 Apr, 2025</span>
                                     <span class="video-meta-views">
-                                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=5.8" alt="views">
+                                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=6.4" alt="views">
                                         <span class="views-count">43k</span>
                                     </span>
                                 </div>
@@ -735,7 +740,7 @@
                     <div class="announcement-header recommended-header">
                         <h2 class="recommended-title">updates</h2>
                         <a href="#" class="announcement-link">
-                            <img src="/ipl/assets/images/up-right.png?v=5.8" alt="Arrow Right"
+                            <img src="/ipl/assets/images/up-right.png?v=6.4" alt="Arrow Right"
                                 class="arrow-icon arrow-icon-light" />
                             
                         </a>
@@ -743,7 +748,7 @@
                     <div class="announcement-list">
                         <div class="announcement-card">
                             <div class="announcement-thumb">
-                                <img src="/ipl/assets/images/latest-updates/update-1.png?v=5.8" alt="Batsman Image" />
+                                <img src="/ipl/assets/images/latest-updates/update-1.png?v=6.4" alt="Batsman Image" />
                             </div>
                             <div class="announcement-content">
                                 <div class="tag">Highlights</div>
@@ -753,7 +758,7 @@
                         </div>
                         <div class="announcement-card">
                             <div class="announcement-thumb">
-                                <img src="/ipl/assets/images/latest-updates/update-2.png?v=5.8" alt="Batsman Image" />
+                                <img src="/ipl/assets/images/latest-updates/update-2.png?v=6.4" alt="Batsman Image" />
                             </div>
                             <div class="announcement-content">
                                 <div class="tag">Announcement</div>
@@ -764,7 +769,7 @@
                         </div>
                         <div class="announcement-card">
                             <div class="announcement-thumb">
-                                <img src="/ipl/assets/images/latest-updates/update-3.png?v=5.8" alt="Batsman Image" />
+                                <img src="/ipl/assets/images/latest-updates/update-3.png?v=6.4" alt="Batsman Image" />
                             </div>
                             <div class="announcement-content">
                                 <div class="tag">Match Report</div>
@@ -780,7 +785,7 @@
 
         <!-- IPL Banner Start -->
         <section class="ipl-banner">
-            <img src="/ipl/assets/images/tata-ipl-banner.png?v=5.8" alt="TATA IPL 2025 Banner"
+            <img src="/ipl/assets/images/tata-ipl-banner.png?v=6.4" alt="TATA IPL 2025 Banner"
                 class="ipl-banner__img" />
         </section>
         <!-- IPL Banner End -->
@@ -790,7 +795,7 @@
             <div class="announcement-header">
                 <h2 class="announcement-title">points table</h2>
                 <a href="#" class="announcement-link">
-                    <img src="/ipl/assets/images/up-right.png?v=5.8" alt="Arrow Right"
+                    <img src="/ipl/assets/images/up-right.png?v=6.4" alt="Arrow Right"
                         class="arrow-icon arrow-icon-light" />
                     
                 </a>
@@ -798,7 +803,7 @@
             <div class="videos-list">
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/points/point-table-1.png?v=5.8"
+                        <img src="/ipl/assets/images/points/point-table-1.png?v=6.4"
                             alt="Mumbai Indians Points Table" />
                     </div>
                     <div class="stats-row">
@@ -832,7 +837,7 @@
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/points/point-table-2.png?v=5.8"
+                        <img src="/ipl/assets/images/points/point-table-2.png?v=6.4"
                             alt="Chennai Super Kings Points Table" />
                     </div>
                     <div class="stats-row">
@@ -866,7 +871,7 @@
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/points/point-table-3.png?v=5.8"
+                        <img src="/ipl/assets/images/points/point-table-3.png?v=6.4"
                             alt="Royal Challengers Bangalore Points Table" />
                     </div>
                     <div class="stats-row">
@@ -900,7 +905,7 @@
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/points/point-table-4.png?v=5.8"
+                        <img src="/ipl/assets/images/points/point-table-4.png?v=6.4"
                             alt="Kolkata Knight Riders Points Table" />
                     </div>
                     <div class="stats-row">
@@ -952,7 +957,7 @@
             <div class="moments-list">
                 <div class="article-video-card video-item" data-video-url="https://youtube.com/shorts/RlONXD7aaCk?feature=shared" data-video-title="Dhoni And Jadeja Share A Moment After CSK's Win" data-video-date="05 Jun, 2025">                    
                     <div class="article-video-thumbnail">
-                      <img src="/ipl/assets/images/moments/mm-1.png?v=5.8" alt="article title">
+                      <img src="/ipl/assets/images/moments/mm-1.png?v=6.4" alt="article title">
                      </div>
                   <div class="duration">4:07</div>
                   <div class="play-button"></div>
@@ -961,7 +966,7 @@
                     <div class="video-meta">
                       <span class="video-meta-date">05 Jun, 2025</span>
                       <span class="video-meta-views">
-                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=5.8" alt="views">
+                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=6.4" alt="views">
                         <span class="views-count">115k</span>
                       </span>
                     </div>
@@ -969,7 +974,7 @@
                 </div>
                 <div class="article-video-card video-item" data-video-url="https://youtube.com/shorts/-mmzAeHzw7I?feature=shared" data-video-title="Pant frontflips away to a century" data-video-date="08 Jun, 2025">
                     <div class="article-video-thumbnail">
-                      <img src="/ipl/assets/images/moments/mm-2.png?v=5.8" alt="article title">
+                      <img src="/ipl/assets/images/moments/mm-2.png?v=6.4" alt="article title">
                      </div>
                   <div class="duration">2:56</div>
                   <div class="play-button"></div>
@@ -978,7 +983,7 @@
                     <div class="video-meta">
                       <span class="video-meta-date">08 Jun, 2025</span>
                       <span class="video-meta-views">
-                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=5.8" alt="views">
+                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=6.4" alt="views">
                         <span class="views-count">67k</span>
                       </span>
                     </div>
@@ -986,7 +991,7 @@
                 </div>
                 <div class="article-video-card video-item" data-video-url="https://youtube.com/shorts/2vke3-haSis?feature=shared" data-video-title="Harsh Dubey gives Andre Russell a golden duck" data-video-date="11 Jun, 2025">
                             <div class="article-video-thumbnail">
-                              <img src="/ipl/assets/images/moments/mm-3.png?v=5.8" alt="article title">
+                              <img src="/ipl/assets/images/moments/mm-3.png?v=6.4" alt="article title">
                              </div>
                           <div class="duration">10:05</div>
                           <div class="play-button"></div>
@@ -995,7 +1000,7 @@
                             <div class="video-meta">
                               <span class="video-meta-date">11 Jun, 2025</span>
                               <span class="video-meta-views">
-                                <img class="views-icon" src="/ipl/assets/images/views.svg?v=5.8" alt="views">
+                                <img class="views-icon" src="/ipl/assets/images/views.svg?v=6.4" alt="views">
                                 <span class="views-count">123k</span>
                               </span>
                             </div>
@@ -1003,7 +1008,7 @@
                         </div>
                         <div class="article-video-card video-item" data-video-url="https://youtube.com/shorts/uL7DR-cmCdI?feature=shared" data-video-title="Shreyas and Arshdeep are thrilled after the powerplay" data-video-date="12 Jun, 2025">
                     <div class="article-video-thumbnail">
-                      <img src="/ipl/assets/images/moments/mm-4.png?v=5.8" alt="article title">
+                      <img src="/ipl/assets/images/moments/mm-4.png?v=6.4" alt="article title">
                      </div>
                   <div class="duration">4:43</div>
                   <div class="play-button"></div>
@@ -1012,7 +1017,7 @@
                     <div class="video-meta">
                       <span class="video-meta-date">12 Jun, 2025</span>
                       <span class="video-meta-views">
-                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=5.8" alt="views">
+                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=6.4" alt="views">
                         <span class="views-count">256k</span>
                       </span>
                     </div>
@@ -1020,7 +1025,7 @@
                 </div>
                 <div class="article-video-card video-item" data-video-url="https://www.youtube.com/shorts/iXLX6ddd7cI?feature=share" data-video-title="Jitesh is ecstatic after a thrilling chase" data-video-date="13 Jun, 2025">
                     <div class="article-video-thumbnail">
-                      <img src="/ipl/assets/images/moments/mm-5.png?v=5.8" alt="article title">
+                      <img src="/ipl/assets/images/moments/mm-5.png?v=6.4" alt="article title">
                      </div>
                   <div class="duration">05:05</div>
                   <div class="play-button"></div>
@@ -1029,33 +1034,33 @@
                     <div class="video-meta">
                       <span class="video-meta-date">13 Jun, 2025</span>
                       <span class="video-meta-views">
-                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=5.8" alt="views">
+                        <img class="views-icon" src="/ipl/assets/images/views.svg?v=6.4" alt="views">
                         <span class="views-count">230k</span>
                       </span>
                     </div>
                   </div>
                 </div> 
                 <!-- <div class="moment-item">
-                    <img src="/ipl/assets/images/mm-2.png?v=5.8" alt="Magic Moments 2" />
+                    <img src="/ipl/assets/images/mm-2.png?v=6.4" alt="Magic Moments 2" />
                 </div>
                 <div class="moment-item">
-                    <img src="/ipl/assets/images/mm-3.png?v=5.8" alt="Magic Moments 3" />
+                    <img src="/ipl/assets/images/mm-3.png?v=6.4" alt="Magic Moments 3" />
                 </div>
                 <div class="moment-item">
-                    <img src="/ipl/assets/images/mm-4.png?v=5.8" alt="Magic Moments 4" />
+                    <img src="/ipl/assets/images/mm-4.png?v=6.4" alt="Magic Moments 4" />
                 </div> -->
                 <!-- <div class="moment-item">
-                    <img src="/ipl/assets/images/moments/moments-card-5.png?v=5.8" alt="Magic Moments 5" />
+                    <img src="/ipl/assets/images/moments/moments-card-5.png?v=6.4" alt="Magic Moments 5" />
                 </div>
                 <div class="moment-item">
-                    <img src="/ipl/assets/images/moments/moments-card-6.png?v=5.8" alt="Magic Moments 6" />
+                    <img src="/ipl/assets/images/moments/moments-card-6.png?v=6.4" alt="Magic Moments 6" />
                 </div> -->
             </div>
             <div class="stats-section" id="magic-moments">
                 <div class="stats-header">
                     <h2 class="stats-title">2025 In Numbers</h2>
                     <div class="stats-header-img">
-                        <img src="/ipl/assets/images/stat-header.png?v=5.8" alt="Stats Header Image" />
+                        <img src="/ipl/assets/images/stat-header.png?v=6.4" alt="Stats Header Image" />
                     </div>
                 </div>
                 <div class="stats-top">
@@ -1079,13 +1084,13 @@
                     </div>
                     <div class="stats-data">
                         <div class="stats-data-sai">
-                            <img src="/ipl/assets/images/sai.png?v=5.8" alt="Stats Image" />
+                            <img src="/ipl/assets/images/sai.png?v=6.4" alt="Stats Image" />
                         </div>
                         <div class="stats-data-image">
-                            <img src="/ipl/assets/images/player-1.png?v=5.8" alt="Stats Image" />
+                            <img src="/ipl/assets/images/player-1.png?v=6.4" alt="Stats Image" />
                         </div>
                         <div class="stats-data-team">
-                            <img src="/ipl/assets/images/gt.png?v=5.8" alt="Stats Image" />
+                            <img src="/ipl/assets/images/gt.png?v=6.4" alt="Stats Image" />
                         </div>
                         <div class="stats-data-player">
                             <span class="number animate-number" data-animate="true">01</span>
@@ -1094,13 +1099,13 @@
                                 <span class="role">sudharshan</span>
                             </div>
                             <div class="stats-data-im">
-                                <img src="/ipl/assets/images/up-right-w.png?v=5.8" alt="Stats Image" />
+                                <img src="/ipl/assets/images/up-right-w.png?v=6.4" alt="Stats Image" />
                             </div>
                         </div>
                     </div>
                     <div class="stats-orange">
                         <span class="text animate-number" data-animate="true">runs 759</span>
-                        <img src="/ipl/assets/images/orange.png?v=5.8" alt="Orange Background" />
+                        <img src="/ipl/assets/images/orange.png?v=6.4" alt="Orange Background" />
                     </div>
                     <div class="stats-data-list">
                         <div class="stat-list-item">
@@ -1138,16 +1143,16 @@
                 <div class="stats-bottom">
                     <div class="stats-bottom-list">
                         <div class="stats-image">
-                            <img src="/ipl/assets/images/stats/1.png?v=5.8" alt="Stats Image" />
+                            <img src="/ipl/assets/images/stats/1.png?v=6.4" alt="Stats Image" />
                         </div>
                         <div class="stats-image">
-                            <img src="/ipl/assets/images/stats/2.png?v=5.8" alt="Stats Image" />
+                            <img src="/ipl/assets/images/stats/2.png?v=6.4" alt="Stats Image" />
                         </div>
                         <div class="stats-image">
-                            <img src="/ipl/assets/images/stats/3.png?v=5.8" alt="Stats Image" />
+                            <img src="/ipl/assets/images/stats/3.png?v=6.4" alt="Stats Image" />
                         </div>
                         <div class="stats-image">
-                            <img src="/ipl/assets/images/stats/4.png?v=5.8" alt="Stats Image" />
+                            <img src="/ipl/assets/images/stats/4.png?v=6.4" alt="Stats Image" />
                         </div>
                     </div>
                 </div>
@@ -1157,16 +1162,16 @@
             <div class="announcement-header">
                 <h2 class="announcement-title">Latest Videos</h2>
                 <a href="#" class="announcement-link">
-                    <img src="/ipl/assets/images/up-right.png?v=5.8" alt="Arrow Right"
+                    <img src="/ipl/assets/images/up-right.png?v=6.4" alt="Arrow Right"
                        />
-                    <!-- <img src="/ipl/assets/images/up-right-w.png?v=5.8" alt="Arrow Right"
+                    <!-- <img src="/ipl/assets/images/up-right-w.png?v=6.4" alt="Arrow Right"
                         class="arrow-icon arrow-icon-dark" /> -->
                 </a>
             </div>
             <div class="videos-list">
                 <div class="video-item" data-video-url="https://youtube.com/shorts/RlONXD7aaCk?feature=shared" data-video-title="Glenn Maxwell's Sensational Effort on the Boundary Line" data-video-date="03 May, 2025">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/vid-1.png?v=5.8"
+                        <img src="/ipl/assets/images/vid-1.png?v=6.4"
                             alt="Maxwell's Catch" />
                         <span>10:05</span>
                     </div>
@@ -1190,7 +1195,7 @@
                 </div>
                 <div class="video-item" data-video-url="https://youtube.com/shorts/-mmzAeHzw7I?feature=shared" data-video-title="Sunrisers finish their campaign in style" data-video-date="05 Jun, 2025">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/vid-2.png?v=5.8"
+                        <img src="/ipl/assets/images/vid-2.png?v=6.4"
                             alt="Mumbai Indians Sign Raghu Sharma" />
                             <span>14:01</span>
                     </div>
@@ -1214,7 +1219,7 @@
                 </div>
                 <div class="video-item" data-video-url="https://youtube.com/shorts/2vke3-haSis?feature=shared" data-video-title="TATA IPL 2025 Match 47, RR vs GT - Match Report" data-video-date="05 Jun, 2025">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/vid-3.png?v=5.8"
+                        <img src="/ipl/assets/images/vid-3.png?v=6.4"
                             alt="Mumbai Indians Sign Raghu Sharma" />
                             <span>05:10</span>
                     </div>
@@ -1238,7 +1243,7 @@
                 </div>
                 <div class="video-item" data-video-url="https://youtube.com/shorts/uL7DR-cmCdI?feature=shared" data-video-title="TATA IPL 2025 Match 37, PBKS vs RCB - Match Report" data-video-date="05 Jun, 2025">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/vid-4.png?v=5.8"
+                        <img src="/ipl/assets/images/vid-4.png?v=6.4"
                             alt="Mumbai Indians Sign Raghu Sharma" />
                             <span>08:22</span>
                     </div>
@@ -1262,7 +1267,7 @@
                 </div>
                 <div class="video-item" data-video-url="https://www.youtube.com/shorts/iXLX6ddd7cI?feature=share" data-video-title="TATA IPL 2025 Match 35, GT vs DC - Match Report" data-video-date="05 Jun, 2025">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/vid-5.png?v=5.8"
+                        <img src="/ipl/assets/images/vid-5.png?v=6.4"
                             alt="Mumbai Indians Sign Raghu Sharma" />
                             <span>12:09</span>
                     </div>
@@ -1290,7 +1295,7 @@
             <div class="announcement-header">
                 <h2 class="announcement-title">Photo Galleries</h2>
                 <a href="#" class="announcement-link">
-                    <img src="/ipl/assets/images/up-right.png?v=5.8" alt="Arrow Right"
+                    <img src="/ipl/assets/images/up-right.png?v=6.4" alt="Arrow Right"
                         class="arrow-icon arrow-icon-light" />
                     
                 </a>
@@ -1298,11 +1303,11 @@
             <div class="announcement-list">
                 <div class="announcement-card">
                     <div class="announcement-thumb">
-                        <img src="/ipl/assets/images/card-a.png?v=5.8" alt="Batsman Image" />
+                        <img src="/ipl/assets/images/card-a.png?v=6.4" alt="Batsman Image" />
                     </div>
                     <div class="announcement-content">
                         <div class="tag">
-                            <img src="/ipl/assets/images/count-icon.png?v=5.8" alt="count icon" />
+                            <img src="/ipl/assets/images/count-icon.png?v=6.4" alt="count icon" />
                            <p> 275</p>
                         </div>
                         <div class="title">Epic Final: RCB's men lift their first ever trophy</div>
@@ -1311,11 +1316,11 @@
                 </div>
                 <div class="announcement-card">
                     <div class="announcement-thumb">
-                        <img src="/ipl/assets/images/card-b.png?v=5.8" alt="Batsman Image" />
+                        <img src="/ipl/assets/images/card-b.png?v=6.4" alt="Batsman Image" />
                     </div>
                     <div class="announcement-content">
                         <div class="tag">
-                            <img src="/ipl/assets/images/count-icon.png?v=5.8" alt="count icon" />
+                            <img src="/ipl/assets/images/count-icon.png?v=6.4" alt="count icon" />
                            <p> 180</p>
                         </div>
                         <div class="title">Shreyas Storm: PBKS into the final after 11 years</div>
@@ -1324,11 +1329,11 @@
                 </div>
                 <div class="announcement-card">
                     <div class="announcement-thumb">
-                        <img src="/ipl/assets/images/card-c.png?v=5.8" alt="Batsman Image" />
+                        <img src="/ipl/assets/images/card-c.png?v=6.4" alt="Batsman Image" />
                     </div>
                     <div class="announcement-content">
                         <div class="tag">
-                            <img src="/ipl/assets/images/count-icon.png?v=5.8" alt="count icon" />
+                            <img src="/ipl/assets/images/count-icon.png?v=6.4" alt="count icon" />
                            <p> 220</p>
                         </div>
                         <div class="title">Match 63 - TATA IPL 2025: MI vs DC</div>
@@ -1346,22 +1351,22 @@
                 <div class="video-item">
                     <a target="_blank" href="https://demo.sportz.io/ipl/games/arcade/trumps/index.html"
                         class="video-thumb">
-                        <img src="/ipl/assets/images/trumpscards.png?v=5.8" alt="Fans Choice" />
+                        <img src="/ipl/assets/images/trumpscards.png?v=6.4" alt="Fans Choice" />
                     </a>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/yourvoice.png?v=5.8" alt="Your Voice your call" />
+                        <img src="/ipl/assets/images/yourvoice.png?v=6.4" alt="Your Voice your call" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/fantasygame.png?v=5.8" alt="Fantasy Game" />
+                        <img src="/ipl/assets/images/fantasygame.png?v=6.4" alt="Fantasy Game" />
                     </div>
                 </div>
                 <div class="video-item">
                     <div class="video-thumb">
-                        <img src="/ipl/assets/images/fansChoice.png?v=5.8" alt="Trump's Cards" />
+                        <img src="/ipl/assets/images/fansChoice.png?v=6.4" alt="Trump's Cards" />
                     </div>
                 </div>
                
@@ -1374,13 +1379,13 @@
             <div class="announcement-header">
                 <h2 class="announcement-title">latest updates</h2>
                 <a href="#" class="announcement-link">
-                    <img src="/ipl/assets/images/up-right.png?v=5.8" alt="Arrow Right" />
+                    <img src="/ipl/assets/images/up-right.png?v=6.4" alt="Arrow Right" />
                 </a>
             </div>
             <div class="announcement-list">
                 <div class="announcement-card">
                     <div class="announcement-thumb">
-                        <img src="/ipl/assets/images/latest-updates/latest-update-1.png?v=5.8" alt="Batsman Image" />
+                        <img src="/ipl/assets/images/latest-updates/latest-update-1.png?v=6.4" alt="Batsman Image" />
                     </div>
                     <div class="announcement-content">
                         <div class="tag">Announcement</div>
@@ -1390,7 +1395,7 @@
                 </div>
                 <div class="announcement-card">
                     <div class="announcement-thumb">
-                        <img src="/ipl/assets/images/latest-updates/latest-update-2.png?v=5.8" alt="Batsman Image" />
+                        <img src="/ipl/assets/images/latest-updates/latest-update-2.png?v=6.4" alt="Batsman Image" />
                     </div>
                     <div class="announcement-content">
                         <div class="tag">Match Report</div>
@@ -1400,7 +1405,7 @@
                 </div>
                 <div class="announcement-card">
                     <div class="announcement-thumb">
-                        <img src="/ipl/assets/images/latest-updates/latest-update-3.png?v=5.8" alt="Batsman Image" />
+                        <img src="/ipl/assets/images/latest-updates/latest-update-3.png?v=6.4" alt="Batsman Image" />
                     </div>
                     <div class="announcement-content">
                         <div class="tag">Announcement</div>
@@ -1410,7 +1415,7 @@
                 </div>
                 <div class="announcement-card">
                     <div class="announcement-thumb">
-                        <img src="/ipl/assets/images/latest-updates/latest-update-4.png?v=5.8" alt="Batsman Image" />
+                        <img src="/ipl/assets/images/latest-updates/latest-update-4.png?v=6.4" alt="Batsman Image" />
                     </div>
                     <div class="announcement-content">
                         <div class="tag">Match Report</div>
@@ -1426,9 +1431,9 @@
                 <img src="/ipl/assets/images/pomo.gif" alt="IPL App Card Left" class="" />
             </div> -->
             <div class="ipl-app-promo__img-wrap">
-                <img src="/ipl/assets/images/card-1.png?v=5.8" alt="IPL App Card Left" class="ipl-promo-left" />
-                <img src="/ipl/assets/images/iphone.png?v=5.8" alt="IPL Mobile App" class="ipl-app-promo-middle" />
-                <img src="/ipl/assets/images/card-2.png?v=5.8" alt="IPL App Card Right" class="ipl-promo-right" />
+                <img src="/ipl/assets/images/card-1.png?v=6.4" alt="IPL App Card Left" class="ipl-promo-left" />
+                <img src="/ipl/assets/images/iphone.png?v=6.4" alt="IPL Mobile App" class="ipl-app-promo-middle" />
+                <img src="/ipl/assets/images/card-2.png?v=6.4" alt="IPL App Card Right" class="ipl-promo-right" />
             </div>
             <div class="ipl-app-promo__content">
                 <h2 class="ipl-app-promo__title">DOWNLOAD THE OFFICIAL IPL APP</h2>
@@ -1439,16 +1444,16 @@
                     <a target="_blank"
                         href=" https://play.google.com/store/apps/details?id=com.pulselive.bcci.android&hl=en_IN"
                         class="ipl-app-promo__store-btn">
-                        <img src="/ipl/assets/images/google-ap.png?v=5.8" alt="Download on Google Play"
+                        <img src="/ipl/assets/images/google-ap.png?v=6.4" alt="Download on Google Play"
                             class="store-badge store-badge-light" />
-                        <img src="/ipl/assets/images/google-app-dark.png?v=5.8" alt="Download on Google Play"
+                        <img src="/ipl/assets/images/google-app-dark.png?v=6.4" alt="Download on Google Play"
                             class="store-badge store-badge-dark" />
                     </a>
                     <a target="_blank" href="https://apps.apple.com/us/app/ipl/id509837419"
                         class="ipl-app-promo__store-btn">
-                        <img src="/ipl/assets/images/app-st.png?v=5.8" alt="Download on App Store"
+                        <img src="/ipl/assets/images/app-st.png?v=6.4" alt="Download on App Store"
                             class="store-badge store-badge-light" />
-                        <img src="/ipl/assets/images/app-st-dark.png?v=5.8" alt="Download on App Store"
+                        <img src="/ipl/assets/images/app-st-dark.png?v=6.4" alt="Download on App Store"
                             class="store-badge store-badge-dark" />
                     </a>
                 </div>
@@ -1462,7 +1467,7 @@
                         <span class="footer-title">title sponsor</span>
                     </div>
                     <div class="footer-logo">
-                        <img src="/ipl/assets/images/sponsorsn/tata.png?v=5.8" alt="Mumbai Indians" />
+                        <img src="/ipl/assets/images/sponsorsn/tata.png?v=6.4" alt="Mumbai Indians" />
                     </div>
                 </div>
                 <div class="footer-wrap associate-partner">
@@ -1470,9 +1475,9 @@
                         <span class="footer-title">associate partner</span>
                     </div>
                     <div class="footer-logo">
-                        <img src="/ipl/assets/images/sponsorsn/my11circle.png?v=5.8" alt="Mumbai Indians" />
-                        <img src="/ipl/assets/images/sponsorsn/angle.png?v=5.8" alt="AngelOne" />
-                        <img src="/ipl/assets/images/sponsorsn/rupayn.png?v=5.8" alt="RuPay" />
+                        <img src="/ipl/assets/images/sponsorsn/my11circle.png?v=6.4" alt="Mumbai Indians" />
+                        <img src="/ipl/assets/images/sponsorsn/angle.png?v=6.4" alt="AngelOne" />
+                        <img src="/ipl/assets/images/sponsorsn/rupayn.png?v=6.4" alt="RuPay" />
                     </div>
                 </div>
                 <div class="footer-half-wrap">
@@ -1481,7 +1486,7 @@
                             <span class="footer-title">official<br>umpire partner</span>
                         </div>
                         <div class="footer-logo">
-                            <img src="/ipl/assets/images/sponsorsn/cement.png?v=5.8" alt="Mumbai Indians" />
+                            <img src="/ipl/assets/images/sponsorsn/cement.png?v=6.4" alt="Mumbai Indians" />
                         </div>
                     </div>
                     <div class="footer-wrap">
@@ -1489,7 +1494,7 @@
                             <span class="footer-title">official strategic<br>timeout partner</span>
                         </div>
                         <div class="footer-logo">
-                            <img src="/ipl/assets/images/sponsorsn/ceatn.png?v=5.8" alt="Mumbai Indians" />
+                            <img src="/ipl/assets/images/sponsorsn/ceatn.png?v=6.4" alt="Mumbai Indians" />
                         </div>
                     </div>
                 </div>
@@ -1499,7 +1504,7 @@
                             <span class="footer-title">official<br>broadcaster</span>
                         </div>
                         <div class="footer-logo">
-                            <img src="/ipl/assets/images/sponsorsn/starsp.png?v=5.8" alt="Mumbai Indians" />
+                            <img src="/ipl/assets/images/sponsorsn/starsp.png?v=6.4" alt="Mumbai Indians" />
                         </div>
                     </div>
                     <div class="footer-wrap">
@@ -1507,7 +1512,7 @@
                             <span class="footer-title">official digital<br>streaming partner</span>
                         </div>
                         <div class="footer-logo">
-                            <img src="/ipl/assets/images/sponsorsn/jiostar.png?v=5.8" alt="Mumbai Indians" />
+                            <img src="/ipl/assets/images/sponsorsn/jiostar.png?v=6.4" alt="Mumbai Indians" />
                         </div>
                     </div>
                 </div>
