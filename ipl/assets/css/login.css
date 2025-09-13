@@ -124,6 +124,7 @@ body {
    NAVBAR STYLES (Light & Dark Mode)
    --------------------------------------------- */
 
+
    .navbar {
     display: flex;
     align-items: center;
@@ -138,18 +139,95 @@ body {
     transform: translateX(-50%);
     height: 60px;
     z-index: 100;
+    width: calc(100% + 1px);
+      margin-left: -1px;
   }
   
   .navbar__logo {
-    width: 84px;
-    height: 42px;
+    /* width: 84px;
+    height: 42px; */
+    display: flex;
+    align-items: center;    
+    position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    z-index: 101;
+  }
+  
+  .separator {
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 60px;
+    position: relative;
+  }
+  
+  .separator::before,
+  .separator::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60px;
+    opacity: 20%;
+    background-color: var(--color-text-sec-high);
+  }
+  
+  .separator-both {
+    margin-left: auto;
+      margin-right: 16px;
+  }
+  
+  .separator-right::before {
+    content: '';
+    right: -1rem;
+  }
+  
+  .separator-both::before {
+    content: '';
+    right: -1rem;
+  }
+  
+  .separator-both::after {
+    content: '';
+    left: -1rem;
+  }
+  
+  .semi-circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: hsl(223, 68%, 22%);
+    border-radius: 50vmax;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .semi-circle.circle-up {
+    top: -12.5px;
+    left: 50px;
+  }
+  
+  .semi-circle.circle-down {
+    bottom: -12.5px;
+    right: 50px;
+  }
+  
+  .navbar__logo a {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 64px;
+    height: 72px;
+    border-bottom-left-radius: 50vmax;
+    border-bottom-right-radius: 50vmax;
   }
   
   .navbar__logo img {
-    width: 100%;
-    height: 100%;
+    width: 44px;
+    height: auto;
   }
   
   .navbar__logo span {
@@ -162,8 +240,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 24px;
+    height: 24px;
     background: none;
     border: none;
     cursor: pointer;
@@ -172,7 +250,7 @@ body {
     padding: 0;
   }
   
-  .navbar__toggle::after {
+  /* .navbar__toggle::after {
     content: '';
     background: url(../images/bg-header.png?v=5.6) no-repeat;
     position: absolute;
@@ -183,15 +261,15 @@ body {
     background-size: cover;
     z-index: -1;
     background-position: left;
-  }
+  } */
   
   .navbar__toggle .icon-hamburger,
   .navbar__toggle .icon-close {
     position: absolute;
     left: 0;
     top: 0;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,9 +284,9 @@ body {
     position: fixed;
     top: 60px;
     left: 0;
-    width: 100vw;
-    height: calc(100dvh - 60px);
-    background: var(--color-bg-surface);
+    width: calc(100vw + 1px);
+      height: calc(100dvh - 59px);
+    background: var(--color-bg-neu-surface);
     z-index: 100;
     box-shadow: 0 4px 24px var(--color-shadow-primary);
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -232,17 +310,16 @@ body {
     background: var(--color-gray-400);
     border-radius: 2rem;
     box-shadow: 0 1px 4px var(--color-shadow-secondary);
-    padding: 0.1rem 1.2rem 0.1rem 1.2rem;
-    margin: 1rem;
+    margin: 20px 16px 0 16px;
   }
   
   .navbar__menu .navbar__search input {
     width: 100%;
     border: none;
     background: transparent;
-    font-family: 'Teko', Arial, sans-serif;
-    font-size: 1.2rem;
-    padding: 0.7rem 2.5rem 0.7rem 0.5rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 12px;
+    padding: 10px 20px;
     border-radius: 2rem;
     outline: none;
     color: var(--color-text-dark);
@@ -252,7 +329,7 @@ body {
   .navbar__menu .navbar__search input::placeholder {
     color: var(--color-gray-600);
     opacity: 1;
-    font-size: 1.1rem;
+    font-size: 12px;
   }
   
   .navbar__menu .navbar__search .navbar__search-icon {
@@ -266,8 +343,8 @@ body {
   
   .navbar__menu .navbar__search .navbar__search-icon svg {
     color: var(--color-gray-700);
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 16px;
+    height: 16px;
     stroke: var(--color-gray-700);
   }
   
@@ -278,17 +355,20 @@ body {
     background: var(--color-bg-surface);
   }
   
-  .navbar__menu .navbar__links li {
+  .navbar__menu .navbar__links li:not(:first-child) {
     border-top: 1px solid var(--color-border-primary);
+  }
+  .navbar__menu .navbar__links li:last-child {
+    border-bottom: 1px solid var(--color-border-primary);
   }
   
   .navbar__menu .navbar__links li a {
     display: block;
-    padding: 1rem 0;
+    padding: 20px 0;
     color: var(--color-primary);
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     letter-spacing: 0.02em;
     transition: color 0.2s;
   }
@@ -378,17 +458,17 @@ body {
   .navbar__menu .navbar__menu-footer .bcci-tv-box {
     background: var(--color-primary);
     color: var(--color-text-light);
-      padding: 0 10px 0 50px;
-      clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
-      font-size: 1rem;
-      font-weight: 600;
-      gap: 0.7rem;
-      min-height: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      width: max-content;
-      margin-left: auto;
+    padding: 0 16px;
+    border-top-left-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    gap: 0.7rem;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: max-content;
+    margin-left: auto;
   }
   
   .navbar__menu .navbar__menu-footer .bcci-tv-box img {
@@ -397,10 +477,11 @@ body {
   
   .navbar__menu .navbar__menu-footer .bcci-tv-box .divider {
     width: 1px;
-    height: 1.3rem;
+    height: 14px;
     background: var(--color-text-light);
     opacity: 0.4;
     margin: 0 0.7rem;
+    opacity: 20%;
     display: inline-block;
   }
   
@@ -409,8 +490,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.5rem;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    gap: 12px;
+    padding: 12px 16px;
   }
   
   .navbar__menu .navbar__menu-footer .navbar__socials {
@@ -423,9 +504,10 @@ body {
     align-items: center;
     justify-content: center;
     background: var(--color-primary-lightest);
-    border-radius: 0.3rem;
-    width: 2.2rem;
-    height: 2.2rem;
+    border-radius: 50vmax;
+    width: 32px;
+    height: 32px;
+    color: var(--color-text-sec-medium);
   }
   
   .navbar__menu .navbar__menu-footer .navbar__socials a img {
@@ -440,15 +522,20 @@ body {
   
   .navbar__menu .navbar__menu-footer .navbar__footer-actions button {
     background: transparent;
-    color: var(--color-text-light);
-    border: 1.5px solid var(--color-text-light);
-    border-radius: 0.3rem;
-    padding: 0.4rem 1rem;
-    font-size: 14px;
-    font-family: 'Teko', Arial, sans-serif;
-    font-weight: 600;
+    color: var(--color-text-sec-medium);
+    border: 1px solid var(--color-text-light);
+    border-radius: 32px;
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     cursor: pointer;
+    height: 32px;
+    letter-spacing: 0;
+    padding: 10px 16px;
     transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .navbar__menu .navbar__menu-footer .navbar__footer-actions button:hover {
@@ -460,14 +547,14 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 60px;
     justify-content: space-between;
     gap: 1rem;
   }
   
   .navbar__switch {
-    width: 4.5rem;
-    height: 2.2rem;
+    width: 58px;
+    height: 28px;
     background: var(--color-primary-lighter);
     border-radius: 999px;
     position: relative;
@@ -494,10 +581,11 @@ body {
   
   .navbar__switch .toggle-knob {
     position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-    width: 1.8rem;
-    height: 1.8rem;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
     background: var(--color-secondary);
     border-radius: 50%;
     box-shadow: 0 2px 6px var(--color-shadow-dark);
@@ -508,12 +596,13 @@ body {
     transition: left 0.3s;
   }
   
-  .navbar__switch .toggle-knob.toggle-knob-dark{
+  .navbar__switch .toggle-knob.toggle-knob-dark {
     right: 0.2rem;
     left: unset;
   }
   
-  .icon-moon,.icon-sun{
+  .icon-moon,
+  .icon-sun {
     width: 100%;
     height: 100%;
     display: flex;
@@ -540,6 +629,12 @@ body {
     background: var(--color-dark-secondary);
   }
   
+  body.dark-mode .navbar {
+    background: var(--color-dark-header) url('../images/bg-header.png?v=5.6') no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 4px 8px var(--color-shadow-dark);
+  }
+  
   body.dark-mode .navbar__menu {
     background: #19398A;
     box-shadow: 0 4px 16px var(--color-shadow-dark);
@@ -556,6 +651,28 @@ body {
   .navbar__profile {
     width: 24px;
     height: 24px;
+  }
+  
+  .navbar__profile-login {
+    width: 28px;
+    height: 28px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-status-completed);
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .profile-icon {
+    position: relative;
+    top: 1px;
   }
   
   .navbar__profile img {
@@ -583,33 +700,6 @@ body {
   .navbar__desktop {
     display: none;
   }
-
-  /* Dark Mode */
-.dark-mode .navbar__toggle::after {
-	background: url(../images/bg-header-dark.png?v=5.6) no-repeat;
-}
-.dark-mode .match-card .match-card__overlay{
-	background: linear-gradient(0.78deg, #10172B 20.38%, rgba(11, 38, 104, 0.5) 42.49%, rgba(16, 23, 43, 0) 56.34%);
-}
-.dark-mode .navbar__menu.open{
-	background: #19398A;
-}
-.dark-mode .navbar__menu .navbar__links{
-	background: #19398A;
-}
-.dark-mode .navbar__menu .navbar__search{
-	background: hsla(224, 46%, 12%, 1);
-}
-.dark-mode .navbar__menu .navbar__links li a{
-	color: #fff;
-}
-.dark-mode .navbar__menu .navbar__menu-footer .bcci-tv-box{
-	background: hsla(224, 46%, 12%, 1);
-}
-.dark-mode .navbar__menu .navbar__menu-footer .navbar__footer-row{
-	background: hsla(223, 81%, 23%, 1);
-}
-  
   
   /* ---------------------------------------------
      END NAVBAR STYLES
