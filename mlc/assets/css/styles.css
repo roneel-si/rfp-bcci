@@ -307,6 +307,202 @@ overflow-x: auto;
 	fill: #fff;
 }
 
+/* ==========================================================================
+   STANDINGS SECTION
+   ========================================================================== */
+.standings-section {
+	background: #fff;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+.standings-container {
+	padding: 15px;
+}
+
+.standings-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.standings-title {
+	font-family: "Bakbak One", sans-serif;
+	font-size: 24px;
+	font-weight: 400px;
+	text-transform: uppercase;
+	color: #000048;
+	margin: 0;
+}
+
+.standings-expand-icon {
+	width: 33px;
+	height: 33px;
+	border: 1px solid #000048;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	text-decoration: none;
+	color: #000048;
+	transition: all 0.3s ease;
+}
+
+.standings-expand-icon:hover {
+	background: #000048;
+	color: #fff;
+}
+
+.standings-expand-icon svg {
+	transform: rotate(-45deg);
+	width: 20px;
+}
+
+.standings-table {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.standings-row {
+	display: flex;
+	align-items: center;
+	background: #F5F5F5;
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.standings-row:hover {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transform: translateY(-1px);
+}
+
+.team-indicator {
+	width: 4px;
+	height: 34px;
+	flex-shrink: 0;
+}
+
+.team-info {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	padding: 8px 12px;
+	gap: 12px;
+	position: relative;
+}
+
+.team-vector-bg {
+	position: absolute;
+	left: -10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 120px;
+	height: 60px;
+	opacity: 0.15;
+	pointer-events: none;
+	z-index: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+
+.vector-image {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	filter: grayscale(100%);
+}
+
+.team-logo-wrapper {
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	border-radius: 50%;
+	padding: 4px;
+	position: relative;
+	z-index: 1;
+}
+
+.team-logo-standings {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	border-radius: 50%;
+}
+
+.team-stats {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex: 1;
+	gap: 8px;
+	position: relative;
+	z-index: 1;
+}
+
+.stat-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2px;
+	min-width: 50px;
+}
+
+.stat-value {
+	font-family: "Bakbak One", sans-serif;
+	font-size: 20px;
+	color: #222222;
+	font-weight: 400;
+}
+
+.stat-label {
+	font-size: 10px;
+	color: #666;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+
+.qualification-badge {
+	width: 24px;
+	height: 24px;
+	background: #EA0048;
+	color: #fff;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	font-weight: 700;
+	margin-right: 12px;
+	flex-shrink: 0;
+}
+
+/* Responsive adjustments for standings */
+@media screen and (max-width: 360px) {
+	.stat-item {
+		min-width: 45px;
+	}
+	
+	.stat-value {
+		font-size: 14px;
+	}
+	
+	.stat-label {
+		font-size: 9px;
+	}
+}
+
 /* scores section css */
 .scores-listing {
 	display: flex;
