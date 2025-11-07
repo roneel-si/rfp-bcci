@@ -1022,7 +1022,64 @@ left: unset;
 	   top: -30px;
    }
    
-   
+   .verticle-news-section .article-listing {
+	flex-direction: column;
+   }
+   .verticle-news-section .top-item .article-thumbnail {
+	height: 268px;
+   }
+   .verticle-news-section .top-item .article-content {
+    position: absolute;
+    bottom: 10px;
+    z-index: 9;
+    width: 90%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+   }
+   .verticle-news-section .top-item .article-date,
+   .verticle-news-section .top-item .article-title {
+	color: #FEFEFE;
+   } 
+   .verticle-news-section .top-item:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 61.75%);
+
+   }
+   .verticle-news-section .article-item {
+	width: 100%;
+   }
+   .bottom-articles-listing .article-item {
+	display: flex;
+	gap: 10px;
+	border-bottom: 1px solid rgb(0 0 72 / 23%);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+   }
+   .bottom-articles-listing .article-item:last-child {
+	border-bottom: none;
+   }
+   .bottom-articles-listing .article-thumbnail {
+	width: 160px;
+    height: 90px;
+    flex-shrink: 0;
+   }
+   .bottom-articles-listing .article-content {
+	width: calc(100% - 160px);
+	
+   }
+   .bottom-articles-listing .article-title {
+	font-size: 12px;
+	
+
+   }
    /* ==========================================================================
 			OTP VERIFICATION SECTION
 			========================================================================== */
