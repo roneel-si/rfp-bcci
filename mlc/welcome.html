@@ -21,31 +21,27 @@
         </div>
 
         <section class="welcome-card" role="region" aria-labelledby="welcome-title">
-            <h1 id="welcome-title" class="welcome-title">WELCOME</h1>
-            <p class="welcome-sub">Login / Create your account</p>
-
-            <form class="welcome-form" action="#" method="post" autocomplete="tel">
-                <label for="mobile" class="field-label">Mobile No.</label>
-
-                <div class="field-control">
-                    <input id="mobile"
-                           name="mobile"
-                           type="tel"
-                           inputmode="numeric"
-                           pattern="[0-9]*"
-                           maxlength="15"
-                           placeholder="9859846521"
-                           class="mobile-input"
-                           aria-label="Mobile number"
-                           required
-                           value=""/>
+            <div class="welcome-header">
+                <div class="welcome-content">
+                    <h1 id="welcome-title" class="welcome-title">WELCOME</h1>
+                    <p class="welcome-sub">Login / Create your account</p>
                 </div>
-            </form>
-                    <div class="welcome-footer">
-            <button type="button" class="otp-btn" aria-label="Get OTP">
-                GET OTP
-            </button>
-        </div>
+
+                <form class="welcome-form" action="#" method="post" autocomplete="tel">
+                    <label for="mobile" class="field-label">Mobile No.</label>
+
+                    <div class="field-control">
+                        <input id="mobile" name="mobile" type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="15"
+                            placeholder="9859846521" class="mobile-input" aria-label="Mobile number" required
+                            value="" />
+                    </div>
+                </form>
+            </div>
+            <div class="welcome-footer">
+                <button type="button" class="otp-btn" aria-label="Get OTP">
+                    GET OTP
+                </button>
+            </div>
         </section>
     </main>
 </body>
