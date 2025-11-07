@@ -1478,6 +1478,283 @@ left: unset;
 	   outline: none;
    }
    
+   /* ==========================================================================
+			BANNER SECTION STYLES
+			========================================================================== */
+   .banner-section {
+	background: #F5F5F5;
+	padding: 58px 15px;
+   }
+   .banner-content{
+	font-family: Bakbak One;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15px;
+   }
+   .banner-title{
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 70.2px;
+	text-transform: uppercase;
+	color: #000048;
+   }
+   .banner-image{
+	width: 390px;
+	height: 250px;
+	margin:0 auto;
+   }
+   .banner-image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+   }
+
+   .download-section {
+	padding: 58px 15px;
+	background: #F5F5F5;
+	position: relative;
+	z-index: 1;
+   }
+   .download-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 100%;
+	background: no-repeat center / contain url('/mlc/assets/images/banner/download.svg');
+  }
+  .download-section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: no-repeat center / cover url('/mlc/assets/images/banner/grains.svg');
+	z-index: -1; 
+	}
+
+   .download-content{
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+   }
+   .download-image{
+	width: 265px;
+	height: 240px;
+	margin:0 auto;
+   }
+   .download-image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+   }
+   .download-title{
+	font-family: Bakbak One;
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 42px;
+	text-transform: uppercase;
+	color: #000048;
+   }
+   .download-subtitle{
+	font-family: Montserrat;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #121C70;
+   }
+   .download-button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+   }
+   .download-link{
+	width: calc(50% - 6px);
+	height: 52px;
+   }
+   .download-link img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+   }
+
+   .social-section {
+	padding: 58px 15px;
+	background: #000048;
+	position: relative;
+   }
+   .social-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 100%;
+	background: no-repeat center / contain url('/mlc/assets/images/banner/download.svg');
+  } 
+  .social-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	position: relative;
+	z-index: 1;
+   }
+   .social-content::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 72%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 100%;
+	background: no-repeat center / contain url('/mlc/assets/images/banner/arrow.svg');
+   }
+   .social-image{
+	width: 113px;
+	height: 160px;
+	margin:0 auto;
+   }
+   .social-image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+   }
+   .social-title{
+	font-family: Bakbak One;
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 44px;
+	text-transform: uppercase;
+	color: #FEFEFE;
+	text-align: center;
+   }
+   .social-subtitle{
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #FEFEFE;
+	opacity: 0.4;
+	text-align: center;
+   }
+   .email-subscribe{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    background: #F5F5F5;
+    height: 51px;
+    width: 100%;
+	margin-top: 20px;
+	border-radius: 12px;
+
+   }
+   .email-input{
+	border: none;
+	padding: 10px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1;
+	background: #F5F5F5;
+	color: #434343;
+	width: 100%;
+   }
+   .email-input:hover{
+	outline: none;
+	border: none;
+   }
+   .email-btn{
+	position: relative;
+	border: 1px solid white;
+    padding-inline: 35px;
+    height: 40px;
+    border-radius: 6px;
+    margin-right: 5px;
+    background: #EA0048;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #FEFEFE;
+   }
+   .email-btn::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 19px; 
+	transform: translateY(-50%);
+	width: 9px;
+	height: 9px;
+	background: no-repeat center / contain url('/mlc/assets/images/banner/arrow-icon.svg');
+  }
+
+  .fantasy-section {
+	padding: 58px 15px;
+	background: #F5F5F5;
+	position: relative;
+   }
+   .fantasy-content{
+	position: relative;
+   }
+   .fantasy-image{
+	width: 100%;
+	height: auto;
+   }
+   .fantasy-image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+   }
+  .fantasy-subtitle{
+	position: absolute;
+	bottom: 100px;
+	padding-inline: 10px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #FCFCFD;
+	opacity: 0.4;
+	text-align: center;
+   }
+   .fantasy-subtitle .text-highlight{
+	font-weight: 800;
+   }
+   .fantasy-button{
+	position: absolute;
+	bottom: 50px;
+    height: 35px;
+    width: calc(100% - 20px);
+	padding-inline: 10px;
+    background: #EA0048;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+	left: 10px;
+   }
+   .fantasy-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+	padding-left: 15px;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 9px;
+    background: no-repeat center / contain url(/mlc/assets/images/banner/arrow-icon.svg);
+}
+
+
+
    /* Dark mode form select styling */
    body[data-theme="dark"] .form-select {
 	   background: var(--background-very-light);
