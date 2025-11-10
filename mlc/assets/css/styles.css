@@ -87,6 +87,12 @@ body {
   gap: 15px;
   overflow-x: auto;
 }
+.article-social-meta {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin: 10px 0 ;
+}
 .article-listing-icon {
   width: 33px;
   height: 33px;
@@ -173,6 +179,28 @@ body {
 }
 .article-content {
   padding: 12px 0;
+}
+.article-listing-meta {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.view-count {
+	display: flex;
+    align-items: center;
+    font-size: 12px;
+	position: relative;
+	gap: 5px;
+}
+.view-count::before {
+	content: "";
+    width: 1px;
+    height: 80%;
+    position: absolute;
+    background: #000048;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: -7px;
 }
 
 .article-title {
@@ -313,13 +341,13 @@ body {
    STANDINGS SECTION
    ========================================================================== */
 .standings-section {
-  background: #fff;
+	background: #F5F5F5;
   padding: 0;
   margin-bottom: 20px;
 }
 
 .standings-container {
-  padding: 15px;
+  padding: 40px 15px 20px;
 }
 
 .standings-header {
@@ -383,17 +411,17 @@ body {
   transform: translateY(-1px);
 }
 
-.team-indicator {
+.standings-row .team-indicator {
   width: 4px;
   height: 34px;
   flex-shrink: 0;
 }
 
-.team-info {
+.standings-row .team-info {
   display: flex;
   align-items: center;
   flex: 1;
-  padding: 8px 25px 8px 12px;
+  padding: 10px 25px 10px 12px;
   gap: 12px;
   position: relative;
 }
@@ -414,7 +442,7 @@ body {
   overflow: hidden;
 }
 
-.vector-image {
+.standings-row .vector-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -422,30 +450,25 @@ body {
 }
 
 .team-logo-wrapper {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
   border-radius: 50%;
-  padding: 4px;
+  padding: 5px;
   position: relative;
   z-index: 1;
   border: 1px solid #e5e6f1;
 }
 .team-logo-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 21px;
-  left: -6px;
-  transform: translateY(-50%);
-  width: 55px;
-  height: 72px;
-  background: no-repeat left center / contain
-    url(/mlc/assets/images/banner/download.svg);
-  pointer-events: none;
+	content: "";
+    position: absolute;
+    width: 56px;
+    height: 72px;
+    background: no-repeat center bottom / contain url(/mlc/assets/images/banner/download.svg);
+    pointer-events: none;
 }
 
 .team-logo-standings {
@@ -455,7 +478,7 @@ body {
   border-radius: 50%;
 }
 
-.team-stats {
+.standings-row  .team-stats {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -465,7 +488,7 @@ body {
   z-index: 1;
 }
 
-.stat-item {
+.standings-row  .stat-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -473,14 +496,14 @@ body {
   min-width: 50px;
 }
 
-.stat-value {
+.standings-row  .stat-value {
   font-family: "Bakbak One", sans-serif;
   font-size: 20px;
   color: #222222;
   font-weight: 400;
 }
 
-.stat-label {
+.standings-row  .stat-label {
   font-size: 10px;
   color: #666;
   text-transform: uppercase;
@@ -533,18 +556,7 @@ body {
   padding: 23px;
   position: relative;
 }
-/* .scores-banner-inner::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 6%;
-  transform: translateY(-50%);
-  width: 40%;
-  height: 100%;
-  background: no-repeat left center / contain
-    url("/mlc/assets/images/banner/download.svg");
-  pointer-events: none;
-} */
+
 .sb-left {
   position: relative;
   display: flex;
@@ -740,7 +752,7 @@ body {
 .match-card .match-number {
   position: relative;
   text-transform: capitalize;
-  font-weight: bold;
+  font-weight: bold;   
   padding-right: 8px;
   margin-right: 5px;
 }
@@ -904,7 +916,7 @@ body {
   width: 190px;
 }
 .partner-image {
-  width: 100px;
+  width: 80px;
 }
 .partner-image img {
   width: 100%;
@@ -1308,8 +1320,8 @@ body {
     margin-top: 30px;
    }
    .section-ads img {
-	width: 300px
-	height: 100px
+	width: 300px;
+	height: 100px;
 	object-fit: cover;
    }
    /* ==========================================================================
@@ -1387,7 +1399,7 @@ body {
 
 /* Label styling */
 .login-input-label {
-font-family: Montserrat;
+
 font-weight: 400;
 font-size: 14px;
 line-height: 22px;
@@ -1400,14 +1412,14 @@ line-height: 22px;
   padding: 12px 12px;
   border-radius: 8px;
   border: none;
-  font-family: Montserrat;
+  
 font-weight: 600;
 font-size: 14px;
 color: #000048;
 
 }
 .login-selected-text{
-	font-family: Montserrat;
+	
 font-weight: 600;
 font-style: SemiBold;
 font-size: 14px;
@@ -1613,7 +1625,7 @@ body[data-theme="dark"] .otp-container {
   font-weight: 700;
   font-size: 12px;
   margin-left: 5px;
-  font-family: Montserrat;
+  
 }
 
 .timer-text {
@@ -1669,34 +1681,7 @@ body[data-theme="dark"] .otp-container {
   object-fit: cover;
 }
 
-.otp-verify-btn {
-  background: #c0995a;
-  border: none;
-  padding: 11px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  border-radius: 6px;
-  background-color: #ea0048;
-  color: #fefefe;
-  text-transform: uppercase;
-  position: relative;
-}
-.otp-verify-btn:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  padding-right: 10px;
-  transform: translateY(-50%);
-  width: 9px;
-  height: 9px;
-  background: no-repeat center / contain
-    url(/mlc/assets/images/banner/arrow-icon.svg);
-}
+
 
 /* Animation for OTP inputs */
 @keyframes shake {
@@ -1799,11 +1784,7 @@ body[data-theme="dark"] .login-main-content {
   transition: all 0.3s ease;
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+
 
 .login-form-row {
   display: grid;
@@ -1925,37 +1906,37 @@ body[data-theme="dark"] .login-main-content {
 /* ==========================================================================
 			BANNER SECTION STYLES
 			========================================================================== */
-.banner-section {
+.mlc-banner-section {
   background: #f5f5f5;
-  padding: 58px 15px;
+  padding: 30px 15px;
 }
-.banner-content {
+.mlc-banner-section .banner-content {
   font-family: Bakbak One;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 15px;
 }
-.banner-title {
+.mlc-banner-section .banner-title {
   font-size: 40px;
   font-weight: 400;
   line-height: 70.2px;
   text-transform: uppercase;
   color: #000048;
 }
-.banner-image {
+.mlc-banner-section .banner-image {
   width: 100%;
   height: 250px;
   margin: 0 auto;
 }
-.banner-image img {
+.mlc-banner-section .banner-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .download-section {
-  padding: 58px 15px;
+  padding: 20px 20px 40px;
   background: #f5f5f5;
   position: relative;
   z-index: 1;
@@ -2006,7 +1987,7 @@ body[data-theme="dark"] .login-main-content {
   color: #000048;
 }
 .download-subtitle {
-  font-family: Montserrat;
+  
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
@@ -2084,7 +2065,7 @@ body[data-theme="dark"] .login-main-content {
   text-align: center;
 }
 .social-subtitle {
-  font-family: Montserrat;
+  
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -2160,61 +2141,38 @@ body[data-theme="dark"] .login-main-content {
   object-fit: cover;
 }
 .fantasy-subtitle {
-  position: absolute;
-  bottom: 100px;
-  padding-inline: 10px;
   font-size: 14px;
-  font-weight: 400;
   line-height: 24px;
   color: #fcfcfd;
-  opacity: 0.4;
   text-align: center;
+  margin-bottom: 10px;
 }
 .fantasy-subtitle .text-highlight {
   font-weight: 800;
 }
-.fantasy-button {
-  position: absolute;
-  bottom: 50px;
-  height: 35px;
-  width: calc(100% - 20px);
-  padding-inline: 10px;
-  background: #ea0048;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 12px;
-  color: white;
-  border: none;
-  text-transform: uppercase;
-  left: 10px;
-}
-.fantasy-button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  padding-left: 15px;
-  transform: translateY(-50%);
-  width: 9px;
-  height: 9px;
-  background: no-repeat center / contain
-    url(/mlc/assets/images/banner/arrow-icon.svg);
+.fantasy-footer-container {
+	position: absolute;
+    bottom: 25px;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
-/* OTP SECTION (WELCOME) */
-.welcome-hero {
+
+/* OTP SECTION (login) */
+.login-hero {
+  width: 100%;
+  height: 150px;
+}
+.login-hero img {
   width: 100%;
   height: 100%;
-  padding: 0;
+  object-fit: cover;
 }
-.welcome-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.welcome-card {
+.login-card {
   padding: 20px;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 150px - 60px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2222,7 +2180,7 @@ body[data-theme="dark"] .login-main-content {
   z-index: 1;
   position: relative;
 }
-.welcome-card:before {
+.login-card:before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -2235,34 +2193,18 @@ body[data-theme="dark"] .login-main-content {
   background: no-repeat center / contain
     url(/mlc/assets/images/banner/download.svg);
 }
-.welcome-header {
+.login-header {
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
-.welcome-content {
+.login-content {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
 }
-.welcome-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-}
-.welcome-title {
-  font-family: "Bakbak One", sans-serif;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 28px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: #000048;
-}
-.welcome-sub {
-  font-family: "Montserrat", sans-serif;
+
+.login-sub {
   font-weight: 400;
   font-style: Regular;
   font-size: 12px;
@@ -2270,9 +2212,7 @@ body[data-theme="dark"] .login-main-content {
   color: #626262;
 }
 .field-label {
-  font-family: Montserrat;
   font-weight: 400;
-  font-style: Regular;
   font-size: 14px;
   line-height: 22px;
 }
@@ -2285,36 +2225,13 @@ body[data-theme="dark"] .login-main-content {
   border-radius: 6px;
   border: none;
   padding: 10px;
-  font-family: Montserrat;
+  
   font-weight: 600;
-  font-style: SemiBold;
   font-size: 14px;
   line-height: 20px;
   color: #222222;
 }
-.otp-btn {
-  width: 100%;
-  height: 40px;
-  background: #ea0048;
-  border-radius: 6px;
-  border: none;
-  color: white;
-  position: relative;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 12px;
-}
-.otp-btn:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  padding-right: 10px;
-  transform: translateY(-50%);
-  width: 9px;
-  height: 9px;
-  background: no-repeat center / contain
-    url(/mlc/assets/images/banner/arrow-icon.svg);
-}
+
 
 /* Dark mode form select styling */
 body[data-theme="dark"] .form-select {
@@ -2337,6 +2254,9 @@ body[data-theme="dark"] .form-select {
   color: var(--gray);
   pointer-events: none;
 }
+input {
+	font-family: "Montserrat", sans-serif;
+}
 
 /* Submit Button */
 .login-submit-btn {
@@ -2352,6 +2272,316 @@ body[data-theme="dark"] .form-select {
   text-transform: uppercase;
   margin-top: 10px;
 }
+
+.latest-video-section .article-thumbnail {
+	height: 281px;
+}
+.latest-video-section .article-thumbnail img {
+	aspect-ratio: 1 / 1;
+}
+.tournament-leader-list {
+	display: flex;
+	gap: 15px;
+	overflow-x: auto;
+	margin: 0 -15px;
+    padding: 0 15px;
+}
+.tournament-leader-item {
+	width: 80%;
+	flex-shrink: 0;
+}
+.tournament-leader-item-image img {
+	width: 100%;
+}
+.fan-wall-section {
+	position: relative;
+	background: #f5f5f5;
+}
+.fan-wall-section .video .video-play-button {
+	top: 50%;
+	transform: translate(-50%);
+	left: 50%;
+}
+.fan-wall-section::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mask: url(/mlc/assets/images/pattern-02.png) no-repeat center center / cover;
+    background: #000;
+    opacity: .5;
+}
+.fan-wall-section .article-item {
+	width: 164px;
+}
+.fan-wall-section .article-thumbnail {
+	height: 217px;
+}
+.fan-wall-section .article-listing {
+	gap: 10px;
+}
+.fan-wall-section .article-content {
+padding: 12px 10px;
+}
+.vote-section .article-item {
+	width: 313px;
+}
+.vote-section .article-title {
+    font-size: 12px;
+    font-weight: 500;
+
+}
+.article-footer-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.article-footer-section .website-button {
+	flex: 1;
+}
+.global-vote {
+	border-radius: 8px;
+    background: #FEE3E8;
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+	font-size: 14px;
+    font-weight: bold;
+    color: #000048;
+}
+.vote-section .listing-section-content {
+	position: relative;
+	background: #F5F5F5;
+	padding-top: 0;
+}
+.vote-section .listing-section-content::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mask: url(/mlc/assets/images/pattern-02.png) no-repeat center center;
+    background-size: cover;
+    background-color: #000;
+    opacity: .5;
+}
+.vote-section .article-listing-title {
+	font-size: 18px;
+    text-align: center;
+    width: 100%;
+    text-transform: capitalize;
+}
+.vote-section .article-listing-header {
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	gap: 20px;
+}
+.article-listing-header .header-image img {
+	width: 180px;
+}
+
+
+
+/* HEADER */
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	padding: 10px 20px;
+	background: white;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  .header-logo img {
+	height: 60px;
+    margin-top: 27px;
+  }
+  .header-logo {
+	z-index: 9999;
+  }
+  
+  .header-icons {
+	display: flex;
+	gap: 15px;
+  }
+  
+  .header-icon-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 22px;
+  }
+  
+  /* MOBILE MENU */
+  .header-mobile-menu {
+	position: fixed;
+	overflow: auto;
+	top: 60px;
+	right: -100%;
+	width: 100%;
+	height: calc(100vh - 60px);
+	background: #F5F5F5;
+	transition: right 0.3s ease;
+	z-index: 1000;
+	box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  }
+  .header-mobile-menu:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mask: url(/mlc/assets/images/pattern-02.png) no-repeat center center;
+    background-size: cover;
+    background-color: #000;
+    transform: scale(1.5);
+    opacity: .4;
+  }
+  
+  .header-mobile-menu.header-open {
+	right: 0;
+  }
+  
+  .header-menu-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+	border-bottom: 1px solid #eee;
+  }
+  
+  .header-menu-header img {
+	height: 45px;
+  }
+  
+  .header-close-btn {
+	background: #d61e41;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	font-size: 22px;
+	cursor: pointer;
+  }
+  
+  .header-menu-list {
+	list-style: none;
+	padding: 20px;
+  }
+  
+  .header-menu-list li {
+	padding: 15px 0;
+	font-family: "Bakbak One", sans-serif;
+	font-size: 16px;
+	color: #000048;
+	text-transform: uppercase;
+	border-bottom: 1px solid rgba(184, 184, 184, 1);
+  }
+  
+  
+/* Submenu header */
+.header-submenu-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #d61e41;
+	cursor: pointer;
+  }
+  
+  .header-arrow {
+	transition: transform 0.3s ease;
+  }
+  
+  .header-rotate {
+	transform: rotate(180deg);
+  }
+  
+  /* Submenu list */
+  .header-teams-list {
+	list-style: none;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+  }
+  
+  .header-submenu-open {
+	max-height: 500px; /* enough space for all items */
+  }
+  
+  .header-teams-list li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 0;
+	border-bottom: 1px solid #f1f1f1;
+	font-size: 14px;
+	font-weight: 600;
+  }
+  
+  .header-teams-list {
+	list-style: none;
+	padding-top: 10px;
+	padding-left: 20px;
+  }
+  
+  .header-teams-list li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 0;
+	border-bottom: 1px solid #f1f1f1;
+	font-size: 12px;
+	font-weight: 600;
+  }
+  .header-teams-list li:last-child {
+	border-bottom: none;
+  }
+  
+  .header-team-bar {
+	display: inline-block;
+	width: 3px;
+	height: 25px;
+	border-radius: 2px;
+  }
+  
+  .header-purple { background: #662d91; }
+  .header-blue { background: #0071bc; }
+  .header-orange { background: #f7941d; }
+  .header-green { background: #39b54a; }
+  .header-red { background: #ed1c24; }
+  
+  .header-menu-footer {
+	display: flex;
+	justify-content: space-around;
+	padding: 15px 0;
+  }
+  
+  .header-shop-btn,
+  .header-ticket-btn {
+	border: none;
+	background: #d61e41;
+	color: white;
+	font-weight: 700;
+	border-radius: 8px;
+	padding: 12px 25px;
+	cursor: pointer;
+	width: 45%;
+  }
+
 
 @media screen and (min-width: 768px) {
   .main {
