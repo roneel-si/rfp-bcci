@@ -108,7 +108,7 @@
                             Select your favourite Teamsa
                         </div>
                         <div class="preferences-list" role="list" aria-label="Select favourite team">
-                            <div class="pref-item" role="listitem">
+                            <div class="pref-item" role="listitem" style="--team-color: #612EA7;">
                                 <label class="pref-row">
                                     <input type="radio" name="favorite-team" value="los-angeles-knight-riders"
                                         class="pref-input" />
@@ -243,49 +243,6 @@
           });
         });
 
-        // Preference item click handler - apply background color when selected
-        document.querySelectorAll(".pref-input").forEach((input) => {
-          input.addEventListener("change", function() {
-            // Remove background color from all items
-            document.querySelectorAll(".pref-item").forEach((item) => {
-              item.style.backgroundColor = "";
-              item.querySelectorAll(".team-line").forEach((line) => {
-                line.style.color = "";
-              });
-            });
-            
-            // Apply background color to selected item
-            if (this.checked) {
-              const prefItem = this.closest(".pref-item");
-              const prefColor = prefItem.querySelector(".pref-color");
-              if (prefColor) {
-                // Get background color from inline style or computed style
-                let bgColor = prefColor.style.backgroundColor || 
-                             prefColor.style.background;
-                
-                // If not found, try to extract from style attribute
-                if (!bgColor && prefColor.getAttribute("style")) {
-                  const styleMatch = prefColor.getAttribute("style").match(/background[:\s]*#?([0-9A-Fa-f]{6})/i);
-                  if (styleMatch) {
-                    bgColor = "#" + styleMatch[1];
-                  }
-                }
-                
-                // Fallback to computed style
-                if (!bgColor) {
-                  bgColor = window.getComputedStyle(prefColor).backgroundColor;
-                }
-                
-                prefItem.style.backgroundColor = bgColor || "#612EA7";
-                
-                // Change text color to white for better contrast
-                prefItem.querySelectorAll(".team-line").forEach((line) => {
-                  line.style.color = "#ffffff";
-                });
-              }
-            }
-          });
-        });
     </script>
 </body>
 

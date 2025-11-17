@@ -1851,11 +1851,10 @@ body[data-theme="dark"] .otp-container {
 }
 
 .pref-item:has(.pref-input:checked) {
-  background: linear-gradient(269.69deg, #612EA7 2.06%, #3E1871 84.46%);
-
+  background-color: var(--team-color);
 }
 
-.pref-item:has(.pref-input:checked) .team-line {
+.pref-item:has(.pref-input:checked)[style*="--team-color"] .team-line {
   color: #ffffff;
 }
 
