@@ -1850,6 +1850,39 @@ body[data-theme="dark"] .otp-container {
   display: block;
 }
 
+.pref-item:has(.pref-input:checked) {
+  background-color: var(--team-color);
+}
+
+.pref-item:has(.pref-input:checked)[style*="--team-color"] .team-line {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+			TEAM-SPECIFIC STYLES (LAKR - Los Angeles Knight Riders)
+			========================================================================== */
+
+body.team-lakr .social-section {
+  background: linear-gradient(269.69deg, #612EA7 2.06%, #3E1871 84.46%);
+}
+
+body.team-lakr .pref-item:has(.pref-input:checked) {
+  background: linear-gradient(269.69deg, #612EA7 2.06%, #3E1871 84.46%);
+}
+
+body.team-lakr .pref-item:has(.pref-input:checked) .team-line {
+  color: #ffffff;
+}
+
+body.team-lakr .team-indicator {
+  background: linear-gradient(269.69deg, #612EA7 2.06%, #3E1871 84.46%);
+}
+
+body.team-lakr .scores-banner {
+  background: no-repeat left center / cover
+    url("/mlc/assets/images/banner/adkr-top-banner.jpg");
+}
+
 /* ==========================================================================
 			LOGIN PAGE STYLES
 			========================================================================== */
