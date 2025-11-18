@@ -1880,7 +1880,7 @@ body.team-lakr .team-indicator {
 
 body.team-lakr .scores-banner {
   background: no-repeat left center / cover
-    url("/mlc/assets/images/banner/adkr-top-banner.jpg");
+    url("/mlc/assets/images/banner/adkr-top-banner.jpg?v=1");
 }
 
 /* ==========================================================================
@@ -2761,6 +2761,115 @@ gap: 20px;
   padding: 12px 25px;
   cursor: pointer;
   width: 45%;
+}
+
+/* listing section */
+.listing-section {
+  height: 32px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000048 1.91%, #EA0048 121.23%);
+  font-family: Bakbak One;
+  font-weight: 400;
+  font-size: 14.55px;
+  line-height: 100%;
+  color: #FFFFFF;
+
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.listing-section .listing-section-text {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+.listing-section .listing-section-text::after {
+  content: attr(data-text);
+  padding-left: 80px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Stories Section */
+.stories-section .article-listing {
+  margin-inline: -20px;
+  padding-inline: 20px;
+  gap: 20px;
+}
+.stories-section .article-item {
+  width: 60%;
+}
+.stories-section .article-thumbnail {
+  /* width: 182px; */
+  height: 324px;
+  position: relative;
+}
+.stories-section .article-thumbnail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #171717 0%, rgba(0, 0, 0, 0) 61.75%);
+  z-index: 1; /* Places gradient over image but under content */
+  pointer-events: none; /* Allows clicks to pass through if needed */
+}
+
+.stories-section .article-thumbnail img {
+  position: absolute; /* Pull image out of flow to layer properly */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the space without distortion */
+  z-index: 0; /* Keeps image behind gradient */
+}
+.stories-section .article-content {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 2; /* Ensures text is on top of gradient */
+  margin: 0;
+}
+.stories-section .article-date {
+  color: #fff;
+}
+
+
+.stories-section .article-title {
+  margin-bottom: 14px;
+  color: #fff;
+}
+.stories-section .swiper-wrapper{
+  position: absolute;
+  width: 100%;
+  padding-inline: 10px;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.75px;
+  z-index: 2;
+  pointer-events: none;
+}
+.stories-section .swiper-item{
+  width: 25%;
+  opacity: 0.3;
+  height: 1px;
+  background-color: #FFFFFF;
 }
 
 @media screen and (min-width: 768px) {
