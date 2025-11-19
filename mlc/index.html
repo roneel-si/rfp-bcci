@@ -10,10 +10,13 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/mlc/assets/images/favicon/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="MyWebSite" />
         <link rel="manifest" href="/mlc/assets/images/favicon/site.webmanifest" />
-        <link rel="stylesheet" href="/mlc/assets/css/styles.css?v=2.1" />
+        <link rel="stylesheet" href="/mlc/assets/css/styles.css?v=2.4" />
     </head>
     <body class="">
         <div class="main">
+            <div class="listing-section">
+                <span class="listing-section-text">Welcome to Major League Cricket — where every match feels like championship day.  </span>
+              </div>
             <div class="site-header">
                 <header class="header-container">
                     <div class="header-logo">
@@ -127,7 +130,7 @@
                                     <div class=" count-label ">SECS</div>
                                 </div>
                             </div>
-                            <button class=" sb-buy-btn ">
+                            <button onclick="window.open('https://tickets.majorleaguecricket.com/', '_blank');" class=" sb-buy-btn ">
                                 <svg width=" 18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M16.5499 5.44079C16.5499 3.83732 16.3354 3.07511 15.9265 2.66587C15.5173 2.25668 14.7547 2.04128 13.1504 2.04128H5.15026C3.54629 2.04131 2.78449 2.25672 2.37534 2.66587C1.97721 3.064 1.76438 3.79604 1.75309 5.31306C2.89792 5.58505 3.7509 6.61302 3.75108 7.84072C3.75108 9.06844 2.89782 10.095 1.75309 10.3672C1.76421 11.8856 1.97704 12.6184 2.37534 13.0168C2.78454 13.4258 3.54654 13.6413 5.15026 13.6413H13.1504C14.7547 13.6413 15.5173 13.4259 15.9265 13.0168C16.2882 12.655 16.4968 12.017 16.5406 10.7656C15.3997 10.4908 14.551 9.4664 14.5508 8.24149C14.5508 7.01293 15.404 5.98397 16.5499 5.71266V5.44079ZM17.7499 6.24116C17.7499 6.57252 17.4813 6.84114 17.1499 6.84114C16.3775 6.84135 15.7507 7.46901 15.7507 8.24149C15.751 9.01379 16.3776 9.64046 17.1499 9.64067C17.4812 9.64067 17.7497 9.90947 17.7499 10.2407C17.7499 11.8362 17.5656 13.0744 16.7749 13.8652C15.9842 14.6559 14.7461 14.8413 13.1504 14.8413H5.15026C3.55492 14.8413 2.31765 14.6557 1.52693 13.8652C0.736144 13.0744 0.550781 11.8363 0.550781 10.2407V9.84106C0.550781 9.5097 0.819403 9.24107 1.15076 9.24107C1.92337 9.24107 2.55112 8.61333 2.55112 7.84072C2.5509 7.06829 1.92324 6.44154 1.15076 6.44154C0.819533 6.44154 0.550992 6.17274 0.550781 5.84156V5.44079C0.550811 3.84531 0.736208 2.60817 1.52693 1.81745C2.31764 1.02674 3.55478 0.841339 5.15026 0.841309H13.1504C14.7461 0.841309 15.9842 1.02667 16.7749 1.81745C17.5653 2.60819 17.7499 3.84557 17.7499 5.44079V6.24116Z"
@@ -142,7 +145,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="scores-listing ">
+                <div class="scores-listing " style="display: none;">
                     <div class="match-card ">
                         <div class="match-header ">
                             <div class="match-meta ">
@@ -246,7 +249,13 @@
                 </div>
                 <div class="scores-live-card ">
                     <div class="match-header ">
-                        <span class="match-status ">Live</span>
+                        <span class="match-status ">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="5" cy="5" r="4.58333" stroke="white" stroke-width="0.833333"></circle>
+                              <circle opacity="0.32" cx="4.99996" cy="5.00008" r="3.33333" fill="white"></circle>
+                              <circle cx="5.00004" cy="4.99992" r="1.66667" fill="white"></circle>
+                            </svg>
+                            Live</span>
                         <div class="match-meta ">
                             <span class="match-number ">Match No:34 | 29 Jun 2025 | Grand Prairie Stadium,Dallas</span>
                         </div>
@@ -288,7 +297,7 @@
                             <span class="match-result ">MI New York need 50 run(s) to win from 24 balls</span>
                             <div class="match-action-btn ">
                                 <div class="website-button ">
-                                    <a href="https://shop.majorleaguecricket.com/products/t-shirt-4-pod-white-g64000 " target="_blank ">
+                                    <a href="https://www.majorleaguecricket.com/matchdetail/13850" target="_blank ">
                                         <span>Match Center</span>
                                         <svg width="16 " height="16 " viewBox="0 0 24 24 " fill="currentColor ">
                                             <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z "></path>
@@ -323,7 +332,7 @@
                                 <h3 class="article-title ">MAJOR LEAGUE CRICKET REVEALS DATES FOR 2026 SEASON FOLLOWING RECORD SETTING
                                     SEASON 3
                                 </h3>
-                                <p class="article-date ">Sep 10 2025</p>
+                                <p class="article-date ">10 Sep 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -339,7 +348,7 @@
                                     <h3 class="article-title "> “Happy to Contribute With Both Bat and Ball” – Mukkamalla Reflects on an
                                         Outstanding Start to the MiLC 2025 Season 
                                     </h3>
-                                    <p class="article-date ">Sep 06 2025</p>
+                                    <p class="article-date ">06 Sep 2025</p>
                                 </div>
                                 <div class="article-footer ">
                                     <a href="# " class="article-link ">Read More</a>
@@ -352,7 +361,7 @@
                                 </div>
                                 <div class="article-content ">
                                     <h3 class="article-title ">MLC Players To Watch This Minor League Season</h3>
-                                    <p class="article-date ">Aug 25 2025</p>
+                                    <p class="article-date ">25 Aug 2025</p>
                                 </div>
                                 <div class="article-footer ">
                                     <a href="# " class="article-link ">Read More</a>
@@ -367,7 +376,7 @@
                                     <h3 class="article-title ">ALL-ROUND BOULT, KENJIGE KNOCK OUT SAN FRANCISCO UNICORNS IN THRILLING
                                         ELIMINATOR
                                     </h3>
-                                    <p class="article-date ">Jul 10 2025</p>
+                                    <p class="article-date ">10 Jul 2025</p>
                                 </div>
                                 <div class="article-footer ">
                                     <a href="# " class="article-link ">Read More</a>
@@ -380,6 +389,95 @@
                     </div>
                 </div>
             </div>
+            <div class="section-container stories-section ">
+                <div class="listing-section-content ">
+                  <div class="article-listing-header ">
+                    <h2 class="article-listing-title ">STORIES</h2>
+                    <a class="article-listing-icon " target="_blank ">
+                      <svg width="25 " height="25 " viewBox="0 0 24 24 " fill="currentColor ">
+                        <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z "></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="article-listing ">
+                    <article class="article-item">
+                      <div class="article-thumbnail ">
+                        <img src="/mlc/assets/images/stories/stories-01.jpg " alt="Article Image ">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                        </div>
+                      </div>
+                      <div class="article-content ">
+                        <h3 class="article-title ">Owen five-for sends Unicorns to their first defeat of MLC 2025</h3>
+                        <p class="article-date ">03 Jun 2025 </p>
+                      </div>
+                    </article>
+                    <article class="article-item">
+                      <div class="article-thumbnail ">
+                        <img src="/mlc/assets/images/stories/stories-02.jpg " alt="Article Image ">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                        </div>
+                      </div>
+                      <div class="article-content ">
+                        <h3 class="article-title ">Hetmyer tops Pooran with dramatic last-ball six as Orcas get first win</h3>
+                        <p class="article-date ">05 Jul 2025 </p>
+                      </div>
+                    </article>
+                    <article class="article-item">
+                      <div class="article-thumbnail ">
+                        <img src="/mlc/assets/images/stories/stories-03.jpg " alt="Article Image ">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                        </div>
+                      </div>
+                      <div class="article-content ">
+                        <h3 class="article-title ">Unbeaten Unicorns storm into playoffs with win over Orcas </h3>
+                        <p class="article-date ">03 Aug 2025 </p>
+                      </div>
+                    </article>
+                    <article class="article-item">
+                      <div class="article-thumbnail ">
+                        <img src="/mlc/assets/images/stories/stories-04.jpg " alt="Article Image ">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                        </div>
+                      </div>
+                      <div class="article-content ">
+                        <h3 class="article-title ">MOwen five-for sends Unicorns to their first defeat of MLC 2025</h3>
+                        <p class="article-date ">10 Aug 2025 </p>
+                      </div>
+                    </article>
+                    <article class="article-item">
+                      <div class="article-thumbnail ">
+                        <img src="/mlc/assets/images/stories/stories-05.jpg " alt="Article Image ">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                          <div class="swiper-item"></div>
+                        </div>
+                      </div>
+                      <div class="article-content ">
+                        <h3 class="article-title ">Bartlett blitz gives Unicorns against-the-odds win over MI New York</h3>
+                        <p class="article-date ">15 Sep 2025 </p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
             <div class="section-container fantasy-section ">
                 <div class="fantasy-content ">
                     <div class="fantasy-image ">
@@ -391,7 +489,7 @@
                             game and Win exciting rewards! 
                         </div>
                         <div class="website-button ">
-                            <a href="https://shop.majorleaguecricket.com/products/mi-ny-official-match-replica-jersey-2025?variant=51337811689761 "
+                            <a href="https://d11-ipl-int-cf.sportz.io/season/home"
                                 target="_blank ">
                                 <span>play NOW</span>
                                 <svg width="16 " height="16 " viewBox="0 0 24 24 " fill="currentColor ">
@@ -414,6 +512,11 @@
                         <article class="article-item ">
                             <div class="article-thumbnail ">
                                 <img src="/mlc/assets/images/vote/vote-01.jpg " alt="Article Image ">
+                                <div class="video-play-button ">
+                                    <svg width="24 " height="24 " fill="white " viewBox="0 0 24 24 ">
+                                        <path d="M8 5v14l11-7z "></path>
+                                    </svg>
+                                </div>
                             </div>
                             <div class="article-content ">
                                 <h3 class="article-title ">Which team will win the 2025 Major League Cricket Season?</h3>
@@ -430,34 +533,44 @@
                         <article class="article-item ">
                             <div class="article-thumbnail ">
                                 <img src="/mlc/assets/images/vote/vote-02.jpg " alt="Article Image ">
+                                <div class="video-play-button ">
+                                <svg width="24 " height="24 " fill="white " viewBox="0 0 24 24 ">
+                                    <path d="M8 5v14l11-7z "></path>
+                                </svg>
+                            </div>
                             </div>
                             <div class="article-content ">
                                 <h3 class="article-title ">Corey Anderson's stunning one-handed catch in MLC</h3>
                             </div>
                             <div class="article-footer-section ">
-                                <div class="website-button ">
+                                <div class="website-button voted">
                                     <a href="# " target="_blank ">
                                     <span>vote now</span>
                                     </a>
                                 </div>
-                                <div class="global-vote ">60%</div>
+                                <div class="global-vote voted">30%</div>
                             </div>
                         </article>
                         <article class="article-item ">
                             <div class="article-thumbnail ">
                                 <img src="/mlc/assets/images/vote/vote-03.jpg " alt="Article Image ">
+                                <div class="video-play-button ">
+                                    <svg width="24 " height="24 " fill="white " viewBox="0 0 24 24 ">
+                                        <path d="M8 5v14l11-7z "></path>
+                                    </svg>
+                                </div>
                             </div>
                             <div class="article-content ">
                                 <h3 class="article-title ">Mukhtar Ahmed takes smart boundary catch to dismiss Donovan Ferreira in MLC 2025
                                 </h3>
                             </div>
                             <div class="article-footer-section ">
-                                <div class="website-button ">
+                                <div class="website-button voted">
                                     <a href="# " target="_blank ">
                                     <span>vote now</span>
                                     </a>
                                 </div>
-                                <div class="global-vote ">60%</div>
+                                <div class="global-vote voted">10%</div>
                             </div>
                         </article>
                     </div>
@@ -488,7 +601,7 @@
                                 <h3 class="article-title ">Cognizant Major League Cricket 2025 Match Highlights | Washington Freedom vs SF
                                     Unicorns
                                 </h3>
-                                <p class="article-date ">Oct 10 2025</p>
+                                <p class="article-date ">10 Oct 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -506,7 +619,7 @@
                             </div>
                             <div class="article-content ">
                                 <h3 class="article-title ">Du Plessis, Milne propel Texas Super Kings to top of table</h3>
-                                <p class="article-date ">Jul 02 2025</p>
+                                <p class="article-date ">02 Jul 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -524,7 +637,7 @@
                             </div>
                             <div class="article-content ">
                                 <h3 class="article-title ">Hetmyer tops Pooran with dramatic last-ball six as Orcas get first win</h3>
-                                <p class="article-date ">Jul 02 2025</p>
+                                <p class="article-date ">02 Jul 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -542,7 +655,7 @@
                             </div>
                             <div class="article-content ">
                                 <h3 class="article-title ">Maxwell's century for Freedom consigns LAKR to heavy defeat</h3>
-                                <p class="article-date ">Jul 02 2025</p>
+                                <p class="article-date ">02 Jul 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -693,7 +806,7 @@
                                 <h3 class="article-title ">New cricket fan here. Got to attend 2 matches at the end of the season and had an
                                     absolute blast! Will be back next season for sure!
                                 </h3>
-                                <p class="article-date ">Sep 06 2025</p>
+                                <p class="article-date ">06 Sep 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -735,7 +848,7 @@
                                 <h3 class="article-title "> New cricket fan here. Got to attend 2 matches at the end of the season and had
                                     an absolute blast! Will be back next season for sure! 
                                 </h3>
-                                <p class="article-date ">Sep 06 2025</p>
+                                <p class="article-date ">06 Sep 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -771,7 +884,7 @@
                                 <h3 class="article-title ">New cricket fan here. Got to attend 2 matches at the end of the season and had an
                                     absolute blast! Will be back next season for sure!
                                 </h3>
-                                <p class="article-date ">Aug 25 2025</p>
+                                <p class="article-date ">25 Aug 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -808,7 +921,7 @@
                                     absolute blast! Will be back next season for sure!ALL-ROUND BOULT, KENJIGE KNOCK OUT SAN FRANCISCO
                                     UNICORNS IN THRILLING ELIMINATOR
                                 </h3>
-                                <p class="article-date ">Jul 10 2025</p>
+                                <p class="article-date ">10 Jul 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -1037,7 +1150,7 @@
                                 <h3 class="article-title ">MAJOR LEAGUE CRICKET REVEALS DATES FOR 2026 SEASON FOLLOWING RECORD SETTING
                                     SEASON 3
                                 </h3>
-                                <p class="article-date ">Sep 10 2025</p>
+                                <p class="article-date ">10 Sep 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -1052,7 +1165,7 @@
                                 <h3 class="article-title "> “Happy to Contribute With Both Bat and Ball” – Mukkamalla Reflects on an
                                     Outstanding Start to the MiLC 2025 Season 
                                 </h3>
-                                <p class="article-date ">Sep 06 2025</p>
+                                <p class="article-date ">06 Sep 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -1065,7 +1178,7 @@
                             </div>
                             <div class="article-content ">
                                 <h3 class="article-title ">MLC Players To Watch This Minor League Season</h3>
-                                <p class="article-date ">Aug 25 2025</p>
+                                <p class="article-date ">25 Aug 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -1079,7 +1192,7 @@
                             <div class="article-content ">
                                 <h3 class="article-title ">ALL-ROUND BOULT, KENJIGE KNOCK OUT SAN FRANCISCO UNICORNS IN THRILLING ELIMINATOR
                                 </h3>
-                                <p class="article-date ">Jul 10 2025</p>
+                                <p class="article-date ">10 Jul 2025</p>
                             </div>
                             <div class="article-footer ">
                                 <a href="# " class="article-link ">Read More</a>
@@ -1115,12 +1228,12 @@
                                         <path d="M8 5v14l11-7z "></path>
                                     </svg>
                                 </div>
-                                <div class="video-duration ">10:07</div>
+                                <div class="video-duration ">05:00</div>
                             </div>
                             <div class="article-content ">
                                 <h3 class="article-title ">Finn Allen out of MLC playoffs and Zimbabwe tri-series with foot injury</h3>
                                 <div class="article-listing-meta ">
-                                    <p class="article-date ">Sep 10 2025</p>
+                                    <p class="article-date ">10 Sep 2025</p>
                                     <span class="view-count ">
                                         <svg width="18 " height="14 " viewBox="0 0 18 14 " fill="none " xmlns="http://www.w3.org/2000/svg ">
                                             <path
@@ -1132,7 +1245,7 @@
                                                 stroke="#434343
                                                 " stroke-width="1.125 " stroke-linecap="round " stroke-linejoin="round " />
                                         </svg>
-                                        09:11 
+                                        130k 
                                     </span>
                                 </div>
                                 <div class="video-duration ">05:00</div>
@@ -1155,7 +1268,7 @@
                                 <h3 class="article-title "> Ugarkar holds his nerve to give MI New York second MLC title in last-over finish
                                 </h3>
                                 <div class="article-listing-meta ">
-                                    <p class="article-date ">Sep 10 2025</p>
+                                    <p class="article-date ">10 Sep 2025</p>
                                     <span class="view-count ">
                                         <svg width="18 " height="14 " viewBox="0 0 18 14 " fill="none " xmlns="http://www.w3.org/2000/svg ">
                                             <path
@@ -1167,7 +1280,7 @@
                                                 stroke="#434343
                                                 " stroke-width="1.125 " stroke-linecap="round " stroke-linejoin="round " />
                                         </svg>
-                                        09:11 
+                                        133k 
                                     </span>
                                 </div>
                             </div>
@@ -1188,7 +1301,7 @@
                             <div class="article-content ">
                                 <h3 class="article-title ">Glenn Phillips ruled out of Zimbabwe tour with groin injury</h3>
                                 <div class="article-listing-meta ">
-                                    <p class="article-date ">Sep 10 2025</p>
+                                    <p class="article-date ">10 Sep 2025</p>
                                     <span class="view-count ">
                                         <svg width="18 " height="14 " viewBox="0 0 18 14 " fill="none " xmlns="http://www.w3.org/2000/svg ">
                                             <path
@@ -1200,7 +1313,7 @@
                                                 stroke="#434343
                                                 " stroke-width="1.125 " stroke-linecap="round " stroke-linejoin="round " />
                                         </svg>
-                                        09:11 
+                                        300k 
                                     </span>
                                 </div>
                             </div>
@@ -1222,7 +1335,7 @@
                                 <h3 class="article-title ">Haris Rauf out of MLC playoffs with hamstring injury, Lister named replacement
                                 </h3>
                                 <div class="article-listing-meta ">
-                                    <p class="article-date ">Jul 10 2025</p>
+                                    <p class="article-date ">10 Jul 2025</p>
                                     <span class="view-count ">
                                         <svg width="18 " height="14 " viewBox="0 0 18 14 " fill="none " xmlns="http://www.w3.org/2000/svg ">
                                             <path
@@ -1234,7 +1347,7 @@
                                                 stroke="#434343
                                                 " stroke-width="1.125 " stroke-linecap="round " stroke-linejoin="round " />
                                         </svg>
-                                        09:11 
+                                       90k
                                     </span>
                                 </div>
                             </div>
