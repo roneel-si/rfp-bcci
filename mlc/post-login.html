@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWebSite" />
   <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
-  <link rel="stylesheet" href="./assets/css/styles.css?v=2.26" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=2.28" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
@@ -875,15 +875,12 @@
               <h3 class="article-title ">Los Angeles Knight Riders vs Washington Freedom MLC,</h3>
 
             </div>
-            <div class="article-footer-section ">
-              <div class="website-button ">
-                <a href="# " target="_blank ">
+            <div class="article-footer-section">
+              <div class="website-button" style="cursor: pointer;">
                   <span>vote now</span>
-
-                </a>
               </div>
-              <div class="global-vote ">60%</div>
-            </div>
+              <div class="global-vote">63%</div>
+          </div>
 
           </article>
           <article class="article-item ">
@@ -902,15 +899,12 @@
               <h3 class="article-title ">Andre Russell had another good day with the ball.</h3>
 
             </div>
-            <div class="article-footer-section ">
-              <div class="website-button voted">
-                <a href="# " target="_blank ">
+            <div class="article-footer-section">
+              <div class="website-button" style="cursor: pointer;">
                   <span>vote now</span>
-
-                </a>
               </div>
-              <div class="global-vote voted">30%</div>
-            </div>
+              <div class="global-vote">40%</div>
+          </div>
           </article>
           <article class="article-item ">
             <div class="article-thumbnail ">
@@ -928,15 +922,12 @@
               <h3 class="article-title ">aif Badar takes back-to-back amazing catches for the Los Angeles Knight</h3>
 
             </div>
-            <div class="article-footer-section ">
-              <div class="website-button voted">
-                <a href="# " target="_blank ">
+            <div class="article-footer-section">
+              <div class="website-button" style="cursor: pointer;">
                   <span>vote now</span>
-
-                </a>
               </div>
-              <div class="global-vote voted">10%</div>
-            </div>
+              <div class="global-vote">10%</div>
+          </div>
           </article>
         </div>
       </div>
@@ -2016,6 +2007,49 @@
                 }
             }
         });
+    // Vote logic:
+    // - On first click anywhere on a vote button in the vote section:
+    //   disable ALL vote buttons in that section,
+    //   show ALL global-vote values, and highlight the highest in pink.
+    document.addEventListener("click", (e) => {
+      const voteBtn = e.target.closest(".vote-section .article-footer-section .website-button");
+      if (!voteBtn) return;
+      e.preventDefault();
+      const voteSection = voteBtn.closest(".vote-section");
+      if (!voteSection) return;
+
+      // Disable all buttons in this vote section
+      voteSection.querySelectorAll(".article-footer-section .website-button").forEach((btn) => {
+        btn.classList.add("voted");
+        btn.setAttribute("aria-disabled", "true");
+        btn.style.pointerEvents = "none";
+      });
+
+      // Reveal all global votes and find the highest
+      let maxPercent = -1;
+      let maxEl = null;
+      voteSection.querySelectorAll(".article-footer-section").forEach((footer) => {
+        const gv = footer.querySelector(".global-vote");
+        if (!gv) return;
+        gv.classList.add("voted");
+        // Reset any previous highlight
+        gv.style.color = "";
+        gv.style.fontWeight = "";
+        // Parse percentage value
+        const val = parseInt((gv.textContent || "").replace(/[^0-9]/g, ""), 10);
+        if (!isNaN(val) && val > maxPercent) {
+          maxPercent = val;
+          maxEl = gv;
+        }
+      });
+
+      // Highlight the highest percentage
+      if (maxEl) {
+        maxEl.style.color = "#fff";
+        maxEl.style.backgroundColor = "#EA0048";
+        maxEl.style.fontWeight = "700";
+      }
+    });
   </script>
 </body>
 
