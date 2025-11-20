@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Major League Cricket.</title>
-  <link rel="icon" type="image/png" href="/mlc/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/mlc/assets/images/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/mlc/assets/images/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/mlc/assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="./assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-  <link rel="manifest" href="/mlc/assets/images/favicon/site.webmanifest" />
-  <link rel="stylesheet" href="/mlc/assets/css/styles.css?v=2.3" />
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=2.26" />
 </head>
 
 
@@ -20,7 +20,7 @@
       <div class="site-header">
         <header class="header-container">
             <div class="header-logo">
-              <a href="index.html"><img src="/mlc/assets/images/website-logo.svg" alt="MLC Logo" /></a>
+              <a href="index.html"><img src="./assets/images/website-logo.svg" alt="MLC Logo" /></a>
             </div>
             <div class="header-icons">
                 <a class="header-icon-btn" href="https://shop.majorleaguecricket.com/" target="_blank">
@@ -41,59 +41,70 @@
                     </svg>
                 </a>
                 <button id="header-menu-toggle" class="header-icon-btn header-toggle-btn">
-                    <svg xmlns=" http://www.w3.org/2000/svg " height=" 24 " width=" 24 ">
+                    <svg class="icon-hamburger" xmlns=" http://www.w3.org/2000/svg " height=" 24 " width=" 24 ">
                         <path d=" M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z "/>
+                    </svg>
+                    <svg class="icon-close" xmlns=" http://www.w3.org/2000/svg " height=" 24 " width=" 24 ">
+                        <path d="M6 6L18 18M18 6L6 18" stroke="#000048" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </button>
                
             </div>
-            <nav id="header-mobile-menu" class="header-mobile-menu">
-              <ul class=" header-menu-list">
-                  <li>MLC TV</li>
-                  <li>MATCHES</li>
-                  <li>STATS</li>
-                  <li class=" header-submenu">
-                      <div class=" header-submenu-header">
-                          <span>TEAMS</span>
-                          <svg class=" header-arrow " xmlns=" http://www.w3.org/2000/svg " height=" 20 " width="
-                              20 " viewBox=" 0 0 24 24 ">
-                              <path d=" M7 10l5 5 5-5z "/>
+          
+        </header>
+        <nav id="header-mobile-menu" class="header-mobile-menu">
+            <ul class=" header-menu-list">
+                <li>MLC TV</li>
+                <li>MATCHES</li>
+                <li>STATS</li>
+                <li class=" header-submenu">
+                    <div class=" header-submenu-header">
+                        <span>TEAMS</span>
+                        <svg class=" header-arrow " xmlns=" http://www.w3.org/2000/svg " height=" 20 " width="
+                            20 " viewBox=" 0 0 24 24 ">
+                            <path d=" M7 10l5 5 5-5z "/>
+                        </svg>
+                    </div>
+                    <ul class=" header-teams-list ">
+                        <li><span class=" header-team-bar header-purple "></span>LOS ANGELES KNIGHT RIDERS</li>
+                        <li><span class=" header-team-bar header-blue "></span>MI NEW YORK</li>
+                        <li><span class=" header-team-bar header-orange "></span>SAN FRANCISCO UNICORNS</li>
+                        <li><span class=" header-team-bar header-green "></span>SEATTLE ORCAS</li>
+                        <li><span class=" header-team-bar header-red "></span>TEXAS SUPER KINGS</li>
+                    </ul>
+                </li>
+                <li>2025 STANDINGS</li>
+            </ul>
+            <div class=" header-menu-footer ">
+              <div class="website-button ">
+                  <a href="https://shop.majorleaguecricket.com/products/t-shirt-4-pod-white-g64000 "
+                      target="_blank ">
+                      <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.61826 0.307167C4.76408 0.491052 4.0849 1.01008 3.6934 1.78418C3.48579 2.19051 3.39384 2.61166 3.39384 3.14552V3.48363H3.12098C2.70279 3.48363 2.45959 3.52812 2.21935 3.64676C1.94056 3.78319 1.70625 4.0175 1.56982 4.29629C1.46898 4.50094 1.44822 4.61957 0.858007 8.12822C0.338977 11.2157 0.25 11.7941 0.25 12.0551C0.25 12.4347 0.303386 12.669 0.472442 13.019C0.697849 13.4846 1.0152 13.802 1.48084 14.0274C1.97615 14.2646 1.64693 14.2498 6.18178 14.2498C10.7166 14.2498 10.3874 14.2646 10.8827 14.0274C11.3484 13.802 11.6657 13.4846 11.8911 13.019C12.0602 12.669 12.1136 12.4347 12.1136 12.0551C12.1136 11.7941 12.0276 11.2276 11.5204 8.2172C11.1941 6.27454 10.9005 4.59881 10.8679 4.49204C10.7937 4.24883 10.7107 4.1124 10.509 3.90776C10.2095 3.60524 9.85355 3.4866 9.24555 3.48363H8.96972V3.17518C8.96972 2.29135 8.70872 1.62402 8.15113 1.06347C7.49567 0.408007 6.51989 0.11735 5.61826 0.307167ZM6.65632 1.03974C6.7631 1.06347 6.96181 1.13762 7.10121 1.20583C7.30289 1.30371 7.40076 1.37489 7.60541 1.5825C8.04139 2.01552 8.22825 2.49599 8.22825 3.17222V3.48363H4.13532V3.17222C4.13532 2.74809 4.1976 2.4604 4.36369 2.11933C4.47936 1.88205 4.53868 1.79901 4.75519 1.58547C5.28312 1.0605 5.92375 0.876618 6.65632 1.03974ZM3.40867 5.41146L3.50655 5.50637C3.59256 5.59238 3.62222 5.60425 3.76458 5.60425C3.90694 5.60425 3.9366 5.59238 4.02261 5.50637L4.12049 5.41146L4.13828 4.22511H8.22825V4.77676C8.22825 5.40553 8.24901 5.49154 8.42696 5.57459C8.57822 5.64577 8.74728 5.61908 8.86295 5.50341L8.95489 5.41146L8.97268 4.21918L9.33452 4.23104C9.61035 4.23994 9.72009 4.25477 9.80017 4.29629C9.94253 4.37044 10.0612 4.48611 10.1294 4.6166C10.2035 4.75897 11.3721 11.7496 11.3721 12.0432C11.3691 12.6927 10.9925 13.2118 10.3518 13.4461L10.1412 13.5232H2.25198L2.02953 13.452C1.60541 13.3126 1.25544 12.9923 1.09231 12.5919C0.926223 12.1885 0.91436 12.2923 1.58168 8.29134C1.92573 6.23895 2.19859 4.68482 2.22528 4.62847C2.31723 4.45051 2.48035 4.31408 2.68203 4.2518C2.72355 4.23994 2.89854 4.22807 3.07353 4.22807L3.39088 4.22511L3.40867 5.41146Z" fill="#FEFEFE" stroke="#FEFEFE" stroke-width="0.5"/>
                           </svg>
-                      </div>
-                      <ul class=" header-teams-list ">
-                          <li><span class=" header-team-bar header-purple "></span>LOS ANGELES KNIGHT RIDERS</li>
-                          <li><span class=" header-team-bar header-blue "></span>MI NEW YORK</li>
-                          <li><span class=" header-team-bar header-orange "></span>SAN FRANCISCO UNICORNS</li>
-                          <li><span class=" header-team-bar header-green "></span>SEATTLE ORCAS</li>
-                          <li><span class=" header-team-bar header-red "></span>TEXAS SUPER KINGS</li>
-                      </ul>
-                  </li>
-                  <li>2025 STANDINGS</li>
-              </ul>
-              <div class=" header-menu-footer ">
-                <div class="website-button ">
-                  <a href="https://shop.majorleaguecricket.com/products/t-shirt-4-pod-white-g64000 " target="_blank ">
-                      <span>Match Center</span>
-                      <svg width="16 " height="16 " viewBox="0 0 24 24 " fill="currentColor ">
-                          <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z "></path>
-                      </svg>
+                      <span>Shop</span>
+                      
+                          
                   </a>
               </div>
               <div class="website-button ">
-                <a href="https://shop.majorleaguecricket.com/products/t-shirt-4-pod-white-g64000 " target="_blank ">
-                    <span>Match Center</span>
-                    <svg width="16 " height="16 " viewBox="0 0 24 24 " fill="currentColor ">
-                        <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z "></path>
-                    </svg>
-                </a>
-            </div>
+                  <a href="https://tickets.majorleaguecricket.com/ "
+                      target="_blank ">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.625 9.375C14.625 8.34 15.465 7.5 16.5 7.5V6.75C16.5 3.75 15.75 3 12.75 3H5.25C2.25 3 1.5 3.75 1.5 6.75V7.125C2.535 7.125 3.375 7.965 3.375 9C3.375 10.035 2.535 10.875 1.5 10.875V11.25C1.5 14.25 2.25 15 5.25 15H12.75C15.75 15 16.5 14.25 16.5 11.25C15.465 11.25 14.625 10.41 14.625 9.375Z" stroke="#FEFEFE" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M7.5 3L7.5 15" stroke="#FEFEFE" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.75 3.75"/>
+                          </svg>
+                          
+                      <span>BUY TICKETS</span>
+                      
+                  </a>
               </div>
-          </nav>
-        </header>
+          </div>
+        </nav>
     </div>
         <main class="login-shell">
             <div class="login-hero">
-                <img src="/mlc/assets/images/banner/login-banner.png" alt="MLC logo" class="mlc-logo" />
+                <img src="./assets/images/banner/login-banner.png" alt="MLC logo" class="mlc-logo" />
             </div>
             <div class="login-wrapper">
                 <div class="login-main-content">
@@ -107,29 +118,26 @@
                         <form class="login-form login-registration-form">
                             <div class="login-input-group">
                                 <label class="login-input-label">First Name <span class="imp">*</span></label>
-                                <input type="text" class="login-input" placeholder="Enter your first name" value="Nitesh">
+                                <input type="text" class="login-input" placeholder="Enter your first name" value="Ethan">
                             </div>
                             <div class="login-input-group">
                                 <label class="login-input-label">Last Name <span class="imp">*</span></label>
-                                <input type="text" class="login-input" placeholder="Enter your last name" value="Dambe">
+                                <input type="text" class="login-input" placeholder="Enter your last name" value="Hunt">
                             </div>
     
                             <div class="login-input-group">
-                                <label class="login-input-label">DOB </label>
-                                <input type="date" class="login-input login-date-input" value="1997-01-01"
-                                    placeholder="Select your date of birth">
+                                <label class="login-input-label">Email Id</label>
+                                <input type="email" class="login-input" placeholder="Enter your first name" value="ethan.hunt2025@gmail.com" disabled>
+                                <div class="login-verified-badge"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9602 0.271287C15.4732 0.69096 15.5488 1.44699 15.1291 1.95992L6.73615 12.218C5.98962 13.1304 4.65657 13.2922 3.71344 12.5849L0.480355 10.16C-0.0498393 9.76239 -0.157291 9.01023 0.240355 8.48004C0.638 7.94984 1.39016 7.84239 1.92035 8.24004L5.00006 10.5498L13.2716 0.440151C13.6913 -0.0727833 14.4473 -0.148386 14.9602 0.271287Z" fill="#039855"/>
+                                    </svg>
+                                    </div>
                             </div>
-    
-                            <div class="login-input-group">
-                                <label class="login-input-label">Mobile No.</label>
-                                <input type="text" class="login-input mob-submit" placeholder="Enter your last name" value="9859846521">
-                            </div>
-    
                             <div class="login-input-group">
                                 <label class="login-input-label">Country <span class="imp">*</span></label>
                                 <div class="login-custom-dropdown login-country-dropdown">
                                     <div class="login-dropdown-selected">
-                                        <span class="login-selected-text">India</span>
+                                        <span class="login-selected-text">United States Of America</span>
                                         <svg class="login-dropdown-arrow" width="25" height="25" viewBox="0 0 24 24"
                                             fill="currentColor">
                                             <path
@@ -138,7 +146,7 @@
                                         </svg>
                                     </div>
                                     <div class="login-dropdown-options">
-                                        <div class="login-dropdown-option" data-value="india">India</div>
+                                        <div class="login-dropdown-option" data-value="india">United States Of America</div>
                                         <div class="login-dropdown-option" data-value="usa">United States</div>
                                         <div class="login-dropdown-option" data-value="uk">United Kingdom</div>
                                         <div class="login-dropdown-option" data-value="australia">Australia</div>
@@ -151,7 +159,7 @@
                                 <label class="login-input-label">City <span class="imp">*</span></label>
                                 <div class="login-custom-dropdown login-city-dropdown">
                                     <div class="login-dropdown-selected">
-                                        <span class="login-selected-text">Mumbai</span>
+                                        <span class="login-selected-text">Los Angeles</span>
                                         <svg class="login-dropdown-arrow" width="25" height="25" viewBox="0 0 24 24"
                                             fill="currentColor"><button class="otp-verify-btn" onclick="window.location.href='/bcci/login-form.html'">Verify &amp;
                         Proceed</button>
@@ -161,12 +169,7 @@
                                         </svg>
                                     </div>
                                     <div class="login-dropdown-options">
-                                        <div class="login-dropdown-option" data-value="mumbai">Mumbai</div>
-                                        <div class="login-dropdown-option" data-value="delhi">Delhi</div>
-                                        <div class="login-dropdown-option" data-value="bangalore">Bangalore</div>
-                                        <div class="login-dropdown-option" data-value="chennai">Chennai</div>
-                                        <div class="login-dropdown-option" data-value="kolkata">Kolkata</div>
-                                        <div class="login-dropdown-option" data-value="hyderabad">Hyderabad</div>
+                                        <div class="login-dropdown-option" data-value="mumbai">Los Angeles</div>
                                     </div>
                                 </div>
                             </div>
@@ -187,16 +190,50 @@
 
        
     </div>
-    <script>
-      // Main menu toggle
-      const toggleBtn = document.getElementById("header-menu-toggle");
-      const menu = document.getElementById("header-mobile-menu");
-      
-      toggleBtn.onclick = () => {
-        const isOpen = menu.classList.toggle("header-open");
-        toggleBtn.classList.toggle("header-active", isOpen);
-        document.body.style.overflow = isOpen ? "hidden" : " ";
-      };
+  <script>
+      // Main menu toggle (updated for new header markup)
+      (function () {
+        const toggleBtn = document.getElementById("header-menu-toggle");
+        const menu = document.getElementById("header-mobile-menu");
+        if (!toggleBtn || !menu) return;
+
+        const openMenu = () => {
+          if (menu.classList.contains("header-open")) return;
+          menu.classList.add("header-open");
+          toggleBtn.classList.add("header-active");
+          document.documentElement.style.overflow = "hidden";
+          document.body.style.overflow = "hidden";
+          document.addEventListener("keydown", onEsc, { once: true });
+          document.addEventListener("click", onOutsideClick);
+          menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu, { once: true }));
+        };
+
+        const closeMenu = () => {
+          menu.classList.remove("header-open");
+          toggleBtn.classList.remove("header-active");
+          document.documentElement.style.overflow = "";
+          document.body.style.overflow = "";
+          document.removeEventListener("click", onOutsideClick);
+        };
+
+        const onEsc = (e) => {
+          if (e.key === "Escape") closeMenu();
+        };
+
+        const onOutsideClick = (e) => {
+          if (menu.contains(e.target) || toggleBtn.contains(e.target)) return;
+          closeMenu();
+        };
+
+        toggleBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (menu.classList.contains("header-open")) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+      })();
       
       // Generic submenu toggle
       document.querySelectorAll(".header-submenu-header").forEach((header) => {
